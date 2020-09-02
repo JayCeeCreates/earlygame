@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "xx",
+        "xx"
+    ],
+    "key": {
+        "x": {
+            "item": "earlygame:andesite_rock"
+        }
+    },
+    "result": {
+        "item": "earlygame:andesite_cobblestone",
+        "count": 1
+    }
+}

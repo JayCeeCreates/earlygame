@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "xx",
+        "xx"
+    ],
+    "key": {
+        "x": {
+            "item": "earlygame:stone_rock"
+        }
+    },
+    "result": {
+        "item": "minecraft:cobblestone",
+        "count": 1
+    }
+}

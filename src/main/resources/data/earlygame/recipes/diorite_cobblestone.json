@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "xx",
+        "xx"
+    ],
+    "key": {
+        "x": {
+            "item": "earlygame:diorite_rock"
+        }
+    },
+    "result": {
+        "item": "earlygame:diorite_cobblestone",
+        "count": 1
+    }
+}

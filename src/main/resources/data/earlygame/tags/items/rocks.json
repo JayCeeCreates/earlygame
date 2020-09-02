@@ -1,0 +1,9 @@
+{
+    "replace": false,
+    "values": [
+      "earlygame:granite_rock",
+      "earlygame:andesite_rock",
+      "earlygame:diorite_rock",
+      "earlygame:stone_rock"
+    ]
+  }

@@ -1,0 +1,16 @@
+{
+    "item.earlygame.copper_ingot": "Copper Ingot",
+    "item.earlygame.copper_nugget": "Copper Nugget",
+    
+    "block.earlygame.stone_rock_block": "Stone Rock",
+    "block.earlygame.andesite_rock_block": "Andesite Rock",
+    "block.earlygame.diorite_rock_block": "Diorite Rock",
+    "block.earlygame.granite_rock_block": "Granite Rock",
+    "block.earlygame.andesite_cobblestone": "Andesite Cobblestone",
+    "block.earlygame.diorite_cobblestone": "Diorite Cobblestone",
+    "block.earlygame.granite_cobblestone": "Granite Cobblestone",
+    "block.earlygame.copper_ore": "Copper Ore",
+    "block.earlygame.copper_block": "Copper Block",
+
+    "itemGroup.earlygame.eggroup": "EarlyGame"
+}
