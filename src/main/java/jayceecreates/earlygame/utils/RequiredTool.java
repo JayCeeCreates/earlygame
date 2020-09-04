@@ -3,6 +3,7 @@
 package jayceecreates.earlygame.utils;
 
 import net.fabricmc.fabric.api.event.player.AttackBlockCallback;
+import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.block.Material;
 import net.minecraft.item.Item;
@@ -77,4 +78,12 @@ public class RequiredTool {
 
     }
     */
+    public static void requiredToolInit() {
+        noBreak(Material.WOOD, FabricToolTags.AXES, "You need an axe to cut wood!"); // wood cutting
+        noBreak(Material.NETHER_WOOD, FabricToolTags.AXES, "You need an axe to cut wood!"); // wood cutting
+        noBreak(Material.BAMBOO, FabricToolTags.AXES, "You need an axe to cut wood!"); // bamboo cutting
+        noBreak(Material.STONE, FabricToolTags.PICKAXES, "You need a pickaxe to mine!"); // mining
+        noBreak(Material.REPAIR_STATION, FabricToolTags.PICKAXES, "You need a pickaxe to mine!"); // mining
+        noBreak(Material.METAL, FabricToolTags.PICKAXES, "You need a pickaxe to mine!"); // mining
+    }
 }

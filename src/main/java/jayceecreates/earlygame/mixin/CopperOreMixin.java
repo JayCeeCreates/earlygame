@@ -5,8 +5,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import jayceecreates.earlygame.EarlyGame;
-
+import jayceecreates.earlygame.world.CopperOreGen;
 import net.minecraft.world.biome.GenerationSettings;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.feature.DefaultBiomeFeatures;
@@ -19,7 +18,7 @@ public class CopperOreMixin {
         at = @At("TAIL")
     )
     private static void addDefaultOres(GenerationSettings.Builder builder, CallbackInfo ci) {
-        builder.feature(GenerationStep.Feature.UNDERGROUND_ORES, EarlyGame.COPPER_ORE_GEN);
+        builder.feature(GenerationStep.Feature.UNDERGROUND_ORES, CopperOreGen.COPPER_ORE_GEN);
     }
 
 }
