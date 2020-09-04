@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#E",
+        " /"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:flint"
+        },
+        "E": {
+            "item": "earlygame:lashing"
+        },
+        "/": {
+            "item": "minecraft:stick"
+        }
+    },
+    "result": {
+        "item": "earlygame:flint_axe",
+        "count": 1
+    }
+}
