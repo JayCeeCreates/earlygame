@@ -38,6 +38,8 @@ public class StickTwigBlock extends Block {
             floor.isOf(Blocks.WATER) ||
             floor.isOf(Blocks.LAVA) ||
             floor.isIn(BlockTags.LEAVES) ||
+            floor.isIn(BlockTags.FLOWERS) ||
+            floor.isIn(BlockTags.FLOWER_POTS) ||
             floor.isOf(BlocksInit.ANDESITE_ROCK_BLOCK) ||
             floor.isOf(BlocksInit.GRANITE_ROCK_BLOCK) ||
             floor.isOf(BlocksInit.DIORITE_ROCK_BLOCK) ||

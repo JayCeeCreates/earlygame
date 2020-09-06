@@ -21,6 +21,6 @@ public class StoneRockGen {
                 .tries(32).build())
         .decorate(ConfiguredFeatures.Decorators.SQUARE_HEIGHTMAP_SPREAD_DOUBLE)
         .decorate(Decorator.COUNT_NOISE
-            .configure(new CountNoiseDecoratorConfig(0.0D, 1, 1)));
+            .configure(new CountNoiseDecoratorConfig(-3.0D, 1, 1)));
 
 }
