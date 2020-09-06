@@ -17,5 +17,5 @@ public class CopperOreGen {
         .decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(0, 0, 64)))
         .spreadHorizontally()
         .repeat(20);
-        
+    
 }

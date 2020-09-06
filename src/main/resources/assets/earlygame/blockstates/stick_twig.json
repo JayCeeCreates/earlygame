@@ -6,16 +6,16 @@
             },
             {
                 "model": "earlygame:block/stick_twig",
-                "y": "90"
+                "y": 90
             },
             {
                 "model": "earlygame:block/stick_twig",
-                "y": "180"
+                "y": 180
             },
             {
                 "model": "earlygame:block/stick_twig",
-                "y": "270"
+                "y": 270
             }
-        ]        
+        ]
     }
 }

@@ -11,7 +11,7 @@ import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.feature.DefaultBiomeFeatures;
 
 @Mixin(DefaultBiomeFeatures.class)
-public class CopperOreMixin {
+public class CopperOreGenMixin {
     
     @Inject(
         method = "addDefaultOres(Lnet/minecraft/world/biome/GenerationSettings$Builder;)V",

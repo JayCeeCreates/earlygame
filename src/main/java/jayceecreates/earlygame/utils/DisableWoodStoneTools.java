@@ -41,22 +41,17 @@ public class DisableWoodStoneTools {
 
         AttackEntityCallback.EVENT.register((player, world, hand, entity, hitResult) -> {
 
-            if (player == null) {
+            if (player == null)
                 return ActionResult.PASS;
-            }
 
             ItemStack itemHeld = player.inventory.getMainHandStack();
-            ActionResult a = ActionResult.PASS;
             
             if (itemHeld.getItem() instanceof SwordItem) {
                 SwordItem sword = (SwordItem) itemHeld.getItem();
                 if (sword.getMaterial().equals(ToolMaterials.WOOD) || sword.getMaterial().equals(ToolMaterials.STONE))
-                    a = ActionResult.FAIL;
-            }
-            else {
-                a = ActionResult.PASS;
-            }
-            return a;
+                    return ActionResult.FAIL;
+            };
+            return ActionResult.PASS;
         });
     }
 }

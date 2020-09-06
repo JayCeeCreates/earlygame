@@ -36,11 +36,8 @@ public class RequiredTool {
             if (!player.isCreative()) {
                 // if the block targeted is of a specific material
                 if (world.getBlockState(pos).getMaterial().equals(material)) {
-                    // if a player has a specific tool on hand, break it
-                    if (player.inventory.getMainHandStack().getItem().isIn(toolTag))
-                        return ActionResult.PASS;
-                    // if a player has anything but a specific tool on hand, don't break it
-                    else {
+                    // if a player doesn't have a specific tool on hand, don't break it
+                    if (!player.inventory.getMainHandStack().getItem().isIn(toolTag)) {
                         player.sendMessage(new TranslatableText(warningText), true);;
                         /**
                         System.out.println("rand1: " + rand);
@@ -53,10 +50,9 @@ public class RequiredTool {
                         */
                         return ActionResult.SUCCESS;
                     }
-                // if it's anything other than a specific material
-                } else return ActionResult.PASS;
-            // if player is creative
-            } else return ActionResult.PASS;
+                }
+            }
+            return ActionResult.PASS;
         });
     }
     /**

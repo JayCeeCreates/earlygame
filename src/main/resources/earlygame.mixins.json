@@ -4,7 +4,9 @@
     "package": "jayceecreates.earlygame.mixin",
     "compatibilityLevel": "JAVA_8",
     "mixins": [
-        "CopperOreMixin"
+        "CopperOreGenMixin",
+        "StoneRockGenMixin",
+        "StickTwigGenMixin"
     ],
     "client": [
     ],

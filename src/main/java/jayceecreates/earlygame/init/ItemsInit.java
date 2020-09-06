@@ -21,6 +21,9 @@ public class ItemsInit {
     public static final Item COPPER_INGOT = new Item(new Item.Settings().group(ModItemGroup.EARLYGAME));
     public static final Item COPPER_NUGGET = new Item(new Item.Settings().group(ModItemGroup.EARLYGAME));
 
+    // other
+    public static final Item LASHING = new Item(new Item.Settings().group(ModItemGroup.EARLYGAME));
+
     public static void init() {
 
         // flint
@@ -31,6 +34,9 @@ public class ItemsInit {
         // copper
         Registry.register(Registry.ITEM, new Identifier("earlygame", "copper_ingot"), COPPER_INGOT);
         Registry.register(Registry.ITEM, new Identifier("earlygame", "copper_nugget"), COPPER_NUGGET);
+
+        // other
+        Registry.register(Registry.ITEM, new Identifier("earlygame", "lashing"), LASHING);
 
     }
 
