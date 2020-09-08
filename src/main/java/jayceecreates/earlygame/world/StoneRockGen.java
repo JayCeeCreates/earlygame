@@ -1,26 +1,53 @@
 package jayceecreates.earlygame.world;
 
+import java.util.Map;
+import java.util.Random;
+
+import com.google.common.collect.ImmutableMap;
+import com.mojang.serialization.Codec;
+
 import jayceecreates.earlygame.init.BlocksInit;
-import net.minecraft.world.gen.decorator.CountNoiseDecoratorConfig;
-import net.minecraft.world.gen.decorator.Decorator;
-import net.minecraft.world.gen.feature.ConfiguredFeature;
-import net.minecraft.world.gen.feature.ConfiguredFeatures;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
+import net.minecraft.util.Lazy;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.StructureWorldAccess;
+import net.minecraft.world.gen.chunk.ChunkGenerator;
+import net.minecraft.world.gen.feature.DefaultFeatureConfig;
 import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.RandomPatchFeatureConfig;
-import net.minecraft.world.gen.placer.SimpleBlockPlacer;
-import net.minecraft.world.gen.stateprovider.SimpleBlockStateProvider;
 
-public class StoneRockGen {
+public class StoneRockGen extends Feature<DefaultFeatureConfig> {
 
-    public static ConfiguredFeature<?, ?> STONE_ROCK_GEN = Feature.RANDOM_PATCH
-        .configure((new RandomPatchFeatureConfig.Builder(
-            new SimpleBlockStateProvider(
-                BlocksInit.STONE_ROCK_BLOCK.getDefaultState()
-            ),
-            SimpleBlockPlacer.INSTANCE))
-                .tries(32).build())
-        .decorate(ConfiguredFeatures.Decorators.SQUARE_HEIGHTMAP_SPREAD_DOUBLE)
-        .decorate(Decorator.COUNT_NOISE
-            .configure(new CountNoiseDecoratorConfig(-3.0D, 1, 1)));
+    private static final Lazy<Map<Block, Block>> A = new Lazy<>(() -> new ImmutableMap.Builder<Block, Block>()
+        .put(Blocks.STONE, BlocksInit.STONE_ROCK_BLOCK)
+        .put(Blocks.ANDESITE, BlocksInit.ANDESITE_ROCK_BLOCK)
+        .put(Blocks.DIORITE, BlocksInit.DIORITE_ROCK_BLOCK)
+        .put(Blocks.GRANITE, BlocksInit.GRANITE_ROCK_BLOCK)
+        .build()
+    );
+
+    public StoneRockGen(Codec<DefaultFeatureConfig> configCodec) {
+        super(configCodec);
+    }
+
+    @Override
+    public boolean generate(StructureWorldAccess world, ChunkGenerator chunkGenerator, Random random, BlockPos pos,
+            DefaultFeatureConfig featureConfig) {
+        BlockState stateAt = world.getBlockState(pos);
+        BlockState stateDown = world.getBlockState(pos.down());
+        if (stateAt.isAir() && ModBlockTags.ROCK_PLACEABLE_ON.contains(stateDown.getBlock())) {
+            for (int y = 1; y <= 8; y++) {
+                BlockPos stonePos = pos.down(y);
+                BlockState stoneState = world.getBlockState(stonePos);
+                if (A.get().containsKey(stoneState.getBlock())) {
+                    Block looseRockBlock = A.get().get(stoneState.getBlock());
+                    world.setBlockState(pos, looseRockBlock.getDefaultState(), 3);
+                    return true;
+                }
+            }
+        }
+        return true;
+    }
 
 }
