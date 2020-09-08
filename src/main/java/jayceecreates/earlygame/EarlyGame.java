@@ -5,7 +5,6 @@ import jayceecreates.earlygame.init.ItemsInit;
 import jayceecreates.earlygame.utils.DisableWoodStoneTools;
 import jayceecreates.earlygame.utils.RequiredTool;
 import jayceecreates.earlygame.world.CopperOreGen;
-import jayceecreates.earlygame.world.StickTwigGen;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.BuiltinRegistries;
@@ -27,7 +26,6 @@ public class EarlyGame implements ModInitializer {
 
         // world gen
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier("earlygame", "copper_ore_gen"), CopperOreGen.COPPER_ORE_GEN);
-        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier("earlygame", "stick_twig_gen"), StickTwigGen.STICK_TWIG_GEN);
         
         // noBreak
         RequiredTool.requiredToolInit();

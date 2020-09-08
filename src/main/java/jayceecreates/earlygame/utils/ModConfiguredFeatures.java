@@ -14,6 +14,15 @@ public class ModConfiguredFeatures {
       ModFeature.ROCK_BLOCK_FEATURE
          .configure(FeatureConfig.DEFAULT)
          .decorate(ConfiguredFeatures.Decorators.SQUARE_HEIGHTMAP)
-         .repeatRandomly(5)
+         .repeat(4)
+   );
+
+   public static final ConfiguredFeature<?, ?> STICK_TWIG = Registry.register(
+      BuiltinRegistries.CONFIGURED_FEATURE,
+      new Identifier("earlygame", "stick_twig_gen"),
+      ModFeature.STICK_TWIG_FEATURE
+         .configure(FeatureConfig.DEFAULT)
+         .decorate(ConfiguredFeatures.Decorators.SQUARE_HEIGHTMAP)
+         .repeat(3)
    );
 }

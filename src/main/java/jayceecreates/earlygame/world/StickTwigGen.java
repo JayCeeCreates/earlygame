@@ -1,26 +1,33 @@
 package jayceecreates.earlygame.world;
 
+import java.util.Random;
+
+import com.mojang.serialization.Codec;
+
 import jayceecreates.earlygame.init.BlocksInit;
-import net.minecraft.world.gen.decorator.CountNoiseDecoratorConfig;
-import net.minecraft.world.gen.decorator.Decorator;
-import net.minecraft.world.gen.feature.ConfiguredFeature;
-import net.minecraft.world.gen.feature.ConfiguredFeatures;
+import net.minecraft.block.BlockState;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.StructureWorldAccess;
+import net.minecraft.world.gen.chunk.ChunkGenerator;
+import net.minecraft.world.gen.feature.DefaultFeatureConfig;
 import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.RandomPatchFeatureConfig;
-import net.minecraft.world.gen.placer.SimpleBlockPlacer;
-import net.minecraft.world.gen.stateprovider.SimpleBlockStateProvider;
 
-public class StickTwigGen {
+public class StickTwigGen extends Feature<DefaultFeatureConfig> {
 
-    public static ConfiguredFeature<?, ?> STICK_TWIG_GEN = Feature.RANDOM_PATCH
-        .configure((new RandomPatchFeatureConfig.Builder(
-            new SimpleBlockStateProvider(
-                BlocksInit.STICK_TWIG_BLOCK.getDefaultState()
-            ),
-            SimpleBlockPlacer.INSTANCE))
-                .tries(32).build())
-        .decorate(ConfiguredFeatures.Decorators.SQUARE_HEIGHTMAP_SPREAD_DOUBLE)
-        .decorate(Decorator.COUNT_NOISE
-            .configure(new CountNoiseDecoratorConfig(-5.0D, 1, 1)));
+    public StickTwigGen(Codec<DefaultFeatureConfig> configCodec) {
+        super(configCodec);
+    }
+
+    @Override
+    public boolean generate(StructureWorldAccess world, ChunkGenerator chunkGenerator, Random random, BlockPos pos,
+            DefaultFeatureConfig featureConfig) {
+        BlockState stateAt = world.getBlockState(pos);
+        BlockState stateDown = world.getBlockState(pos.down());
+        if (stateAt.isAir() && ModBlockTags.ROCK_PLACEABLE_ON.contains(stateDown.getBlock())) {
+            world.setBlockState(pos, BlocksInit.STICK_TWIG_BLOCK.getDefaultState(), 3);
+            return true;
+        }
+        return true;
+    }
 
 }

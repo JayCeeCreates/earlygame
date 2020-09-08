@@ -4,13 +4,14 @@
   "version": "${version}",
 
   "name": "EarlyGame",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "description": "A Fabric mod that emphasizes on changing the early game aspects that makes the gameplay feel \"realistic\".",
   "authors": [
     "JayCeeCreates"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://twitter.com/jaycee_creates",
+    "sources": "https://github.com/JayCeeCreates/earlygame.git",
+    "issues": "https://github.com/JayCeeCreates/earlygame/issues"
   },
 
   "license": "CC0-1.0",
