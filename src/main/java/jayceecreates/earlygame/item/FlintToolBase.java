@@ -1,6 +1,5 @@
 package jayceecreates.earlygame.item;
 
-import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 
@@ -28,12 +27,12 @@ public class FlintToolBase implements ToolMaterial {
 
     @Override
     public int getEnchantability() {
-        return 5;
+        return 0;
     }
 
     @Override
     public Ingredient getRepairIngredient() {
-        return Ingredient.ofItems(Items.FLINT);
+        return null;
     }
     
 }

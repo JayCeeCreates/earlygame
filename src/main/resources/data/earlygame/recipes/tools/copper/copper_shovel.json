@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "x",
+        "y",
+        "y"
+    ],
+    "key": {
+        "x": {
+            "item": "earlygame:copper_ingot"
+        },
+        "y": {
+            "item": "minecraft:stick"
+        }
+    },
+    "result": {
+        "item": "earlygame:copper_shovel",
+        "count": 1
+    }
+}

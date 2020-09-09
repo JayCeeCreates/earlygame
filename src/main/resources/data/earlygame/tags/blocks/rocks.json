@@ -1,0 +1,11 @@
+{
+    "replace": false,
+    "values": [
+        "earlygame:stone_rock_block",
+        "earlygame:granite_rock_block",
+        "earlygame:andesite_rock_block",
+        "earlygame:diorite_rock_block",
+        "earlygame:sandstone_rock_block",
+        "earlygame:red_sandstone_rock_block"
+    ]
+}

@@ -3,6 +3,7 @@ package jayceecreates.earlygame;
 import jayceecreates.earlygame.init.BlocksInit;
 import jayceecreates.earlygame.init.ItemsInit;
 import jayceecreates.earlygame.utils.DisableWoodStoneTools;
+import jayceecreates.earlygame.utils.FlintKnapEvent;
 import jayceecreates.earlygame.utils.RequiredTool;
 import jayceecreates.earlygame.world.CopperOreGen;
 import net.fabricmc.api.ModInitializer;
@@ -33,7 +34,9 @@ public class EarlyGame implements ModInitializer {
         // noStoneWoodTier
         DisableWoodStoneTools.noStoneWoodTier();
 
+        // knapEvent
+        FlintKnapEvent.knapEvent();
+
     }
-    
     
 }

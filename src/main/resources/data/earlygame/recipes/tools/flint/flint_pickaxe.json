@@ -7,7 +7,7 @@
     ],
     "key": {
         "#": {
-            "item": "minecraft:flint"
+            "item": "earlygame:flint_shard"
         },
         "E": {
             "item": "earlygame:lashing"

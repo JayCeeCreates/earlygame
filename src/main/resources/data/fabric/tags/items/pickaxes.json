@@ -1,6 +1,7 @@
 {
     "replace": false,
     "values": [
-        "earlygame:flint_pickaxe"
+        "earlygame:flint_pickaxe",
+        "earlygame:copper_pickaxe"
     ]
 }

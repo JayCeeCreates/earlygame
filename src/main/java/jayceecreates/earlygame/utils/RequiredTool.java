@@ -22,7 +22,7 @@ import net.minecraft.entity.damage.DamageSource;
 public class RequiredTool {
 
     public static void noBreak(Material material, Tag<Item> toolTag, String warningText) {
-
+        
         AttackBlockCallback.EVENT.register((player, world, hand, pos, direction) -> {
 
             // final ChopWoodHurt chopWoodHurt = new ChopWoodHurt();
@@ -38,7 +38,7 @@ public class RequiredTool {
                 if (world.getBlockState(pos).getMaterial().equals(material)) {
                     // if a player doesn't have a specific tool on hand, don't break it
                     if (!player.inventory.getMainHandStack().getItem().isIn(toolTag)) {
-                        player.sendMessage(new TranslatableText(warningText), true);;
+                        player.sendMessage(new TranslatableText(warningText), true);
                         /**
                         System.out.println("rand1: " + rand);
                         System.out.println(player.world.isClient);

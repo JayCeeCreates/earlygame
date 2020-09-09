@@ -7,6 +7,7 @@ import com.google.common.collect.ImmutableMap;
 import com.mojang.serialization.Codec;
 
 import jayceecreates.earlygame.init.BlocksInit;
+import jayceecreates.earlygame.utils.ModBlockTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -24,6 +25,11 @@ public class StoneRockGen extends Feature<DefaultFeatureConfig> {
         .put(Blocks.ANDESITE, BlocksInit.ANDESITE_ROCK_BLOCK)
         .put(Blocks.DIORITE, BlocksInit.DIORITE_ROCK_BLOCK)
         .put(Blocks.GRANITE, BlocksInit.GRANITE_ROCK_BLOCK)
+        .put(Blocks.SAND, BlocksInit.SANDSTONE_ROCK_BLOCK)
+        .put(Blocks.SANDSTONE, BlocksInit.SANDSTONE_ROCK_BLOCK)
+        .put(Blocks.RED_SAND, BlocksInit.RED_SANDSTONE_ROCK_BLOCK)
+        .put(Blocks.RED_SANDSTONE, BlocksInit.RED_SANDSTONE_ROCK_BLOCK)
+        .put(Blocks.TERRACOTTA, BlocksInit.RED_SANDSTONE_ROCK_BLOCK)
         .build()
     );
 

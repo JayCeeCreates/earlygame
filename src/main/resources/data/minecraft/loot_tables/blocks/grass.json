@@ -31,10 +31,10 @@
                   },
                   {
                     "condition": "minecraft:random_chance",
-                    "chance": 0.25
+                    "chance": 0.20
                   }
                 ],
-                "name": "earlygame:lashing"
+                "name": "earlygame:plant_fiber"
               },
               {
                 "type": "item",

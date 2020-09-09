@@ -1,4 +1,4 @@
-package jayceecreates.earlygame.world;
+package jayceecreates.earlygame.utils;
 
 import net.fabricmc.fabric.api.tag.TagRegistry;
 import net.minecraft.block.Block;
@@ -7,6 +7,7 @@ import net.minecraft.util.Identifier;
 
 public final class ModBlockTags {
     public static final Tag<Block> ROCK_PLACEABLE_ON = register("rock_placeable_on");
+    public static final Tag<Block> ROCKS = register("rocks");
 
 	private ModBlockTags() { }
 

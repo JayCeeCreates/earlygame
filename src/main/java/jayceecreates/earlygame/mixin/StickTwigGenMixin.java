@@ -28,5 +28,77 @@ public class StickTwigGenMixin {
     private static void addForestGrass(GenerationSettings.Builder builder, CallbackInfo ci) {
         builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModConfiguredFeatures.STICK_TWIG);
     }
+
+    @Inject(
+        method = "addJungleGrass(Lnet/minecraft/world/biome/GenerationSettings$Builder;)V",
+        at = @At("TAIL")
+    )
+    private static void addJungleGrass(GenerationSettings.Builder builder, CallbackInfo ci) {
+        builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModConfiguredFeatures.STICK_TWIG);
+    }
+
+    @Inject(
+        method = "addShatteredSavannaGrass(Lnet/minecraft/world/biome/GenerationSettings$Builder;)V",
+        at = @At("TAIL")
+    )
+    private static void addShatteredSavannaGrass(GenerationSettings.Builder builder, CallbackInfo ci) {
+        builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModConfiguredFeatures.STICK_TWIG);
+    }
+
+    @Inject(
+        method = "addSavannaGrass(Lnet/minecraft/world/biome/GenerationSettings$Builder;)V",
+        at = @At("TAIL")
+    )
+    private static void addSavannaGrass(GenerationSettings.Builder builder, CallbackInfo ci) {
+        builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModConfiguredFeatures.STICK_TWIG);
+    }
+
+    @Inject(
+        method = "addBadlandsGrass(Lnet/minecraft/world/biome/GenerationSettings$Builder;)V",
+        at = @At("TAIL")
+    )
+    private static void addBadlandsGrass(GenerationSettings.Builder builder, CallbackInfo ci) {
+        builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModConfiguredFeatures.STICK_TWIG);
+    }
+
+    @Inject(
+        method = "addSwampFeatures(Lnet/minecraft/world/biome/GenerationSettings$Builder;)V",
+        at = @At("TAIL")
+    )
+    private static void addSwampFeatures(GenerationSettings.Builder builder, CallbackInfo ci) {
+        builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModConfiguredFeatures.STICK_TWIG);
+    }
+
+    @Inject(
+        method = "addDesertDeadBushes(Lnet/minecraft/world/biome/GenerationSettings$Builder;)V",
+        at = @At("TAIL")
+    )
+    private static void addDesertDeadBushes(GenerationSettings.Builder builder, CallbackInfo ci) {
+        builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModConfiguredFeatures.STICK_TWIG);
+    }
+
+    @Inject(
+        method = "addGiantTaigaGrass(Lnet/minecraft/world/biome/GenerationSettings$Builder;)V",
+        at = @At("TAIL")
+    )
+    private static void addGiantTaigaGrass(GenerationSettings.Builder builder, CallbackInfo ci) {
+        builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModConfiguredFeatures.STICK_TWIG);
+    }
+
+    @Inject(
+        method = "addDefaultGrass(Lnet/minecraft/world/biome/GenerationSettings$Builder;)V",
+        at = @At("TAIL")
+    )
+    private static void addDefaultGrass(GenerationSettings.Builder builder, CallbackInfo ci) {
+        builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModConfiguredFeatures.STICK_TWIG);
+    }
+
+    @Inject(
+        method = "addTaigaGrass(Lnet/minecraft/world/biome/GenerationSettings$Builder;)V",
+        at = @At("TAIL")
+    )
+    private static void addTaigaGrass(GenerationSettings.Builder builder, CallbackInfo ci) {
+        builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModConfiguredFeatures.STICK_TWIG);
+    }
     
 }
