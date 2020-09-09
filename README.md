@@ -1,5 +1,9 @@
-# EarlyGame
-A 1.16.2 Fabric mod focusing on changing early game aspects to make the game feel more "realistic". This mod is currently in the alpha state so expect incomplete features
+<p align="center">
+  <img width="384" height="384" src="https://cdn.discordapp.com/attachments/669587583034064919/753223254474227762/icon.png">
+</p>
+
+<h1 align="center">EarlyGame</h1>
+<p align="center">A 1.16.2 Fabric mod focusing on changing early game aspects to make the game feel more "realistic". This mod is currently in the alpha state so expect incomplete features.</p>
 
 ## Background
 This idea revolves around the fact that as of this writing, no such mods for early game realism are present in the Fabric mod database. Moreover, it was inspired by three particular Forge mods that have the same premise, namely [No Tree Punching (1.12.2/1.15.2)](https://www.curseforge.com/minecraft/mc-mods/no-tree-punching), [Natural Progression (1.14.4/1.15.2)](https://www.curseforge.com/minecraft/mc-mods/natural-progressions), and [TerraFirmaCraft (1.12.2)](https://www.curseforge.com/minecraft/mc-mods/tfcraft) mods. Then I thought, "Fine, I'll do it myself."
