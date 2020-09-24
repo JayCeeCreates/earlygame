@@ -38,7 +38,8 @@ This idea revolves around the fact that as of this writing, no such mods for ear
 All incompatibilities and bugs can be reported in the [issues](https://github.com/JayCeeCreates/earlygame/issues) section.
 
 ## Credits
-- **BoogieMonster1O1** (a great help for the code)
+- **BoogieMonster1O1#2458** (a great help for the code)
+- **! !#6008** (a great help for the code)
 - **You** (for playing with this mod!)
 
 ### Any plans for a Forge version?
