@@ -10,14 +10,10 @@ import net.minecraft.item.Item;
 import net.minecraft.tag.Tag;
 import net.minecraft.util.ActionResult;
 
-/**
-I'll get back at you guys soon(tm)
-
-import net.minecraft.text.Text;
+/*import net.minecraft.text.Text;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.damage.DamageSource;
-*/
+import net.minecraft.entity.damage.DamageSource;*/
 
 public class RequiredTool {
 
@@ -32,22 +28,18 @@ public class RequiredTool {
                 return ActionResult.PASS;
             }
             
-            // if player is not in creative
             if (!player.isCreative()) {
-                // if the block targeted is of a specific material
+
                 if (world.getBlockState(pos).getMaterial().equals(material)) {
-                    // if a player doesn't have a specific tool on hand, don't break it
+                    
                     if (!player.inventory.getMainHandStack().getItem().isIn(toolTag)) {
                         player.sendMessage(new TranslatableText(warningText), true);
-                        /**
-                        System.out.println("rand1: " + rand);
+                        /*System.out.println("rand1: " + rand);
                         System.out.println(player.world.isClient);
-                        // it should damage the player in random chances
                         if (player.inventory.getMainHandStack().isEmpty() && rand == 1) {
                             System.out.println("Should damage");
                             player.damage(chopWoodHurt, 1.0F);
-                        }
-                        */
+                        }*/
                         return ActionResult.SUCCESS;
                     }
                 }
@@ -55,8 +47,8 @@ public class RequiredTool {
             return ActionResult.PASS;
         });
     }
-    /**
-    public static class ChopWoodHurt extends DamageSource {
+    
+    /*public static class ChopWoodHurt extends DamageSource {
 
         ChopWoodHurt() {
             super("chopWoodHurt");
@@ -72,8 +64,8 @@ public class RequiredTool {
             return new TranslatableText("earlygame.splintered", entity.getDisplayName());
         }
 
-    }
-    */
+    }*/
+    
     public static void requiredToolInit() {
         noBreak(Material.WOOD, FabricToolTags.AXES, "You need an axe to cut wood!"); // wood cutting
         noBreak(Material.NETHER_WOOD, FabricToolTags.AXES, "You need an axe to cut wood!"); // wood cutting

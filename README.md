@@ -1,6 +1,6 @@
 [![License](https://img.shields.io/github/license/jayceecreates/earlygame?style=for-the-badge)](https://github.com/JayCeeCreates/earlygame/blob/master/LICENSE)
 ![Minecraft Version](https://img.shields.io/badge/mc%20version-1.16.2-brightgreen?style=for-the-badge)
-![Mod Version](https://img.shields.io/badge/mod%20version-0.3.0a-yellow?style=for-the-badge)
+![Mod Version](https://img.shields.io/badge/mod%20version-0.3.1a-yellow?style=for-the-badge)
 [![Modloader](https://img.shields.io/badge/modloader-fabric-blue?style=for-the-badge)](https://fabricmc.net)
 
 <p align="center">
@@ -27,10 +27,9 @@ This idea revolves around the fact that as of this writing, no such mods for ear
 - Copper tools are tiered exactly with stone tools to make it useful for those who use stone tools a lot.
 - Copper armor can be crafted for a small but right amount of protection.
 - New tools are introduced as well: saws and knives!
-### TODO
-- Waterlogging small blocks such as rocks
+### In consideration
 - Taking damage from breaking wooden and stone materials with bare hands
-- Wiki
+- Rock generation underwater
 
 ## Dependencies
 - **Fabric API** (0.20.1 build 401-1.16 and above)
