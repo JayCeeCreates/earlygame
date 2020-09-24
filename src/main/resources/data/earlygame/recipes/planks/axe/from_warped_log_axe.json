@@ -1,0 +1,16 @@
+{
+    "type": "earlygame:crafting_shapeless",
+    "ingredients": [
+        {
+            "tag": "earlygame:axes"
+        },
+        {
+            "tag": "minecraft:warped_stems"
+        }
+    ],
+    "result": {
+        "item": "minecraft:warped_planks",
+        "count": 1
+    },
+    "group": "earlygame_crafting"
+}

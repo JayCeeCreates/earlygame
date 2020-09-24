@@ -1,0 +1,16 @@
+{
+    "type": "earlygame:crafting_shapeless",
+    "ingredients": [
+        {
+            "tag": "earlygame:axes"
+        },
+        {
+            "tag": "minecraft:oak_logs"
+        }
+    ],
+    "result": {
+        "item": "minecraft:oak_planks",
+        "count": 1
+    },
+    "group": "earlygame_crafting"
+}

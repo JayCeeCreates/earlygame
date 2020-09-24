@@ -1,0 +1,16 @@
+{
+    "type": "earlygame:crafting_shapeless",
+    "ingredients": [
+        {
+            "tag": "earlygame:axes"
+        },
+        {
+            "tag": "minecraft:birch_logs"
+        }
+    ],
+    "result": {
+        "item": "minecraft:birch_planks",
+        "count": 1
+    },
+    "group": "earlygame_crafting"
+}

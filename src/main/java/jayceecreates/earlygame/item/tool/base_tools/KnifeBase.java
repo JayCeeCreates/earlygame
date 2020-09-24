@@ -1,4 +1,4 @@
-package jayceecreates.earlygame.item.tool.copper_tier;
+package jayceecreates.earlygame.item.tool.base_tools;
 
 import jayceecreates.earlygame.item.ModItemGroup;
 import net.minecraft.block.BlockState;
@@ -11,10 +11,10 @@ import net.minecraft.item.ToolMaterial;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-public class CopperKnife extends SwordItem {
-
-    public CopperKnife(ToolMaterial material) {
-        super(material, 1, -1.5f, new Item.Settings().group(ModItemGroup.EARLYGAME));
+public class KnifeBase extends SwordItem {
+    
+    public KnifeBase(ToolMaterial material) {
+        super(material, 1, 0f, new Item.Settings().group(ModItemGroup.EARLYGAME));
     }
     
     @Override

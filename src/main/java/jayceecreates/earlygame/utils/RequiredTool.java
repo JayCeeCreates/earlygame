@@ -1,4 +1,4 @@
-// Thanks to BoogieMonster1O1 from the Fabric Discord!
+// Thanks to BoogieMonster1O1#2458 from the Fabric Discord for the help!
 
 package jayceecreates.earlygame.utils;
 

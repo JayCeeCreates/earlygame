@@ -2,6 +2,11 @@
     "replace": false,
     "values": [
         "earlygame:flint_axe",
-        "earlygame:copper_axe"
+        "earlygame:copper_axe",
+        "earlygame:copper_saw",
+        "earlygame:iron_saw",
+        "earlygame:golden_saw",
+        "earlygame:diamond_saw",
+        "earlygame:netherite_saw"
     ]
 }

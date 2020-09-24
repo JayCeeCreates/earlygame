@@ -1,6 +1,7 @@
 package jayceecreates.earlygame.block;
 
 import jayceecreates.earlygame.init.BlocksInit;
+import jayceecreates.earlygame.utils.ModBlockTags;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -40,10 +41,7 @@ public class StickTwigBlock extends Block {
             floor.isIn(BlockTags.LEAVES) ||
             floor.isIn(BlockTags.FLOWERS) ||
             floor.isIn(BlockTags.FLOWER_POTS) ||
-            floor.isOf(BlocksInit.ANDESITE_ROCK_BLOCK) ||
-            floor.isOf(BlocksInit.GRANITE_ROCK_BLOCK) ||
-            floor.isOf(BlocksInit.DIORITE_ROCK_BLOCK) ||
-            floor.isOf(BlocksInit.STONE_ROCK_BLOCK) ||
+            floor.isIn(ModBlockTags.ROCKS) ||
             floor.isOf(BlocksInit.STICK_TWIG_BLOCK)
         );
     }

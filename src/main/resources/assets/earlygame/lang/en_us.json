@@ -1,10 +1,13 @@
 {
     "item.earlygame.plant_fiber": "Plant Fiber",
     "item.earlygame.lashing": "Lashing",
+
     "item.earlygame.flint_shard": "Flint Shard",
     "item.earlygame.flint_knife": "Flint Knife",
     "item.earlygame.flint_pickaxe": "Flint Pickaxe",
     "item.earlygame.flint_axe": "Flint Axe",
+    "item.earlygame.flint_saw": "Flint Saw",
+
     "item.earlygame.copper_ingot": "Copper Ingot",
     "item.earlygame.copper_nugget": "Copper Nugget",
     "item.earlygame.copper_helmet": "Copper Helmet",
@@ -16,7 +19,20 @@
     "item.earlygame.copper_shovel": "Copper Shovel",
     "item.earlygame.copper_pickaxe": "Copper Pickaxe",
     "item.earlygame.copper_axe": "Copper Axe",
+    "item.earlygame.copper_saw": "Copper Saw",
     "item.earlygame.copper_hoe": "Copper Hoe",
+
+    "item.earlygame.iron_knife": "Iron Knife",
+    "item.earlygame.iron_saw": "Iron Saw",
+
+    "item.earlygame.golden_knife": "Golden Knife",
+    "item.earlygame.golden_saw": "Golden Saw",
+
+    "item.earlygame.diamond_knife": "Diamond Knife",
+    "item.earlygame.diamond_saw": "Diamond Saw",
+    
+    "item.earlygame.netherite_knife": "Netherite Knife",
+    "item.earlygame.netherite_saw": "Netherite Saw",
     
     "block.earlygame.stone_rock_block": "Stone Rock",
     "block.earlygame.andesite_rock_block": "Andesite Rock",

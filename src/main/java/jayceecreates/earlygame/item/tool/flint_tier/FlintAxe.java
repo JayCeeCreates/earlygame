@@ -8,7 +8,7 @@ import net.minecraft.item.ToolMaterial;
 public class FlintAxe extends AxeItem {
 
     public FlintAxe(ToolMaterial material) {
-        super(material, 1, -2.5f, new Item.Settings().group(ModItemGroup.EARLYGAME));
+        super(material, 3, -2.5f, new Item.Settings().group(ModItemGroup.EARLYGAME));
     }
     
 }

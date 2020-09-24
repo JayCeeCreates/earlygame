@@ -1,0 +1,16 @@
+{
+    "type": "earlygame:crafting_shapeless",
+    "ingredients": [
+        {
+            "tag": "earlygame:saws"
+        },
+        {
+            "tag": "minecraft:jungle_logs"
+        }
+    ],
+    "result": {
+        "item": "minecraft:jungle_planks",
+        "count": 4
+    },
+    "group": "earlygame_crafting"
+}
