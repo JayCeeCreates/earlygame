@@ -1,0 +1,54 @@
+{
+    "parent": "minecraft:recipes/root",
+    "rewards": {
+        "recipes": [
+            "earlygame:flint_pickaxe"
+        ]
+    },
+    "criteria": {
+        "has_flint": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "earlygame:flint_shard"
+                    }
+                ]
+            }
+        },
+        "has_lashing": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "earlygame:lashing"
+                    }
+                ]
+            }
+        },
+        "has_stick": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:stick"
+                    }
+                ]
+            }
+        },
+        "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "earlygame:flint_pickaxe"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_flint",
+            "has_lashing",
+            "has_stick",
+            "has_the_recipe"
+        ]
+    ]
+}

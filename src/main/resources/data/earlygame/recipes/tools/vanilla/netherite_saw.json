@@ -7,14 +7,14 @@
     ],
     "key": {
         "x": {
-            "item": "earlygame:copper_ingot"
+            "item": "minecraft:netherite_ingot"
         },
         "y": {
             "item": "minecraft:stick"
         }
     },
     "result": {
-        "item": "earlygame:copper_saw",
+        "item": "earlygame:netherite_saw",
         "count": 1
     }
 }

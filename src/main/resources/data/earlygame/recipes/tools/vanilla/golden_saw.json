@@ -7,14 +7,14 @@
     ],
     "key": {
         "x": {
-            "item": "earlygame:copper_ingot"
+            "item": "minecraft:gold_ingot"
         },
         "y": {
             "item": "minecraft:stick"
         }
     },
     "result": {
-        "item": "earlygame:copper_saw",
+        "item": "earlygame:golden_saw",
         "count": 1
     }
 }

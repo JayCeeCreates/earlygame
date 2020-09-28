@@ -1,6 +1,7 @@
 {
     "replace": false,
     "values": [
+      "earlygame:flint_saw",
       "earlygame:copper_saw",
       "earlygame:iron_saw",
       "earlygame:golden_saw",

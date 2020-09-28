@@ -1,20 +1,17 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "  y",
-        " yx",
-        "yx "
+        "x x",
+        "xxx",
+        "xxx"
     ],
     "key": {
         "x": {
             "item": "earlygame:copper_ingot"
-        },
-        "y": {
-            "item": "minecraft:stick"
         }
     },
     "result": {
-        "item": "earlygame:copper_saw",
+        "item": "earlygame:copper_chestplate",
         "count": 1
     }
 }

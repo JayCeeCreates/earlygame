@@ -1,0 +1,142 @@
+{
+    "parent": "minecraft:recipes/root",
+    "rewards": {
+      "recipes": [
+        "earlygame:copper_nugget_from_smelting"
+      ]
+    },
+    "criteria": {
+        "has_copper_pickaxe": {
+          "trigger": "minecraft:inventory_changed",
+          "conditions": {
+            "items": [
+              {
+                "item": "earlygame:copper_pickaxe"
+              }
+            ]
+          }
+        },
+        "has_copper_shovel": {
+          "trigger": "minecraft:inventory_changed",
+          "conditions": {
+            "items": [
+              {
+                "item": "earlygame:copper_shovel"
+              }
+            ]
+          }
+        },
+        "has_copper_axe": {
+          "trigger": "minecraft:inventory_changed",
+          "conditions": {
+            "items": [
+              {
+                "item": "earlygame:copper_axe"
+              }
+            ]
+          }
+        },
+        "has_copper_hoe": {
+          "trigger": "minecraft:inventory_changed",
+          "conditions": {
+            "items": [
+              {
+                "item": "earlygame:copper_hoe"
+              }
+            ]
+          }
+        },
+        "has_copper_sword": {
+          "trigger": "minecraft:inventory_changed",
+          "conditions": {
+            "items": [
+              {
+                "item": "earlygame:copper_sword"
+              }
+            ]
+          }
+        },
+        "has_copper_knife": {
+          "trigger": "minecraft:inventory_changed",
+          "conditions": {
+            "items": [
+              {
+                "item": "earlygame:copper_knife"
+              }
+            ]
+          }
+        },
+        "has_copper_saw": {
+          "trigger": "minecraft:inventory_changed",
+          "conditions": {
+            "items": [
+              {
+                "item": "earlygame:copper_saw"
+              }
+            ]
+          }
+        },
+        "has_copper_helmet": {
+          "trigger": "minecraft:inventory_changed",
+          "conditions": {
+            "items": [
+              {
+                "item": "earlygame:copper_helmet"
+              }
+            ]
+          }
+        },
+        "has_copper_chestplate": {
+          "trigger": "minecraft:inventory_changed",
+          "conditions": {
+            "items": [
+              {
+                "item": "earlygame:copper_chestplate"
+              }
+            ]
+          }
+        },
+        "has_copper_leggings": {
+          "trigger": "minecraft:inventory_changed",
+          "conditions": {
+            "items": [
+              {
+                "item": "earlygame:copper_leggings"
+              }
+            ]
+          }
+        },
+        "has_copper_boots": {
+          "trigger": "minecraft:inventory_changed",
+          "conditions": {
+            "items": [
+              {
+                "item": "earlygame:copper_boots"
+              }
+            ]
+          }
+        },
+        "has_the_recipe": {
+          "trigger": "minecraft:recipe_unlocked",
+          "conditions": {
+            "recipe": "earlygame:copper_nugget_from_smelting"
+          }
+        }
+    },
+    "requirements": [
+        [
+            "has_copper_sword",
+            "has_copper_axe",
+            "has_copper_pickaxe",
+            "has_copper_shovel",
+            "has_copper_hoe",
+            "has_copper_knife",
+            "has_copper_saw",
+            "has_copper_helmet",
+            "has_copper_chestplate",
+            "has_copper_leggings",
+            "has_copper_boots",
+            "has_the_recipe"
+        ]
+    ]
+}
