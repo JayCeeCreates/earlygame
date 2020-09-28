@@ -14,7 +14,8 @@
 This idea revolves around the fact that as of this writing, no such mods for early game realism are present in the Fabric mod database. Then I thought, "Fine, I'll do it myself." Moreover, it was inspired by two particular Forge mods that have the same premise, namely [No Tree Punching (1.12.2/1.15.2)](https://www.curseforge.com/minecraft/mc-mods/no-tree-punching) and [Natural Progression (1.14.4/1.15.2)](https://www.curseforge.com/minecraft/mc-mods/natural-progressions).
 
 ## Features
-### Current
+<details><summary><b>Current</b></summary>
+  
 - Removed the most beloved early game feature: punching trees.
 - Along with this, stone and wood materials cannot be broken without a proper tool.
 - Rocks and sticks are scattered around the world to help you progress.
@@ -27,10 +28,25 @@ This idea revolves around the fact that as of this writing, no such mods for ear
 - Copper tools are tiered exactly with stone tools to make it useful for those who use stone tools a lot.
 - Copper armor can be crafted for a small but right amount of protection.
 - New tools are introduced as well: saws and knives!
-### In consideration
+
+</details>
+<details><summary><b>In consideration</b></summary>
+  
 - Taking damage from breaking wooden and stone materials with bare hands
 - Rock generation underwater
 - Mod configuration
+
+</details>
+
+## Screenshots
+<details><summary>Show</summary>
+<p align="center">
+<img width="640" height="360" src="https://media.discordapp.net/attachments/669587583034064919/760139762442174494/2020-09-28_21.55.43.png">
+<img width="640" height="360" src="https://media.discordapp.net/attachments/669587583034064919/760139765323399209/2020-09-28_22.00.46.png">
+<img width="640" height="360" src="https://media.discordapp.net/attachments/669587583034064919/760139766770958367/2020-09-28_22.01.32.png">
+<img width="640" height="360" src="https://media.discordapp.net/attachments/669587583034064919/760139769786138684/2020-09-28_22.02.04.png">
+</p>
+</details>
 
 ## Dependencies
 ### Required
