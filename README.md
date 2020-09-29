@@ -1,7 +1,9 @@
-[![License](https://img.shields.io/github/license/jayceecreates/earlygame?style=for-the-badge)](https://github.com/JayCeeCreates/earlygame/blob/master/LICENSE)
-![Minecraft Version](https://img.shields.io/badge/mc%20version-1.16.3-brightgreen?style=for-the-badge)
-![Mod Version](https://img.shields.io/badge/mod%20version-1.0.0a-yellow?style=for-the-badge)
-[![Modloader](https://img.shields.io/badge/modloader-fabric-blue?style=for-the-badge)](https://fabricmc.net)
+<p align="center">
+<a href="https://github.com/JayCeeCreates/earlygame/blob/master/LICENSE"><img src="https://img.shields.io/github/license/jayceecreates/earlygame?style=for-the-badge"></a>
+<img src="https://img.shields.io/badge/mc%20version-1.16.3-brightgreen?style=for-the-badge">
+<img src="https://img.shields.io/badge/mod%20version-1.0.0a-yellow?style=for-the-badge">
+<a href="https://fabricmc.net"><img src="https://img.shields.io/badge/modloader-fabric-blue?style=for-the-badge"></a>
+</p>
 
 <p align="center">
   <img width="384" height="384" src="https://cdn.discordapp.com/attachments/669587583034064919/753223254474227762/icon.png">
