@@ -8,7 +8,7 @@
 </p>
 
 <h1 align="center">EarlyGame</h1>
-<p align="center">A 1.16.3 Fabric mod focusing on changing early game aspects to make the game feel more "realistic". This mod is currently in the alpha state so expect some broken and incomplete features. Changes are bound to happen.</p>
+<p align="center">A Fabric mod focusing on changing early game aspects to make the game feel more "realistic". This mod is currently in the alpha state so expect some broken and incomplete features. Changes are bound to happen.</p>
 
 ## Background
 This idea revolves around the fact that as of this writing, no such mods for early game realism are present in the Fabric mod database. Then I thought, "Fine, I'll do it myself." Moreover, it was inspired by two particular Forge mods that have the same premise, namely [No Tree Punching (1.12.2/1.15.2)](https://www.curseforge.com/minecraft/mc-mods/no-tree-punching) and [Natural Progression (1.14.4/1.15.2)](https://www.curseforge.com/minecraft/mc-mods/natural-progressions).
@@ -35,6 +35,7 @@ This idea revolves around the fact that as of this writing, no such mods for ear
 - Taking damage from breaking wooden and stone materials with bare hands
 - Rock generation underwater
 - Mod configuration
+- Wiki
 
 </details>
 
@@ -50,13 +51,14 @@ This idea revolves around the fact that as of this writing, no such mods for ear
 
 ## Dependencies
 ### Required
-- **Fabric API** (0.22.0 build 408-1.16 and above)
+- **[Fabric API](https://www.curseforge.com/minecraft/mc-mods/fabric-api)** (0.22.0 build 408-1.16 and above)
 ### Optional
-- **Roughly Enough Items**: for crafting new tools
+- **[Roughly Enough Items](https://www.curseforge.com/minecraft/mc-mods/roughly-enough-items)**: for crafting new tools
 
 ## Known Issues
 - Recipes such as copper and flint tools cannot be unlocked for some reason.
 - Some crafting recipes in the vanilla crafting guide are rendered blank; accessing it causes a game crash.
+- Flint knapping event is often delayed.
 
 Incompatibilities and bugs can be reported in the [issues](https://github.com/JayCeeCreates/earlygame/issues) section.
 
