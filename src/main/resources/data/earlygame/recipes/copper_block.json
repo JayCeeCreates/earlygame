@@ -1,13 +1,16 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "xxx",
-        "xxx",
-        "xxx"
+        "xyy",
+        "yyy",
+        "yyy"
     ],
     "key": {
         "x": {
             "item": "earlygame:copper_ingot"
+        },
+        "y": {
+            "tag": "c:copper_ingots"
         }
     },
     "result": {
