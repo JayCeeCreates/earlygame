@@ -58,6 +58,11 @@ public class ModShapelessRecipe extends ShapelessRecipe {
     }
 
     @Override
+    public String getGroup() {
+        return "shapelessrecipe";
+    }
+
+    @Override
     @NonnullDefault
     public DefaultedList<ItemStack> getRemainingStacks(CraftingInventory inv) {
 
