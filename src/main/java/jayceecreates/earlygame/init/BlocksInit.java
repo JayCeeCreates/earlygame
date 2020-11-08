@@ -64,8 +64,6 @@ public class BlocksInit {
         
         // stick
         Registry.register(Registry.BLOCK, new Identifier("earlygame", "stick_twig"), STICK_TWIG_BLOCK);
-        BlockRenderLayerMap.INSTANCE.putBlock(STICK_TWIG_BLOCK, RenderLayer.getCutout());
-        
     }
 
     

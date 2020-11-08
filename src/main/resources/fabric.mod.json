@@ -21,6 +21,9 @@
   "entrypoints": {
     "main": [
       "jayceecreates.earlygame.EarlyGame"
+    ],
+    "client": [
+      "jayceecreates.earlygame.EarlyGameClient"
     ]
   },
   "mixins": [
