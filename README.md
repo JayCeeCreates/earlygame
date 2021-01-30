@@ -13,7 +13,7 @@
 <p align="center">A Fabric mod focusing on changing early game aspects to make the game feel more "realistic". This mod is currently in the alpha state so expect some broken and incomplete features. Changes are bound to happen.</p>
 
 ## Background
-This idea revolves around the fact that as of this writing, no such mods for early game realism are present in the Fabric mod database. Then I thought, "Fine, I'll do it myself." Moreover, it was inspired by two particular Forge mods that have the same premise, namely [No Tree Punching (1.12.2/1.15.2)](https://www.curseforge.com/minecraft/mc-mods/no-tree-punching) and [Natural Progression (1.14.4/1.15.2)](https://www.curseforge.com/minecraft/mc-mods/natural-progressions).
+This idea revolves around the fact that as of this writing, no such mods for early game realism are present in the Fabric mod database. Then I thought, "Fine, I'll do it myself." Moreover, it was inspired by two particular Forge mods that have the same premise, namely [No Tree Punching (1.12.2/1.15.2/1.16.4)](https://www.curseforge.com/minecraft/mc-mods/no-tree-punching) and [Natural Progression (1.14.4/1.15.2/1.16.4)](https://www.curseforge.com/minecraft/mc-mods/natural-progressions).
 
 ## Features
 <details><summary><b>Current</b></summary>
