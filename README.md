@@ -1,6 +1,6 @@
 <p align="center">
 <a href="https://github.com/JayCeeCreates/earlygame/blob/master/LICENSE"><img src="https://img.shields.io/github/license/jayceecreates/earlygame?style=for-the-badge"></a>
-<img src="https://img.shields.io/badge/mc%20version-1.16.3-brightgreen?style=for-the-badge">
+<img src="https://img.shields.io/badge/mc%20version-1.16.5-brightgreen?style=for-the-badge">
 <img src="https://img.shields.io/badge/mod%20version-1.0.0a-yellow?style=for-the-badge">
 <a href="https://fabricmc.net"><img src="https://img.shields.io/badge/modloader-fabric-blue?style=for-the-badge"></a>
 </p>
