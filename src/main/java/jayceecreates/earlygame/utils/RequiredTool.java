@@ -2,6 +2,7 @@
 
 package jayceecreates.earlygame.utils;
 
+import jayceecreates.earlygame.init.BlocksInit;
 import net.fabricmc.fabric.api.event.player.AttackBlockCallback;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.text.TranslatableText;
@@ -20,9 +21,7 @@ public class RequiredTool {
     public static void noBreak(Material material, Tag<Item> toolTag, String warningText) {
         
         AttackBlockCallback.EVENT.register((player, world, hand, pos, direction) -> {
-
-            // final ChopWoodHurt chopWoodHurt = new ChopWoodHurt();
-            // int rand = player.getRandom().nextInt(25);
+            //int rand = player.getRandom().nextInt(25);
 
             if (world.getBlockState(pos) == null || player == null) {
                 return ActionResult.PASS;
@@ -30,20 +29,27 @@ public class RequiredTool {
             
             if (!player.isCreative()) {
 
-                if (world.getBlockState(pos).getMaterial().equals(material)) {
-                    
+                if (world.getBlockState(pos).getMaterial().equals(material) && (
+                    !world.getBlockState(pos).isIn(ModBlockTags.ROCKS) &&
+                    !world.getBlockState(pos).equals(BlocksInit.STICK_TWIG_BLOCK.getDefaultState())
+                )) {
                     if (!player.inventory.getMainHandStack().getItem().isIn(toolTag)) {
                         player.sendMessage(new TranslatableText(warningText), true);
-                        /*System.out.println("rand1: " + rand);
-                        System.out.println(player.world.isClient);
+                        /*System.out.println("B" + player.world.isClient);
                         if (player.inventory.getMainHandStack().isEmpty() && rand == 1) {
-                            System.out.println("Should damage");
-                            player.damage(chopWoodHurt, 1.0F);
+                            if (!world.isClient()) {
+                                System.out.println("C" + player.world.isClient);
+                                System.out.println("Should damage");
+                                player.damage(new ChopWoodHurt(), 1.0F);
+                            }
+                            return ActionResult.SUCCESS;
                         }*/
                         return ActionResult.SUCCESS;
                     }
                 }
+
             }
+            
             return ActionResult.PASS;
         });
     }
