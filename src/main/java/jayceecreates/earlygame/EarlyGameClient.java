@@ -1,3 +1,5 @@
+// Thanks to Bonono63 for the help!
+
 package jayceecreates.earlygame;
 
 import jayceecreates.earlygame.init.BlocksInit;
