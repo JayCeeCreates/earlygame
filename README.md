@@ -26,7 +26,7 @@ This idea revolves around the fact that as of this writing, no such mods for ear
 - Vanilla crafting for planks and sticks are also disabled.
 - Flint can be knapped on the stone surface to create flint shards.
 - Flint shards can then be crafted into makeshift tools such as a knife, pickaxe, axe, and saw.
-- There's a new mineral: copper!
+- There's a new mineral: copper! (well, that was before 1.17 happened lol)
 - Copper tools are tiered exactly with stone tools to make it useful for those who use stone tools a lot.
 - Copper armor can be crafted for a small but right amount of protection.
 - New tools are introduced as well: saws and knives!
@@ -34,8 +34,8 @@ This idea revolves around the fact that as of this writing, no such mods for ear
 </details>
 <details><summary><b>In consideration</b></summary>
   
-- Taking damage from breaking wooden and stone materials with bare hands
-- Rock generation underwater
+- Fixing the mining damage mechanic from wood/stone materials
+- Underwater rock generation 
 - Mod configuration
 - Wiki
 
@@ -65,8 +65,8 @@ This idea revolves around the fact that as of this writing, no such mods for ear
 Incompatibilities and bugs can be reported in the [issues](https://github.com/JayCeeCreates/earlygame/issues) section.
 
 ## Credits
-- **BoogieMonster1O1#2458** (a great help for the code)
-- **! !#6008** (a great help for the code)
+- **Fabric Discord community** (a great help for the code)
+- **Contributors** (for the help with issue fixes and other modifications)
 - **You** (for playing with this mod!)
 
 ### Any plans for a Forge version?
