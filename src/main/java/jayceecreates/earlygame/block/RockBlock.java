@@ -1,12 +1,9 @@
 package jayceecreates.earlygame.block;
 
-// import jayceecreates.earlygame.init.BlocksInit;
-// import jayceecreates.earlygame.utils.ModBlockTags;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-// import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
 import net.minecraft.block.ShapeContext;
 import net.minecraft.block.Waterloggable;
@@ -20,7 +17,6 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
-// import net.minecraft.tag.BlockTags;
 import net.minecraft.tag.FluidTags;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
@@ -49,22 +45,6 @@ public class RockBlock extends Block implements Waterloggable {
        builder.add(WATERLOGGED);
     }
 
-    /*protected boolean canPlaceOnTop(BlockState floor, BlockView world, BlockPos pos) {
-        return !(
-            floor.isAir() ||
-            floor.isOf(Blocks.GRASS) ||
-            floor.isOf(Blocks.TALL_GRASS) ||
-            floor.isIn(BlockTags.SAND) ||
-            floor.isOf(Blocks.WATER) ||
-            floor.isOf(Blocks.LAVA) ||
-            floor.isIn(BlockTags.LEAVES) ||
-            floor.isIn(BlockTags.FLOWERS) ||
-            floor.isIn(BlockTags.FLOWER_POTS) ||
-            floor.isIn(ModBlockTags.ROCKS) ||
-            floor.isOf(BlocksInit.STICK_TWIG_BLOCK)
-        );
-    }*/
-
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         WorldAccess worldAccess = ctx.getWorld();
@@ -92,8 +72,6 @@ public class RockBlock extends Block implements Waterloggable {
 
     @Override
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
-        // BlockPos blockPos = pos.down();
-        // return this.canPlaceOnTop(world.getBlockState(blockPos), world, blockPos);
         BlockState stateUnder = world.getBlockState(pos.down());
         return stateUnder.isSideSolidFullSquare(world, pos.down(), Direction.UP);
     }

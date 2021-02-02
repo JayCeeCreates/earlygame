@@ -33,8 +33,7 @@ This idea revolves around the fact that as of this writing, no such mods for ear
 
 </details>
 <details><summary><b>In consideration</b></summary>
-  
-- Fixing the mining damage mechanic from wood/stone materials
+
 - Underwater rock generation 
 - Mod configuration
 - Wiki

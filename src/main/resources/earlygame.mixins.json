@@ -4,14 +4,14 @@
     "package": "jayceecreates.earlygame.mixin",
     "compatibilityLevel": "JAVA_8",
     "mixins": [
+        "BlockMiningMixin",
         "CopperOreGenMixin",
-        "StoneRockGenMixin",
         "StickTwigGenMixin",
         "SlowDigSpeedMixin"
     ],
     "client": [
     ],
     "injectors": {
-      "defaultRequire": 1
+        "defaultRequire": 1
     }
-  }
+}

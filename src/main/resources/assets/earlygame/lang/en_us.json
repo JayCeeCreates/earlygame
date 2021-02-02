@@ -1,4 +1,9 @@
 {
+    "earlygame.pick_required": "You need a pickaxe to mine!",
+    "earlygame.axe_required": "You need an axe to cut wood!",
+    "earlygame.broken_bones": "%s was dislocated whilst punching stone",
+    "earlygame.splintered": "%s was splintered whilst punching wood",
+
     "item.earlygame.plant_fiber": "Plant Fiber",
     "item.earlygame.lashing": "Lashing",
 
