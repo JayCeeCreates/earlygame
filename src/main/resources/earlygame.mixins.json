@@ -7,7 +7,7 @@
         "BlockMiningMixin",
         "CopperOreGenMixin",
         "StickTwigGenMixin",
-        "SlowDigSpeedMixin"
+        "StoneRockGenMixin"
     ],
     "client": [
     ],
