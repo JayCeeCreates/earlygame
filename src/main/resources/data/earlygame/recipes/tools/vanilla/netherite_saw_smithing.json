@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:smithing",
+    "base": {
+        "item": "earlygame:diamond_saw"
+    },
+    "addition": {
+        "item": "minecraft:netherite_ingot"
+    },
+    "result": {
+        "item": "earlygame:netherite_saw"
+    }
+}

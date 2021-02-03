@@ -2,7 +2,7 @@
     "parent": "minecraft:recipes/root",
     "rewards": {
         "recipes": [
-            "earlygame:netherite_knife"
+            "earlygame:netherite_knife_smithing"
         ]
     },
     "criteria": {
@@ -19,7 +19,7 @@
         "has_the_recipe": {
             "trigger": "minecraft:recipe_unlocked",
             "conditions": {
-                "recipe": "earlygame:netherite_knife"
+                "recipe": "earlygame:netherite_knife_smithing"
             }
         }
     },
