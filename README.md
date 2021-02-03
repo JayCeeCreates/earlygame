@@ -42,10 +42,10 @@ This idea revolves around the fact that as of this writing, no such mods for ear
 ## Screenshots
 <details><summary>Show</summary>
 <p align="center">
-<img width="640" height="360" src="https://media.discordapp.net/attachments/669587583034064919/760139762442174494/2020-09-28_21.55.43.png">
-<img width="640" height="360" src="https://media.discordapp.net/attachments/669587583034064919/760139765323399209/2020-09-28_22.00.46.png">
-<img width="640" height="360" src="https://media.discordapp.net/attachments/669587583034064919/760139766770958367/2020-09-28_22.01.32.png">
-<img width="640" height="360" src="https://media.discordapp.net/attachments/669587583034064919/760139769786138684/2020-09-28_22.02.04.png">
+<img width="640" height="360" src="https://cdn.discordapp.com/attachments/669587583034064919/806583529122168886/2021-02-04_01.14.54.png">
+<img width="640" height="360" src="https://cdn.discordapp.com/attachments/669587583034064919/806583532750110770/2021-02-04_01.41.03.png">
+<img width="640" height="360" src="https://cdn.discordapp.com/attachments/669587583034064919/806583540753498112/2021-02-04_01.42.00.png">
+<img width="640" height="360" src="https://cdn.discordapp.com/attachments/669587583034064919/806583556100063302/2021-02-04_01.44.07.png">
 </p>
 </details>
 
