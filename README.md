@@ -27,7 +27,7 @@ This idea revolves around the fact that as of this writing, no such mods for ear
 - Flint can be knapped on the stone surface to create flint shards.
 - Flint shards can then be crafted into makeshift tools such as a knife, pickaxe, axe, and saw.
 - There's a new mineral: copper! (well, that was before 1.17 happened lol)
-- Copper tools are tiered exactly with stone tools to make it useful for those who use stone tools a lot.
+- Copper tools are tiered exactly with stone tools to make them useful for those who use stone tools a lot.
 - Copper armor can be crafted for a small but right amount of protection.
 - New tools are introduced as well: saws and knives!
 
