@@ -4,6 +4,33 @@
     "earlygame.broken_bones": "%s was dislocated whilst punching stone",
     "earlygame.splintered": "%s was splintered whilst punching wood",
 
+    "text.autoconfig.earlygame.title": "EarlyGame Settings",
+    "text.autoconfig.earlygame.option.warningMessage": "Tool Required Warning",
+    "text.autoconfig.earlygame.option.warningMessage.@Tooltip[0]": "Shows a warning message that tells you that",
+    "text.autoconfig.earlygame.option.warningMessage.@Tooltip[1]": "you need the correct tool whenever you punch",
+    "text.autoconfig.earlygame.option.warningMessage.@Tooltip[2]": "a wooden or stone material",
+    "text.autoconfig.earlygame.option.warningMessage.@Tooltip[3]": "(Default: false)",
+
+    "text.autoconfig.earlygame.option.harderGroundBlocks": "Make Ground Blocks Harder",
+    "text.autoconfig.earlygame.option.harderGroundBlocks.@Tooltip[0]": "Set whether you like to make the digging",
+    "text.autoconfig.earlygame.option.harderGroundBlocks.@Tooltip[1]": "process slower for added realism or not",
+    "text.autoconfig.earlygame.option.harderGroundBlocks.@Tooltip[2]": "(Default: true)",
+
+    "text.autoconfig.earlygame.option.damageProbability": "Damage Probability (%)",
+    "text.autoconfig.earlygame.option.damageProbability.@Tooltip[0]": "Adjust how likely you take damage from punching",
+    "text.autoconfig.earlygame.option.damageProbability.@Tooltip[1]": "wooden or stone materials",
+    "text.autoconfig.earlygame.option.damageProbability.@Tooltip[2]": "(Default: 2.5)",
+
+    "text.autoconfig.earlygame.option.flintConsumeProb": "Flint Knapping Consume Probability",
+    "text.autoconfig.earlygame.option.flintConsumeProb.@Tooltip[0]": "Adjust how likely your flint is consumed from",
+    "text.autoconfig.earlygame.option.flintConsumeProb.@Tooltip[1]": "knapping on stone",
+    "text.autoconfig.earlygame.option.flintConsumeProb.@Tooltip[2]": "(Default: 0.3)",
+
+    "text.autoconfig.earlygame.option.flintSuccessProb": "Flint Knapping Success Probability",
+    "text.autoconfig.earlygame.option.flintSuccessProb.@Tooltip[0]": "Adjust how likely you get flint shards from",
+    "text.autoconfig.earlygame.option.flintSuccessProb.@Tooltip[1]": "flint knapping",
+    "text.autoconfig.earlygame.option.flintSuccessProb.@Tooltip[2]": "(Default: 0.7)",
+
     "item.earlygame.plant_fiber": "Plant Fiber",
     "item.earlygame.lashing": "Lashing",
 

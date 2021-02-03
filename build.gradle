@@ -10,6 +10,13 @@ archivesBaseName = project.archives_base_name
 version = project.mod_version
 group = project.maven_group
 
+minecraft {
+}
+
+repositories {
+	maven { url "https://jitpack.io" }
+}
+
 dependencies {
 	//to change the versions see the gradle.properties file
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
@@ -18,8 +25,17 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+	
+	// Auto Config 1u
+	modImplementation ("me.sargunvohra.mcmods:autoconfig1u:${project.auto_config_version}")
+	include ("me.sargunvohra.mcmods:autoconfig1u:${project.auto_config_version}")
 
-	// Other dependencies
+	// Cloth Config
+	modImplementation ("me.shedaniel.cloth:config-2:${project.cloth_config_version}")
+	include ("me.shedaniel.cloth:config-2:${project.cloth_config_version}")
+
+	// Mod Menu
+	modImplementation ("io.github.prospector:modmenu:${project.mod_menu_version}")
 }
 
 processResources {

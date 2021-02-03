@@ -7,6 +7,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
+import jayceecreates.earlygame.EarlyGameClient;
 import jayceecreates.earlygame.init.BlocksInit;
 import jayceecreates.earlygame.utils.MiningDamageSource;
 import jayceecreates.earlygame.utils.ModBlockTags;
@@ -34,11 +35,13 @@ public abstract class BlockMiningMixin extends LivingEntity {
     private void blockBreak(BlockState state, CallbackInfoReturnable<Float> cir) {
 
         PlayerEntity player = (PlayerEntity) (Object) this;
-        int rand = player.getRandom().nextInt(50);
+        double rand = Math.random();
 
-        if (!player.inventory.getMainHandStack().getItem().isIn(FabricToolTags.SHOVELS)
-                && ModBlockTags.SLOW_DIGGING.contains(state.getBlock()))
-            cir.setReturnValue(cir.getReturnValue() / 5.0F);
+        if (EarlyGameClient.CONFIG.harderGroundBlocks) {
+            if (!player.inventory.getMainHandStack().getItem().isIn(FabricToolTags.SHOVELS)
+                    && ModBlockTags.SLOW_DIGGING.contains(state.getBlock()))
+                cir.setReturnValue(cir.getReturnValue() / 5.0F);
+        }
     
         if (!player.isCreative()) {
             boolean isStone = (state.getMaterial().equals(Material.STONE) ||
@@ -52,17 +55,19 @@ public abstract class BlockMiningMixin extends LivingEntity {
 
             if (isStone)
                 if (!player.inventory.getMainHandStack().getItem().isIn(FabricToolTags.PICKAXES)) {
-                    player.sendMessage(new TranslatableText("earlygame.pick_required"), true);
+                    if (EarlyGameClient.CONFIG.warningMessage)
+                        player.sendMessage(new TranslatableText("earlygame.pick_required"), true);
                     cir.setReturnValue(0.0F);
-                    if (player.inventory.getMainHandStack().isEmpty() && rand == 1)
+                    if (player.inventory.getMainHandStack().isEmpty() && rand <= EarlyGameClient.CONFIG.damageProbability * .01)
                         player.damage(new MiningDamageSource.BrokenHandDamage(), 2.0F);
                 }
 
             if (isWood)
                 if (!player.inventory.getMainHandStack().getItem().isIn(FabricToolTags.AXES)) {
-                    player.sendMessage(new TranslatableText("earlygame.axe_required"), true);
+                    if (EarlyGameClient.CONFIG.warningMessage)
+                        player.sendMessage(new TranslatableText("earlygame.axe_required"), true);
                     cir.setReturnValue(0.0F);
-                    if (player.inventory.getMainHandStack().isEmpty() && rand == 1)
+                    if (player.inventory.getMainHandStack().isEmpty() && rand <= EarlyGameClient.CONFIG.damageProbability * .01)
                         player.damage(new MiningDamageSource.SplinterDamage(), 1.0F);
                 }
 

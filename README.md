@@ -1,6 +1,6 @@
 <p align="center">
 <a href="https://github.com/JayCeeCreates/earlygame/blob/master/LICENSE"><img src="https://img.shields.io/github/license/jayceecreates/earlygame?style=for-the-badge"></a>
-<img src="https://img.shields.io/badge/mc%20version-1.16.5-brightgreen?style=for-the-badge">
+<img src="https://img.shields.io/badge/mc%20version-1.16.x-brightgreen?style=for-the-badge">
 <img src="https://img.shields.io/badge/mod%20version-1.0.0a-yellow?style=for-the-badge">
 <a href="https://fabricmc.net"><img src="https://img.shields.io/badge/modloader-fabric-blue?style=for-the-badge"></a>
 </p>
@@ -34,7 +34,6 @@ This idea revolves around the fact that as of this writing, no such mods for ear
 </details>
 <details><summary><b>In consideration</b></summary>
 
-- Underwater rock generation 
 - Mod configuration
 - Wiki
 - Backporting
@@ -53,14 +52,14 @@ This idea revolves around the fact that as of this writing, no such mods for ear
 
 ## Dependencies
 ### Required
-- **[Fabric API](https://www.curseforge.com/minecraft/mc-mods/fabric-api)** (0.22.0 build 408-1.16 and above)
+- **[Fabric API](https://www.curseforge.com/minecraft/mc-mods/fabric-api)** (0.30.0+1.16 and above)
 ### Optional
+- **[Mod Menu](https://www.curseforge.com/minecraft/mc-mods/modmenu)**: in-game configuration
 - **[Roughly Enough Items](https://www.curseforge.com/minecraft/mc-mods/roughly-enough-items)**: for crafting new tools
 
 ## Known Issues
 - Recipes such as copper and flint tools cannot be unlocked for some reason.
 - Some crafting recipes in the vanilla crafting guide are rendered blank; accessing it causes a game crash.
-- Flint knapping event is often delayed.
 
 Incompatibilities and bugs can be reported in the [issues](https://github.com/JayCeeCreates/earlygame/issues) section.
 

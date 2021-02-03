@@ -4,7 +4,6 @@ import jayceecreates.earlygame.init.*;
 import jayceecreates.earlygame.utils.DisableWoodStoneTools;
 import jayceecreates.earlygame.utils.FlintKnapEvent;
 import jayceecreates.earlygame.utils.ModShapelessRecipe;
-// import jayceecreates.earlygame.utils.RequiredTool;
 import jayceecreates.earlygame.world.CopperOreGen;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.recipe.RecipeSerializer;
@@ -30,9 +29,6 @@ public class EarlyGame implements ModInitializer {
 
         // world gen
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, new Identifier("earlygame", "copper_ore_gen"), CopperOreGen.COPPER_ORE_GEN);
-        
-        // noBreak
-        // RequiredTool.requiredToolInit();
         
         // noStoneWoodTier
         DisableWoodStoneTools.noStoneWoodTier();

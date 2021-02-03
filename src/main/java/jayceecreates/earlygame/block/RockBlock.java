@@ -4,7 +4,9 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
+import net.minecraft.block.MaterialColor;
 import net.minecraft.block.ShapeContext;
 import net.minecraft.block.Waterloggable;
 import net.minecraft.entity.ai.pathing.NavigationType;
@@ -33,47 +35,26 @@ import net.minecraft.world.WorldView;
 public class RockBlock extends Block implements Waterloggable {
 
     protected static final VoxelShape SHAPE = Block.createCuboidShape(6D, 0D, 6D, 10D, 1D, 10D);
-    public static final BooleanProperty WATERLOGGED;
+    public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 
     public RockBlock() {
-        super(FabricBlockSettings.of(Material.STONE).breakByHand(true).sounds(BlockSoundGroup.STONE).strength(0.15F, 0.15F).noCollision().collidable(false));
-        this.setDefaultState((BlockState)this.getDefaultState().with(WATERLOGGED, false));
-    }
-
-    @Override
-    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-       builder.add(WATERLOGGED);
+        super(FabricBlockSettings.of(Material.STONE, MaterialColor.LIGHT_GRAY).strength(0.15F, 0.15F).breakByHand(true).sounds(BlockSoundGroup.STONE).noCollision().collidable(false));
+        this.setDefaultState((BlockState)this.getDefaultState().with(WATERLOGGED, Boolean.FALSE));
     }
 
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         WorldAccess worldAccess = ctx.getWorld();
         BlockPos blockPos = ctx.getBlockPos();
-        boolean bl = worldAccess.getFluidState(blockPos).getFluid() == Fluids.WATER;
-        return (BlockState)this.getDefaultState().with(WATERLOGGED, bl);
+        boolean bl = worldAccess.getBlockState(blockPos).getBlock() == Blocks.WATER;
+        if (bl) return (BlockState)this.getDefaultState().with(WATERLOGGED, Boolean.TRUE);
+        return (BlockState)this.getDefaultState();
     }
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
        Vec3d vec3d = state.getModelOffset(world, pos);
        return SHAPE.offset(vec3d.x, vec3d.y, vec3d.z);
-    }
-
-    @Override
-    public void neighborUpdate(BlockState state, World worldIn, BlockPos pos, Block blockIn, BlockPos fromPos,
-            boolean isMoving)
-    {
-        super.neighborUpdate(state, worldIn, pos, blockIn, fromPos, isMoving);
-        if (!this.canPlaceAt(state, worldIn, pos))
-        {
-            worldIn.breakBlock(pos, true);
-        }
-    }
-
-    @Override
-    public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
-        BlockState stateUnder = world.getBlockState(pos.down());
-        return stateUnder.isSideSolidFullSquare(world, pos.down(), Direction.UP);
     }
 
     @Override
@@ -84,14 +65,39 @@ public class RockBlock extends Block implements Waterloggable {
         }
         return ActionResult.FAIL;
     }
+
+    @Override
+    public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
+        BlockState stateUnder = world.getBlockState(pos.down());
+        return stateUnder.isSideSolidFullSquare(world, pos.down(), Direction.UP);
+    }
+
+    @Override
+    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
+        builder.add(WATERLOGGED);
+    }
     
     @Override
     public AbstractBlock.OffsetType getOffsetType() {
-       return AbstractBlock.OffsetType.XZ;
+        return AbstractBlock.OffsetType.XZ;
     }
 
     public FluidState getFluidState(BlockState state) {
         return (Boolean)state.get(WATERLOGGED) ? Fluids.WATER.getStill(false) : super.getFluidState(state);
+    }
+
+    @Override
+    public void neighborUpdate(BlockState state, World worldIn, BlockPos pos, Block blockIn, BlockPos fromPos,
+            boolean isMoving) {
+        super.neighborUpdate(state, worldIn, pos, blockIn, fromPos, isMoving);
+        if (!this.canPlaceAt(state, worldIn, pos))
+            worldIn.breakBlock(pos, true);
+        else if (state.get(WATERLOGGED))
+            worldIn.getFluidTickScheduler().schedule(pos, Fluids.WATER, Fluids.WATER.getTickRate(worldIn));
+    }
+
+    public BlockState asWaterlogged() {
+        return (BlockState)this.getDefaultState().with(WATERLOGGED, Boolean.TRUE);
     }
 
     @Override
@@ -130,10 +136,6 @@ public class RockBlock extends Block implements Waterloggable {
     @Override
     public boolean canMobSpawnInside() {
         return true;
-    }
-    
-    static {
-        WATERLOGGED = Properties.WATERLOGGED;
     }
 
 }
