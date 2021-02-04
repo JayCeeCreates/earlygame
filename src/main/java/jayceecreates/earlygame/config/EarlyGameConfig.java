@@ -25,4 +25,7 @@ public class EarlyGameConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip(count = 4)
     public double flintSuccessProb = 0.7;
 
+    @ConfigEntry.Gui.Tooltip(count = 4)
+    public double woodChoppingProb = 0.5;
+
 }
