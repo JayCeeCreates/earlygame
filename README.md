@@ -23,7 +23,7 @@ This idea revolves around the fact that as of this writing, no such mods for ear
 - Rocks and sticks are scattered around the world to help you progress.
 - Andesite, granite and diorite rock and cobblestone variants complement with stone variants.
 - You cannot craft wooden and stone tools.
-- Vanilla crafting for planks and sticks are also disabled.
+- You can get planks and sticks by chopping a wooden block using an axe or a saw.
 - Flint can be knapped on the stone surface to create flint shards.
 - Flint shards can then be crafted into makeshift tools such as a knife, pickaxe, axe, and saw.
 - There's a new mineral: copper! (well, that was before 1.17 happened lol)
