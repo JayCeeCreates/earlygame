@@ -4,6 +4,7 @@ import java.util.Random;
 
 import com.mojang.serialization.Codec;
 
+import jayceecreates.earlygame.EarlyGameClient;
 import jayceecreates.earlygame.init.BlocksInit;
 import jayceecreates.earlygame.utils.ModBlockTags;
 import net.minecraft.block.BlockState;
@@ -22,13 +23,16 @@ public class StickTwigGen extends Feature<DefaultFeatureConfig> {
     @Override
     public boolean generate(StructureWorldAccess world, ChunkGenerator chunkGenerator, Random random, BlockPos pos,
             DefaultFeatureConfig featureConfig) {
-        BlockState stateAt = world.getBlockState(pos);
-        BlockState stateDown = world.getBlockState(pos.down());
-        if (stateAt.isAir() && ModBlockTags.ROCK_PLACEABLE_ON.contains(stateDown.getBlock())) {
-            world.setBlockState(pos, BlocksInit.STICK_TWIG_BLOCK.getDefaultState(), 3);
+        if (EarlyGameClient.CONFIG.generateSticks) {
+            BlockState stateAt = world.getBlockState(pos);
+            BlockState stateDown = world.getBlockState(pos.down());
+            if (stateAt.isAir() && ModBlockTags.ROCK_PLACEABLE_ON.contains(stateDown.getBlock())) {
+                world.setBlockState(pos, BlocksInit.STICK_TWIG_BLOCK.getDefaultState(), 3);
+                return true;
+            }
             return true;
         }
-        return true;
+        else return false;
     }
 
 }
