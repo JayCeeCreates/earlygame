@@ -16,28 +16,17 @@
 This idea revolves around the fact that as of this writing, no such mods for early game realism are present in the Fabric mod database. Then I thought, "Fine, I'll do it myself." Moreover, it was inspired by two particular Forge mods that have the same premise, namely [No Tree Punching (1.12.2/1.15.2/1.16.4)](https://www.curseforge.com/minecraft/mc-mods/no-tree-punching) and [Natural Progression (1.14.4/1.15.2/1.16.4)](https://www.curseforge.com/minecraft/mc-mods/natural-progressions).
 
 ## Features
-<details><summary><b>Current</b></summary>
-  
-- Removed the most beloved early game feature: punching trees.
-- Along with this, stone and wood materials cannot be broken without a proper tool.
-- Rocks and sticks are scattered around the world to help you progress.
-- Andesite, granite and diorite rock and cobblestone variants complement with stone variants.
-- You cannot craft wooden and stone tools.
-- You can get planks and sticks by chopping a wooden block using an axe or a saw.
-- Flint can be knapped on the stone surface to create flint shards.
-- Flint shards can then be crafted into makeshift tools such as a knife, pickaxe, axe, and saw.
-- There's a new mineral: copper! (well, that was before 1.17 happened lol)
-- Copper tools are tiered exactly with stone tools to make them useful for those who use stone tools a lot.
-- Copper armor can be crafted for a small but right amount of protection.
-- New tools are introduced as well: saws and knives!
 
-</details>
-<details><summary><b>In consideration</b></summary>
+- Disabled the ability to get wood from punching trees
+- Proper tools are required to collect stone and wood
+- Chopping logs to make planks, and planks to sticks
+- Rocks and sticks are naturally generated around the world
+- Cobblestone variants
+- Makeshift flint tools
+- Copper items, tools and armor
+- Knives and saws serving as alternatives
 
-- Wiki
-- Backporting
-
-</details>
+More details are in the [wiki](https://github.com/JayCeeCreates/earlygame/wiki).
 
 ## Screenshots
 <details><summary>Show</summary>
