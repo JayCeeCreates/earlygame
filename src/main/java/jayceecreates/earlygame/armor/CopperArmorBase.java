@@ -19,7 +19,7 @@ public class CopperArmorBase implements ArmorMaterial {
 
     @Override
     public int getDurability(EquipmentSlot slot) {
-        return BASE_DURABILITY[slot.getEntitySlotId()]*12;
+        return BASE_DURABILITY[slot.getEntitySlotId()]*11;
     }
 
     @Override
