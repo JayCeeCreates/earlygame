@@ -12,6 +12,7 @@ Initial beta release
 - (+) Multiplayer compatibility (thanks, Bonono63!)
 - (*) Fixed flint knapping event
 - (*) Fixed the mining mechanics for sticks and rocks
+- (*) Changed copper textures to match the official ones
 - (*) Changed copper armor durability
 - (*) Moved copper blocks and minerals to common tag for intercompatibility (thanks, Shnupbups!)
 - (-) Removed planks and sticks crafting recipe
