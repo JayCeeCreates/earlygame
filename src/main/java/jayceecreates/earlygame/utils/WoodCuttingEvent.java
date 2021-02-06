@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.event.player.UseBlockCallback;
 import net.minecraft.block.BlockState;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
 
 import java.util.Random;
 
@@ -42,7 +43,7 @@ public class WoodCuttingEvent {
             if (state == null || player == null)
                 return ActionResult.PASS;
 
-            if (isGeneralAxe && (isLog || isPlank) && player.isSneaking()) {
+            if (isGeneralAxe && (isLog || isPlank) && block.getSide() == Direction.UP && player.isSneaking()) {
                 if (!world.isClient) {
                     if (r1 <= EarlyGameClient.CONFIG.woodChoppingProb) {
                         world.breakBlock(pos, false);

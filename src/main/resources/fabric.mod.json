@@ -2,7 +2,7 @@
     "schemaVersion": 1,
     "id": "earlygame",
     "name": "EarlyGame",
-    "version": "1.16.x-1.0.0b",
+    "version": "1.16.x-1.0.1b",
     "environment": "*",
     "license": "GPL-3.0",
     "icon": "assets/earlygame/icon.png",

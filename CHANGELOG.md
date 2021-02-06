@@ -1,8 +1,11 @@
-(+) = Added
-(*) = Improved
-(-) = Removed
+(+) = Added | (*) = Improved | (-) = Removed
 
 ***
+
+## 1.16.x-1.0.1b
+- (+) Added four-sided wood variants on wood chopping event (I forgot soz)
+- (*) You can now only chop wood by clicking the top of the block (I found out that it was too OP)
+- (*) Fixed the knapping event so that you cannot knap on rocks
 
 ## 1.16.x-1.0.0b
 Initial beta release

@@ -35,7 +35,7 @@ public class FlintKnapEvent {
                 return ActionResult.PASS;
 
             if (player.inventory.getMainHandStack().getItem().equals(Items.FLINT) &&
-                    state.getMaterial() == Material.STONE &&
+                    (state.getMaterial() == Material.STONE && !state.isIn(ModBlockTags.ROCKS)) &&
                     block.getSide() == Direction.UP) {
                 if (!world.isClient) {
                     if (r1 <= EarlyGameClient.CONFIG.flintConsumeProb) {
