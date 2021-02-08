@@ -46,8 +46,11 @@ More details are in the [wiki](https://github.com/JayCeeCreates/earlygame/wiki).
 - **[Roughly Enough Items](https://www.curseforge.com/minecraft/mc-mods/roughly-enough-items)**: for crafting new tools
 
 ## Known Issues
+### Bugs
 - Recipes such as copper and flint tools cannot be unlocked for some reason.
 - Some crafting recipes in the vanilla crafting guide are rendered blank; accessing it causes a game crash.
+### Incompatibilities
+- **Charm** (1.16.4-2.3.1): Woodcutter blocks cannot be broken by axe.
 
 Incompatibilities and bugs can be reported in the [issues](https://github.com/JayCeeCreates/earlygame/issues) section.
 
