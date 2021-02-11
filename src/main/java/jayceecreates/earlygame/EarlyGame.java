@@ -4,6 +4,7 @@ import jayceecreates.earlygame.init.*;
 import jayceecreates.earlygame.utils.WoodCuttingEvent;
 import jayceecreates.earlygame.utils.DisableWoodStoneTools;
 import jayceecreates.earlygame.utils.FlintKnapEvent;
+import jayceecreates.earlygame.utils.RecipeRemover;
 import jayceecreates.earlygame.world.CopperOreGen;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
@@ -33,6 +34,7 @@ public class EarlyGame implements ModInitializer {
         // events
         FlintKnapEvent.knapEvent();
         WoodCuttingEvent.chopEvent();
+        RecipeRemover.removeRecipe();
         
     }
     

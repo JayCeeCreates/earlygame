@@ -26,6 +26,31 @@
     "text.autoconfig.earlygame.option.harderGroundBlocks.@Tooltip[2]": "process slower for added realism or not.",
     "text.autoconfig.earlygame.option.harderGroundBlocks.@Tooltip[3]": "§7§o(Default: true)",
 
+    "text.autoconfig.earlygame.option.crafting": "Crafting Settings",
+    "text.autoconfig.earlygame.option.crafting.@Tooltip[0]": "§6§lCrafting Settings",
+    "text.autoconfig.earlygame.option.crafting.@Tooltip[1]": "Enable or disable crafting recipes from",
+    "text.autoconfig.earlygame.option.crafting.@Tooltip[2]": "here if you have any issues with",
+    "text.autoconfig.earlygame.option.crafting.@Tooltip[3]": "compatibility. May require reloading",
+    "text.autoconfig.earlygame.option.crafting.@Tooltip[4]": "the world.",
+
+    "text.autoconfig.earlygame.option.crafting.enableWoodenTools": "Enable Wooden Tools",
+    "text.autoconfig.earlygame.option.crafting.enableWoodenTools.@Tooltip[0]": "§6§lEnable Wooden Tools",
+    "text.autoconfig.earlygame.option.crafting.enableWoodenTools.@Tooltip[1]": "Toggle if you want to enable crafting",
+    "text.autoconfig.earlygame.option.crafting.enableWoodenTools.@Tooltip[2]": "wooden tools.",
+    "text.autoconfig.earlygame.option.crafting.enableWoodenTools.@Tooltip[3]": "§7§o(Default: false)",
+
+    "text.autoconfig.earlygame.option.crafting.enableStoneTools": "Enable Stone Tools",
+    "text.autoconfig.earlygame.option.crafting.enableStoneTools.@Tooltip[0]": "§6§lEnable Stone Tools",
+    "text.autoconfig.earlygame.option.crafting.enableStoneTools.@Tooltip[1]": "Toggle if you want to enable crafting",
+    "text.autoconfig.earlygame.option.crafting.enableStoneTools.@Tooltip[2]": "stone tools.",
+    "text.autoconfig.earlygame.option.crafting.enableStoneTools.@Tooltip[3]": "§7§o(Default: false)",
+
+    "text.autoconfig.earlygame.option.crafting.enablePlanksAndSticks": "Enable Planks and Sticks",
+    "text.autoconfig.earlygame.option.crafting.enablePlanksAndSticks.@Tooltip[0]": "§6§lEnable Planks and Sticks",
+    "text.autoconfig.earlygame.option.crafting.enablePlanksAndSticks.@Tooltip[1]": "Toggle if you want to enable crafting",
+    "text.autoconfig.earlygame.option.crafting.enablePlanksAndSticks.@Tooltip[2]": "planks and sticks.",
+    "text.autoconfig.earlygame.option.crafting.enablePlanksAndSticks.@Tooltip[3]": "§7§o(Default: false)",
+
     "text.autoconfig.earlygame.option.damageProbability": "Damage Probability (%)",
     "text.autoconfig.earlygame.option.damageProbability.@Tooltip[0]": "§6§lDamage Probability (%)",
     "text.autoconfig.earlygame.option.damageProbability.@Tooltip[1]": "Adjust how likely you take damage from punching",

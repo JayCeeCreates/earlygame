@@ -16,6 +16,23 @@ public class EarlyGameConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip(count = 4)
     public boolean harderGroundBlocks = true;
 
+    @ConfigEntry.Gui.CollapsibleObject
+    @ConfigEntry.Gui.Tooltip(count = 5)
+    public Crafting crafting = new Crafting();
+
+    public static final class Crafting implements ConfigData {
+        @ConfigEntry.Gui.Tooltip(count = 4)
+        public boolean enableWoodenTools = false;
+        
+        @ConfigEntry.Gui.Tooltip(count = 4)
+        public boolean enableStoneTools = false;
+        
+        @ConfigEntry.Gui.Tooltip(count = 4)
+        public boolean enablePlanksAndSticks = false;
+        
+        private Crafting() {}
+    }
+
     @ConfigEntry.Gui.Tooltip(count = 4)
     public double damageProbability = 2.5;
 
