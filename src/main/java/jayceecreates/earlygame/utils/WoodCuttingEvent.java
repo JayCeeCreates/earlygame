@@ -1,6 +1,7 @@
 package jayceecreates.earlygame.utils;
 
 import net.fabricmc.fabric.api.event.player.UseBlockCallback;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
@@ -51,14 +52,21 @@ public class WoodCuttingEvent {
                         if (isLog) {
                             if (isAxe) r2 = RANDOM.nextInt(3) + 2;
                             if (isSaw) r2 = 4;
-                            itemEntity = new ItemEntity(
-                                player.world,
-                                block.getPos().x,
-                                block.getPos().y - 0.5,
-                                block.getPos().z,
-                                new ItemStack(
-                                    WoodType.getType(state.getBlock()).getOutputBlock(),
-                                    r2));
+                            for (Block obj : BlockTags.LOGS.values()) {
+                                if (state.getBlock() == obj) {
+                                    String replacement = obj.toString().replace("stripped_", "").replace("log", "planks").replace("bark", "planks").replace("wood", "planks").replace("stem", "planks").replace("hyphae", "planks");
+                                    for (Block planks : BlockTags.PLANKS.values()) {
+                                        System.out.println(replacement);
+                                        System.out.println(planks.toString() + "a");
+                                        System.out.println(replacement.equals(planks.toString()));
+                                        if (replacement.equals(planks.toString())) {
+                                            itemEntity = new ItemEntity(player.world, block.getPos().x, block.getPos().y - 0.5, block.getPos().z, new ItemStack(planks, r2));
+                                            break;
+                                        }
+                                    }
+                                    break;
+                                }
+                            }
                         }
                         if (isPlank) {
                             if (isAxe) r2 = RANDOM.nextInt(2) + 1;
