@@ -1,7 +1,7 @@
 <p align="center">
 <a href="https://github.com/JayCeeCreates/earlygame/blob/master/LICENSE"><img src="https://img.shields.io/github/license/jayceecreates/earlygame?style=for-the-badge"></a>
 <img src="https://img.shields.io/badge/mc%20version-1.16.x-brightgreen?style=for-the-badge">
-<img src="https://img.shields.io/badge/mod%20version-1.0.1b-yellow?style=for-the-badge">
+<img src="https://img.shields.io/badge/mod%20version-1.1.0b-yellow?style=for-the-badge">
 <a href="https://fabricmc.net"><img src="https://img.shields.io/badge/modloader-fabric-blue?style=for-the-badge"></a>
 </p>
 
@@ -49,8 +49,6 @@ More details are in the [wiki](https://github.com/JayCeeCreates/earlygame/wiki).
 ### Bugs
 - Recipes such as copper and flint tools cannot be unlocked for some reason.
 - Some crafting recipes in the vanilla crafting guide are rendered blank; accessing it causes a game crash.
-### Incompatibilities
-- **Charm** (1.16.4-2.3.1): Woodcutter blocks cannot be broken by axe for some reason.
 
 Incompatibilities and bugs can be reported in the [issues](https://github.com/JayCeeCreates/earlygame/issues) section.
 
