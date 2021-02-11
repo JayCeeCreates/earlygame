@@ -48,7 +48,6 @@ More details are in the [wiki](https://github.com/JayCeeCreates/earlygame/wiki).
 ## Known Issues
 ### Bugs
 - Recipes such as copper and flint tools cannot be unlocked for some reason.
-- Some crafting recipes in the vanilla crafting guide are rendered blank; accessing it causes a game crash.
 
 Incompatibilities and bugs can be reported in the [issues](https://github.com/JayCeeCreates/earlygame/issues) section.
 
