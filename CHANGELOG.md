@@ -2,6 +2,10 @@
 
 ***
 
+## 1.16.X-1.1.1b
+- (*) Retextured copper ore and reverted copper textures per request (Discord)
+- (*) Along with that, flint shard is also slightly retextured
+
 ## 1.16.x-1.1.0b
 - (+) You can now craft a furnace with other cobblestone variants
 - (+) Added flint saw to Fabric tooltag database (#6)
