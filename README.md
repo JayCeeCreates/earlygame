@@ -31,10 +31,10 @@ More details are in the [wiki](https://github.com/JayCeeCreates/earlygame/wiki).
 ## Screenshots
 <details><summary>Show</summary>
 <p align="center">
-<img width="640" height="360" src="https://cdn.discordapp.com/attachments/669587583034064919/806583529122168886/2021-02-04_01.14.54.png">
-<img width="640" height="360" src="https://cdn.discordapp.com/attachments/669587583034064919/806583532750110770/2021-02-04_01.41.03.png">
-<img width="640" height="360" src="https://cdn.discordapp.com/attachments/669587583034064919/806583540753498112/2021-02-04_01.42.00.png">
-<img width="640" height="360" src="https://cdn.discordapp.com/attachments/669587583034064919/806583556100063302/2021-02-04_01.44.07.png">
+<img width="640" height="360" src="https://media.discordapp.net/attachments/807114433787854868/810885401043533824/2021-02-15_22.26.53.png">
+<img width="640" height="360" src="https://media.discordapp.net/attachments/807114433787854868/810885396292042822/2021-02-15_22.34.08.png">
+<img width="640" height="360" src="https://media.discordapp.net/attachments/807114433787854868/810886920053194782/2021-02-15_22.19.59.png">
+<img width="640" height="360" src="https://media.discordapp.net/attachments/807114433787854868/810885400595922954/2021-02-15_22.18.33.png">
 </p>
 </details>
 
