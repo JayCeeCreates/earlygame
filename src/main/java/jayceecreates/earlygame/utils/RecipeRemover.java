@@ -21,6 +21,10 @@ import net.minecraft.tag.ItemTags;
 import net.minecraft.tag.Tag;
 import net.minecraft.util.Identifier;
 
+// Most of the code below was made by Choonster@github (https://bit.ly/2BLB9t3), used under MIT License,
+// modified to make it Fabric compatible.
+// © Choonster 2015-2021
+
 public class RecipeRemover {
 
     public static void removeRecipe() {
@@ -47,9 +51,6 @@ public class RecipeRemover {
             }
         });
     }
-
-    // Code below was made by Choonster@github (https://bit.ly/2BLB9t3)
-    // Modified by me to make it Fabric-compatible
 
     /**
      * Removes all crafting recipes with an output item contained in the specified
