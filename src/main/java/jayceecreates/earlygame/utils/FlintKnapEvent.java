@@ -2,6 +2,7 @@ package jayceecreates.earlygame.utils;
 
 import java.util.Random;
 
+import jayceecreates.earlygame.EarlyGame;
 import jayceecreates.earlygame.EarlyGameClient;
 import jayceecreates.earlygame.init.ItemsInit;
 import net.fabricmc.fabric.api.event.player.UseBlockCallback;
@@ -38,8 +39,8 @@ public class FlintKnapEvent {
                     (state.getMaterial() == Material.STONE && !state.isIn(ModBlockTags.ROCKS)) &&
                     block.getSide() == Direction.UP) {
                 if (!world.isClient) {
-                    if (r1 <= EarlyGameClient.CONFIG.flintConsumeProb) {
-                        if (r2 <= EarlyGameClient.CONFIG.flintSuccessProb) {
+                    if (r1 <= EarlyGame.CONFIG.flintConsumeProb) {
+                        if (r2 <= EarlyGame.CONFIG.flintSuccessProb) {
                             ItemEntity itemEntity = new ItemEntity(
                                 player.world,
                                 block.getPos().x,

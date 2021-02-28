@@ -31,21 +31,21 @@ public class RecipeRemover {
         ServerLifecycleEvents.SERVER_STARTED.register(server -> {
             final RecipeManager mgr = server.getRecipeManager();
 
-            if (!EarlyGameClient.CONFIG.crafting.enableWoodenTools) {
+            if (!EarlyGame.CONFIG.crafting.enableWoodenTools) {
                 removeRecipes(mgr, new ItemStack(Items.WOODEN_AXE));
                 removeRecipes(mgr, new ItemStack(Items.WOODEN_HOE));
                 removeRecipes(mgr, new ItemStack(Items.WOODEN_PICKAXE));
                 removeRecipes(mgr, new ItemStack(Items.WOODEN_SHOVEL));
                 removeRecipes(mgr, new ItemStack(Items.WOODEN_SWORD));
             }
-            if (!EarlyGameClient.CONFIG.crafting.enableStoneTools) {
+            if (!EarlyGame.CONFIG.crafting.enableStoneTools) {
                 removeRecipes(mgr, new ItemStack(Items.STONE_AXE));
                 removeRecipes(mgr, new ItemStack(Items.STONE_HOE));
                 removeRecipes(mgr, new ItemStack(Items.STONE_PICKAXE));
                 removeRecipes(mgr, new ItemStack(Items.STONE_SHOVEL));
                 removeRecipes(mgr, new ItemStack(Items.STONE_SWORD));
             }
-            if (!EarlyGameClient.CONFIG.crafting.enablePlanksAndSticks) {
+            if (!EarlyGame.CONFIG.crafting.enablePlanksAndSticks) {
                 removeRecipes(mgr, ItemTags.PLANKS);
                 removeRecipes(mgr, new ItemStack(Items.STICK, 4));
             }
