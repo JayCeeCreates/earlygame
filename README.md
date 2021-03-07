@@ -1,7 +1,7 @@
 <p align="center">
 <a href="https://github.com/JayCeeCreates/earlygame/blob/master/LICENSE"><img src="https://img.shields.io/github/license/jayceecreates/earlygame?style=for-the-badge"></a>
 <img src="https://img.shields.io/badge/mc%20version-1.16.x-brightgreen?style=for-the-badge">
-<img src="https://img.shields.io/badge/mod%20version-1.1.0b-yellow?style=for-the-badge">
+<img src="https://img.shields.io/badge/mod%20version-1.1.1b-yellow?style=for-the-badge">
 <a href="https://fabricmc.net"><img src="https://img.shields.io/badge/modloader-fabric-blue?style=for-the-badge"></a>
 </p>
 
@@ -10,7 +10,7 @@
 </p>
 
 <h1 align="center">EarlyGame</h1>
-<p align="center">A Fabric mod focusing on changing early game aspects to make the game feel more "realistic".</p>
+<p align="center">A Fabric mod that focuses on changing early game progression that makes the gameplay feel more "realistic".</p>
 
 ## Background
 This idea revolves around the fact that as of this writing, no such mods for early game realism are present in the Fabric mod database. Then I thought, "Fine, I'll do it myself." Moreover, it was inspired by two particular Forge mods that have the same premise, namely [No Tree Punching (1.12.2/1.15.2/1.16.4)](https://www.curseforge.com/minecraft/mc-mods/no-tree-punching) and [Natural Progression (1.14.4/1.15.2/1.16.4)](https://www.curseforge.com/minecraft/mc-mods/natural-progressions).
@@ -46,9 +46,12 @@ More details are in the [wiki](https://github.com/JayCeeCreates/earlygame/wiki).
 - **[Roughly Enough Items](https://www.curseforge.com/minecraft/mc-mods/roughly-enough-items)**: for crafting new tools
 
 ## Known Issues
-### Bugs
-- Recipes such as copper and flint tools cannot be unlocked for some reason.
-
+- **\[Bug\]** Recipes such as copper and flint tools cannot be unlocked for some reason.
+- **\[Enhancement\]** Another form of flint shard recipe (#8)
+- **\[Enhancement\]** Tall grass don't yield plant fiber (#10)
+- **\[Enhancement\]** Config is defined in client-side (#11)
+- **\[Bug/Incompatibility\]** Wood, stone, and non-vanilla axes don't chop logs to planks, etc. properly (#9)
+- **\[Incompatibility\]** Bits and Chisels: chisels won't work (#7)
 Incompatibilities and bugs can be reported in the [issues](https://github.com/JayCeeCreates/earlygame/issues) section.
 
 ## Credits
