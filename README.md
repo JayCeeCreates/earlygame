@@ -52,6 +52,7 @@ More details are in the [wiki](https://github.com/JayCeeCreates/earlygame/wiki).
 - **\[Enhancement\]** Config is defined in client-side (#11)
 - **\[Bug/Incompatibility\]** Wood, stone, and non-vanilla axes don't chop logs to planks, etc. properly (#9)
 - **\[Incompatibility\]** Bits and Chisels: chisels won't work (#7)
+
 Incompatibilities and bugs can be reported in the [issues](https://github.com/JayCeeCreates/earlygame/issues) section.
 
 ## Credits
