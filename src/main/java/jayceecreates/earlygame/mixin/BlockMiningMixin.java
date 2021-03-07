@@ -2,6 +2,7 @@
 
 package jayceecreates.earlygame.mixin;
 
+import jayceecreates.earlygame.EarlyGame;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -37,7 +38,7 @@ public abstract class BlockMiningMixin extends LivingEntity {
         PlayerEntity player = (PlayerEntity) (Object) this;
         double rand = Math.random();
 
-        if (EarlyGameClient.CONFIG.harderGroundBlocks) {
+        if (EarlyGame.CONFIG.harderGroundBlocks) {
             if (!player.inventory.getMainHandStack().getItem().isIn(FabricToolTags.SHOVELS)
                     && ModBlockTags.SLOW_DIGGING.contains(state.getBlock()))
                 cir.setReturnValue(cir.getReturnValue() / 3.8F);
@@ -58,10 +59,10 @@ public abstract class BlockMiningMixin extends LivingEntity {
                         !player.inventory.getMainHandStack().getItem().isIn(FabricToolTags.PICKAXES) :
                         !player.inventory.getMainHandStack().getItem().isIn(FabricToolTags.AXES))
                 {
-                    if (EarlyGameClient.CONFIG.warningMessage)
+                    if (EarlyGame.CONFIG.warningMessage)
                         player.sendMessage(new TranslatableText(!isBlacklisted ? "earlygame.pick_required" : "earlygame.axe_required"), true);
                     cir.setReturnValue(0.0F);
-                    if (player.inventory.getMainHandStack().isEmpty() && rand <= EarlyGameClient.CONFIG.damageProbability * .01)
+                    if (player.inventory.getMainHandStack().isEmpty() && rand <= EarlyGame.CONFIG.damageProbability * .01)
                         if (!isBlacklisted)
                             player.damage(new MiningDamageSource.BrokenHandDamage(), 2.0F);
                         else
@@ -73,10 +74,10 @@ public abstract class BlockMiningMixin extends LivingEntity {
                         !player.inventory.getMainHandStack().getItem().isIn(FabricToolTags.AXES) :
                         !player.inventory.getMainHandStack().getItem().isIn(FabricToolTags.PICKAXES))
                 {
-                    if (EarlyGameClient.CONFIG.warningMessage)
+                    if (EarlyGame.CONFIG.warningMessage)
                         player.sendMessage(new TranslatableText(!isBlacklisted ? "earlygame.axe_required" : "earlygame.pick_required"), true);
                     cir.setReturnValue(0.0F);
-                    if (player.inventory.getMainHandStack().isEmpty() && rand <= EarlyGameClient.CONFIG.damageProbability * .01)
+                    if (player.inventory.getMainHandStack().isEmpty() && rand <= EarlyGame.CONFIG.damageProbability * .01)
                     if (!isBlacklisted)
                         player.damage(new MiningDamageSource.SplinterDamage(), 1.0F);
                     else

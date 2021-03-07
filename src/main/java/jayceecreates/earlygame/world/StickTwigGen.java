@@ -4,6 +4,7 @@ import java.util.Random;
 
 import com.mojang.serialization.Codec;
 
+import jayceecreates.earlygame.EarlyGame;
 import jayceecreates.earlygame.EarlyGameClient;
 import jayceecreates.earlygame.init.BlocksInit;
 import jayceecreates.earlygame.utils.ModBlockTags;
@@ -23,7 +24,7 @@ public class StickTwigGen extends Feature<DefaultFeatureConfig> {
     @Override
     public boolean generate(StructureWorldAccess world, ChunkGenerator chunkGenerator, Random random, BlockPos pos,
             DefaultFeatureConfig featureConfig) {
-        if (EarlyGameClient.CONFIG.generateSticks) {
+        if (EarlyGame.CONFIG.generateSticks) {
             BlockState stateAt = world.getBlockState(pos);
             BlockState stateDown = world.getBlockState(pos.down());
             if (stateAt.isAir() && ModBlockTags.ROCK_PLACEABLE_ON.contains(stateDown.getBlock())) {
