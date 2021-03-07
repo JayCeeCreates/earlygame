@@ -1,5 +1,6 @@
 package jayceecreates.earlygame.utils;
 
+import jayceecreates.earlygame.EarlyGame;
 import jayceecreates.earlygame.EarlyGameClient;
 import net.fabricmc.fabric.api.event.player.AttackBlockCallback;
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
@@ -24,22 +25,22 @@ public class DisableWoodStoneTools {
             if (!player.isCreative()) {
                 if (itemHeld.getItem() instanceof ToolItem) {
                     ToolItem tool = (ToolItem) itemHeld.getItem();
-                    if (!EarlyGameClient.CONFIG.crafting.enableWoodenTools) {
+                    if (!EarlyGame.CONFIG.crafting.enableWoodenTools) {
                         if (tool.getMaterial().equals(ToolMaterials.WOOD))
                         a = ActionResult.FAIL;
                     }
-                    if (!EarlyGameClient.CONFIG.crafting.enableStoneTools) {
+                    if (!EarlyGame.CONFIG.crafting.enableStoneTools) {
                         if (tool.getMaterial().equals(ToolMaterials.STONE))
                         a = ActionResult.FAIL;
                     }
                 }
                 else if (itemHeld.getItem() instanceof SwordItem) {
                     SwordItem sword = (SwordItem) itemHeld.getItem();
-                    if (!EarlyGameClient.CONFIG.crafting.enableWoodenTools) {
+                    if (!EarlyGame.CONFIG.crafting.enableWoodenTools) {
                         if (sword.getMaterial().equals(ToolMaterials.WOOD))
                         a = ActionResult.FAIL;
                     }
-                    if (!EarlyGameClient.CONFIG.crafting.enableStoneTools) {
+                    if (!EarlyGame.CONFIG.crafting.enableStoneTools) {
                         if (sword.getMaterial().equals(ToolMaterials.STONE))
                         a = ActionResult.FAIL;
                     }
@@ -62,22 +63,22 @@ public class DisableWoodStoneTools {
             if (!player.isCreative()) {
                 if (itemHeld.getItem() instanceof ToolItem) {
                     ToolItem tool = (ToolItem) itemHeld.getItem();
-                    if (!EarlyGameClient.CONFIG.crafting.enableWoodenTools) {
+                    if (!EarlyGame.CONFIG.crafting.enableWoodenTools) {
                         if (tool.getMaterial().equals(ToolMaterials.WOOD))
                         a = ActionResult.FAIL;
                     }
-                    if (!EarlyGameClient.CONFIG.crafting.enableStoneTools) {
+                    if (!EarlyGame.CONFIG.crafting.enableStoneTools) {
                         if (tool.getMaterial().equals(ToolMaterials.STONE))
                         a = ActionResult.FAIL;
                     }
                 }
                 else if (itemHeld.getItem() instanceof SwordItem) {
                     SwordItem sword = (SwordItem) itemHeld.getItem();
-                    if (!EarlyGameClient.CONFIG.crafting.enableWoodenTools) {
+                    if (!EarlyGame.CONFIG.crafting.enableWoodenTools) {
                         if (sword.getMaterial().equals(ToolMaterials.WOOD))
                         a = ActionResult.FAIL;
                     }
-                    if (!EarlyGameClient.CONFIG.crafting.enableStoneTools) {
+                    if (!EarlyGame.CONFIG.crafting.enableStoneTools) {
                         if (sword.getMaterial().equals(ToolMaterials.STONE))
                         a = ActionResult.FAIL;
                     }

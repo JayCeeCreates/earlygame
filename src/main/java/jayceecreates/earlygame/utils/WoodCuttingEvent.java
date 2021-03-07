@@ -1,5 +1,6 @@
 package jayceecreates.earlygame.utils;
 
+import jayceecreates.earlygame.EarlyGame;
 import net.fabricmc.fabric.api.event.player.UseBlockCallback;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -46,7 +47,7 @@ public class WoodCuttingEvent {
 
             if (isGeneralAxe && (isLog || isPlank) && block.getSide() == Direction.UP && player.isSneaking()) {
                 if (!world.isClient) {
-                    if (r1 <= EarlyGameClient.CONFIG.woodChoppingProb) {
+                    if (r1 <= EarlyGame.CONFIG.woodChoppingProb) {
                         world.breakBlock(pos, false);
                         ItemEntity itemEntity = null;
                         if (isLog) {
