@@ -9,7 +9,7 @@
             "type": "minecraft:alternatives",
             "children": [
               {
-                "type": "item",
+                "type": "minecraft:item",
                 "conditions": [
                   {
                     "condition": "minecraft:match_tool",
@@ -21,7 +21,7 @@
                 "name": "minecraft:grass"
               },
               {
-                "type": "item",
+                "type": "minecraft:item",
                 "conditions": [
                   {
                     "condition": "minecraft:match_tool",
@@ -37,7 +37,7 @@
                 "name": "earlygame:plant_fiber"
               },
               {
-                "type": "item",
+                "type": "minecraft:item",
                 "conditions": [
                   {
                     "condition": "minecraft:random_chance",

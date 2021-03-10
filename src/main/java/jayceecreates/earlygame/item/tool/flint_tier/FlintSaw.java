@@ -4,19 +4,17 @@ import java.util.Set;
 
 import com.google.common.collect.Sets;
 
-import jayceecreates.earlygame.item.ModItemGroup;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Material;
 import net.minecraft.item.AxeItem;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolMaterial;
 
 public class FlintSaw extends AxeItem {
     private static final Set<Material> WOODEN_MATERIAL;
 
-    public FlintSaw(ToolMaterial material) {
-        super(material, 1.0F, -2.5F, new Item.Settings().group(ModItemGroup.EARLYGAME));
+    public FlintSaw(ToolMaterial material, Settings settings) {
+        super(material, 1.0F, -2.5F, settings);
     }
     
     @Override

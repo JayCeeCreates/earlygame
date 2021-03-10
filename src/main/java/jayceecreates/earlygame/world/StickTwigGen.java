@@ -5,7 +5,6 @@ import java.util.Random;
 import com.mojang.serialization.Codec;
 
 import jayceecreates.earlygame.EarlyGame;
-import jayceecreates.earlygame.EarlyGameClient;
 import jayceecreates.earlygame.init.BlocksInit;
 import jayceecreates.earlygame.utils.ModBlockTags;
 import net.minecraft.block.BlockState;

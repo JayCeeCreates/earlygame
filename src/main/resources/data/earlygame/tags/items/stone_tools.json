@@ -1,0 +1,11 @@
+{
+    "_comment_": "If you have your modded stone tools, please add it on your own mod.",
+    "replace": false,
+    "values": [
+        "minecraft:stone_sword",
+        "minecraft:stone_pickaxe",
+        "minecraft:stone_axe",
+        "minecraft:stone_shovel",
+        "minecraft:stone_hoe"
+    ]
+}

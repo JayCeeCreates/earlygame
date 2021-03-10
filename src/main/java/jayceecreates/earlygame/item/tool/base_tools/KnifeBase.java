@@ -1,10 +1,8 @@
 package jayceecreates.earlygame.item.tool.base_tools;
 
-import jayceecreates.earlygame.item.ModItemGroup;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
@@ -13,8 +11,8 @@ import net.minecraft.world.World;
 
 public class KnifeBase extends SwordItem {
     
-    public KnifeBase(ToolMaterial material) {
-        super(material, 1, 0f, new Item.Settings().group(ModItemGroup.EARLYGAME));
+    public KnifeBase(ToolMaterial material, Settings settings) {
+        super(material, 1, 0f, settings);
     }
     
     @Override

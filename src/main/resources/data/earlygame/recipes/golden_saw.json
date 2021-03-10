@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "  y",
+        " yx",
+        "yx "
+    ],
+    "key": {
+        "x": {
+            "item": "minecraft:gold_ingot"
+        },
+        "y": {
+            "item": "minecraft:stick"
+        }
+    },
+    "result": {
+        "item": "earlygame:golden_saw",
+        "count": 1
+    }
+}

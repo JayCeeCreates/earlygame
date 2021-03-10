@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#E#",
+        " / ",
+        " / "
+    ],
+    "key": {
+        "#": {
+            "item": "earlygame:flint_shard"
+        },
+        "E": {
+            "item": "earlygame:lashing"
+        },
+        "/": {
+            "item": "minecraft:stick"
+        }
+    },
+    "result": {
+        "item": "earlygame:flint_pickaxe",
+        "count": 1
+    }
+}

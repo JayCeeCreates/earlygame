@@ -2,16 +2,16 @@
     "schemaVersion": 1,
     "id": "earlygame",
     "name": "EarlyGame",
-    "version": "1.16.x-1.1.1b",
+    "version": "1.16.x-1.0.0",
     "environment": "*",
     "license": "GPL-3.0",
     "icon": "assets/earlygame/icon.png",
-    "description": "A Fabric mod that emphasizes on changing the early game aspects that makes the gameplay feel \"realistic\".",
+    "description": "A Fabric mod that focuses on changing early game progression that makes the gameplay feel more \"realistic\".",
     "authors": [
         "JayCeeCreates"
     ],
     "contact": {
-        "homepage": "https://twitter.com/jaycee_creates",
+        "homepage": "https://www.curseforge.com/minecraft/mc-mods/earlygame",
         "sources": "https://github.com/JayCeeCreates/earlygame.git",
         "issues": "https://github.com/JayCeeCreates/earlygame/issues"
     },

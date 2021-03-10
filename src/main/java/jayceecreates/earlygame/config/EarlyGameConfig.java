@@ -13,6 +13,10 @@ public class EarlyGameConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip(count = 6)
     public boolean generateSticks = true;
 
+    @ConfigEntry.Gui.Tooltip(count = 8)
+    @ConfigEntry.Gui.RequiresRestart
+    public boolean generateCopper = true;
+
     @ConfigEntry.Gui.Tooltip(count = 4)
     public boolean harderGroundBlocks = true;
 
@@ -44,5 +48,8 @@ public class EarlyGameConfig implements ConfigData {
 
     @ConfigEntry.Gui.Tooltip(count = 4)
     public double woodChoppingProb = 0.5;
+
+    @ConfigEntry.Gui.Tooltip(count = 4)
+    public double fireStartProb = 0.3;
 
 }

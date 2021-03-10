@@ -1,0 +1,41 @@
+{
+    "type": "minecraft:smelting",
+    "ingredient": [
+      {
+        "item": "earlygame:copper_pickaxe"
+      },
+      {
+        "item": "earlygame:copper_shovel"
+      },
+      {
+        "item": "earlygame:copper_axe"
+      },
+      {
+        "item": "earlygame:copper_hoe"
+      },
+      {
+        "item": "earlygame:copper_sword"
+      },
+      {
+        "item": "earlygame:copper_knife"
+      },
+      {
+        "item": "earlygame:copper_saw"
+      },
+      {
+        "item": "earlygame:copper_helmet"
+      },
+      {
+        "item": "earlygame:copper_chestplate"
+      },
+      {
+        "item": "earlygame:copper_leggings"
+      },
+      {
+        "item": "earlygame:copper_boots"
+      }
+    ],
+    "result": "earlygame:copper_nugget",
+    "experience": 0.1,
+    "cookingtime": 200
+  }

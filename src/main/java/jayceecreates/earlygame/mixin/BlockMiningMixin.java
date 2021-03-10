@@ -8,7 +8,6 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import jayceecreates.earlygame.EarlyGameClient;
 import jayceecreates.earlygame.init.BlocksInit;
 import jayceecreates.earlygame.utils.MiningDamageSource;
 import jayceecreates.earlygame.utils.ModBlockTags;

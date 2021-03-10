@@ -3,7 +3,6 @@ package jayceecreates.earlygame.utils;
 import java.util.Random;
 
 import jayceecreates.earlygame.EarlyGame;
-import jayceecreates.earlygame.EarlyGameClient;
 import jayceecreates.earlygame.init.ItemsInit;
 import net.fabricmc.fabric.api.event.player.UseBlockCallback;
 import net.minecraft.block.BlockState;

@@ -33,12 +33,12 @@ public class BlocksInit {
     public static void init() {
 
         // rocks
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "stone_rock"), new BlockItem(STONE_ROCK_BLOCK, new Item.Settings().group(ModItemGroup.EARLYGAME)));
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "andesite_rock"), new BlockItem(ANDESITE_ROCK_BLOCK, new Item.Settings().group(ModItemGroup.EARLYGAME)));
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "diorite_rock"), new BlockItem(DIORITE_ROCK_BLOCK, new Item.Settings().group(ModItemGroup.EARLYGAME)));
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "granite_rock"), new BlockItem(GRANITE_ROCK_BLOCK, new Item.Settings().group(ModItemGroup.EARLYGAME)));
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "sandstone_rock"), new BlockItem(SANDSTONE_ROCK_BLOCK, new Item.Settings().group(ModItemGroup.EARLYGAME)));
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "red_sandstone_rock"), new BlockItem(RED_SANDSTONE_ROCK_BLOCK, new Item.Settings().group(ModItemGroup.EARLYGAME)));
+        Registry.register(Registry.ITEM, new Identifier("earlygame", "stone_rock"), ItemsInit.STONE_ROCK);
+        Registry.register(Registry.ITEM, new Identifier("earlygame", "andesite_rock"), ItemsInit.ANDESITE_STONE_ROCK);
+        Registry.register(Registry.ITEM, new Identifier("earlygame", "diorite_rock"), ItemsInit.DIORITE_STONE_ROCK);
+        Registry.register(Registry.ITEM, new Identifier("earlygame", "granite_rock"), ItemsInit.GRANITE_STONE_ROCK);
+        Registry.register(Registry.ITEM, new Identifier("earlygame", "sandstone_rock"), ItemsInit.SANDSTONE_ROCK);
+        Registry.register(Registry.ITEM, new Identifier("earlygame", "red_sandstone_rock"), ItemsInit.RED_SANDSTONE_ROCK);
         Registry.register(Registry.BLOCK, new Identifier("earlygame", "stone_rock_block"), STONE_ROCK_BLOCK);
         Registry.register(Registry.BLOCK, new Identifier("earlygame", "andesite_rock_block"), ANDESITE_ROCK_BLOCK);
         Registry.register(Registry.BLOCK, new Identifier("earlygame", "diorite_rock_block"), DIORITE_ROCK_BLOCK);

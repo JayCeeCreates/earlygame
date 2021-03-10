@@ -8,12 +8,12 @@ import com.google.common.collect.ImmutableMap;
 import it.unimi.dsi.fastutil.objects.Object2IntMap;
 import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap;
 import jayceecreates.earlygame.EarlyGame;
-import jayceecreates.earlygame.EarlyGameClient;
 import jayceecreates.earlygame.mixin.RecipeFieldAccessor;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.Recipe;
 import net.minecraft.recipe.RecipeManager;
 import net.minecraft.recipe.RecipeType;
@@ -31,22 +31,12 @@ public class RecipeRemover {
         ServerLifecycleEvents.SERVER_STARTED.register(server -> {
             final RecipeManager mgr = server.getRecipeManager();
 
-            if (!EarlyGame.CONFIG.crafting.enableWoodenTools) {
-                removeRecipes(mgr, new ItemStack(Items.WOODEN_AXE));
-                removeRecipes(mgr, new ItemStack(Items.WOODEN_HOE));
-                removeRecipes(mgr, new ItemStack(Items.WOODEN_PICKAXE));
-                removeRecipes(mgr, new ItemStack(Items.WOODEN_SHOVEL));
-                removeRecipes(mgr, new ItemStack(Items.WOODEN_SWORD));
-            }
-            if (!EarlyGame.CONFIG.crafting.enableStoneTools) {
-                removeRecipes(mgr, new ItemStack(Items.STONE_AXE));
-                removeRecipes(mgr, new ItemStack(Items.STONE_HOE));
-                removeRecipes(mgr, new ItemStack(Items.STONE_PICKAXE));
-                removeRecipes(mgr, new ItemStack(Items.STONE_SHOVEL));
-                removeRecipes(mgr, new ItemStack(Items.STONE_SWORD));
-            }
+            if (!EarlyGame.CONFIG.crafting.enableWoodenTools)
+                removeRecipes(mgr, ModItemTags.WOODEN_TOOLS);
+            if (!EarlyGame.CONFIG.crafting.enableStoneTools)
+                removeRecipes(mgr, ModItemTags.STONE_TOOLS);
             if (!EarlyGame.CONFIG.crafting.enablePlanksAndSticks) {
-                removeRecipes(mgr, ItemTags.PLANKS);
+                removePlankRecipes(mgr);
                 removeRecipes(mgr, new ItemStack(Items.STICK, 4));
             }
         });
@@ -82,6 +72,27 @@ public class RecipeRemover {
         });
 
         EarlyGame.LOGGER.info("Removed {} recipe(s)", recipesRemoved);
+    }
+
+    /**
+     * Removes all plank recipes if an ingredient is a log.
+     *
+     * @param recipeManager The recipe manager
+     */
+    private static void removePlankRecipes(final RecipeManager recipeManager) {
+        final int recipesRemoved = removeRecipes(recipeManager, recipe -> {
+            final ItemStack recipeOutput = recipe.getOutput();
+            for (Ingredient ing : recipe.getPreviewInputs()) {
+                for (ItemStack stack : ing.getMatchingStacksClient()) {
+                    if (ItemTags.LOGS.contains(stack.getItem())) {
+                        return !recipeOutput.isEmpty() && recipeOutput.getItem().isIn(ItemTags.PLANKS);
+                    }
+                }
+            }
+            return false;
+        });
+
+        EarlyGame.LOGGER.info("Removed {} plank recipe(s)", recipesRemoved);
     }
 
     /**

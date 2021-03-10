@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "xzx",
+        " y ",
+        " x "
+    ],
+    "key": {
+        "x": {
+            "item": "minecraft:stick"
+        },
+        "y": {
+            "tag": "minecraft:planks"
+        },
+        "z": {
+            "item": "earlygame:lashing"
+        }
+    },
+    "result": {
+        "item": "earlygame:slingshot",
+        "count": 1
+    }
+}

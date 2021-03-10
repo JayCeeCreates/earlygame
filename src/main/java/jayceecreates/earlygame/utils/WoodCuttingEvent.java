@@ -10,7 +10,6 @@ import net.minecraft.util.math.Direction;
 
 import java.util.Random;
 
-import jayceecreates.earlygame.EarlyGameClient;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
@@ -36,8 +35,7 @@ public class WoodCuttingEvent {
             int r2 = 0;
 
             boolean
-                isGeneralAxe = player.inventory.getMainHandStack().getItem().isIn(FabricToolTags.AXES),
-                isAxe = player.inventory.getMainHandStack().getItem().isIn(ModItemTags.AXES),
+                isAxe = player.inventory.getMainHandStack().getItem().isIn(FabricToolTags.AXES),
                 isSaw = player.inventory.getMainHandStack().getItem().isIn(ModItemTags.SAWS),
                 isLog = state.getBlock().isIn(BlockTags.LOGS),
                 isPlank = state.getBlock().isIn(BlockTags.PLANKS);
@@ -45,14 +43,13 @@ public class WoodCuttingEvent {
             if (state == null || player == null)
                 return ActionResult.PASS;
 
-            if (isGeneralAxe && (isLog || isPlank) && block.getSide() == Direction.UP && player.isSneaking()) {
+            if (isAxe && (isLog || isPlank) && block.getSide() == Direction.UP && player.isSneaking()) {
                 if (!world.isClient) {
                     if (r1 <= EarlyGame.CONFIG.woodChoppingProb) {
                         world.breakBlock(pos, false);
                         ItemEntity itemEntity = null;
                         if (isLog) {
-                            if (isAxe) r2 = RANDOM.nextInt(3) + 2;
-                            if (isSaw) r2 = 4;
+                            if (isSaw) r2 = 4; else r2 = RANDOM.nextInt(3) + 2;
                             for (Block obj : BlockTags.LOGS.values()) {
                                 if (state.getBlock() == obj) {
                                     String replacement = obj.toString().replace("stripped_", "").replace("log", "planks").replace("bark", "planks").replace("wood", "planks").replace("stem", "planks").replace("hyphae", "planks");
@@ -70,8 +67,7 @@ public class WoodCuttingEvent {
                             }
                         }
                         if (isPlank) {
-                            if (isAxe) r2 = RANDOM.nextInt(2) + 1;
-                            if (isSaw) r2 = 2;
+                            if (isSaw) r2 = 2; else r2 = RANDOM.nextInt(2) + 1;
                             itemEntity = new ItemEntity(
                                 player.world,
                                 block.getPos().x,

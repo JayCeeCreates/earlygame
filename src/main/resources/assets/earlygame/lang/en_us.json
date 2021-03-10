@@ -20,6 +20,16 @@
     "text.autoconfig.earlygame.option.generateSticks.@Tooltip[4]": "to create a new world for it to take effect.",
     "text.autoconfig.earlygame.option.generateSticks.@Tooltip[5]": "§7§o(Default: true)",
 
+    "text.autoconfig.earlygame.option.generateCopper": "Generate Copper Ores",
+    "text.autoconfig.earlygame.option.generateCopper.@Tooltip[0]": "§6§lGenerate Copper Ores",
+    "text.autoconfig.earlygame.option.generateCopper.@Tooltip[1]": "Set whether you want copper ores to be",
+    "text.autoconfig.earlygame.option.generateCopper.@Tooltip[2]": "generated in your world or not. Note that",
+    "text.autoconfig.earlygame.option.generateCopper.@Tooltip[3]": "disabling it while wooden and stone tools",
+    "text.autoconfig.earlygame.option.generateCopper.@Tooltip[4]": "are disabled may make your game virtually",
+    "text.autoconfig.earlygame.option.generateCopper.@Tooltip[5]": "impossible. You might need to create a",
+    "text.autoconfig.earlygame.option.generateCopper.@Tooltip[6]": "new world for it to take effect.",
+    "text.autoconfig.earlygame.option.generateCopper.@Tooltip[7]": "§7§o(Default: true; Requires restart!)",
+
     "text.autoconfig.earlygame.option.harderGroundBlocks": "Make Ground Blocks Harder",
     "text.autoconfig.earlygame.option.harderGroundBlocks.@Tooltip[0]": "§6§lMake Ground Blocks Harder",
     "text.autoconfig.earlygame.option.harderGroundBlocks.@Tooltip[1]": "Set whether you like to make the digging",
@@ -60,7 +70,7 @@
     "text.autoconfig.earlygame.option.flintConsumeProb": "Flint Knapping Consume Probability",
     "text.autoconfig.earlygame.option.flintConsumeProb.@Tooltip[0]": "§6§lFlint Knapping Consume Probability",
     "text.autoconfig.earlygame.option.flintConsumeProb.@Tooltip[1]": "Adjust how likely your flint is consumed from",
-    "text.autoconfig.earlygame.option.flintConsumeProb.@Tooltip[2]": "knapping on stone.",
+    "text.autoconfig.earlygame.option.flintConsumeProb.@Tooltip[2]": "knapping by stone or knife.",
     "text.autoconfig.earlygame.option.flintConsumeProb.@Tooltip[3]": "§7§o(Default: 0.3)",
 
     "text.autoconfig.earlygame.option.flintSuccessProb": "Flint Knapping Success Probability",
@@ -75,8 +85,17 @@
     "text.autoconfig.earlygame.option.woodChoppingProb.@Tooltip[2]": "into planks, and planks into sticks.",
     "text.autoconfig.earlygame.option.woodChoppingProb.@Tooltip[3]": "§7§o(Default: 0.5)",
 
+    "text.autoconfig.earlygame.option.fireStartProb": "Fire Starter Probability",
+    "text.autoconfig.earlygame.option.fireStartProb.@Tooltip[0]": "§6§lFire Starter Probability",
+    "text.autoconfig.earlygame.option.fireStartProb.@Tooltip[1]": "Adjust how likely you start a fire with",
+    "text.autoconfig.earlygame.option.fireStartProb.@Tooltip[2]": "a fire starter.",
+    "text.autoconfig.earlygame.option.fireStartProb.@Tooltip[3]": "§7§o(Default: 0.3)",
+
     "item.earlygame.plant_fiber": "Plant Fiber",
     "item.earlygame.lashing": "Lashing",
+
+    "item.earlygame.fire_starter": "Fire Starter",
+    "item.earlygame.slingshot": "Slingshot",
 
     "item.earlygame.flint_shard": "Flint Shard",
     "item.earlygame.flint_knife": "Flint Knife",

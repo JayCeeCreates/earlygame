@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "xy",
+        "yx"
+    ],
+    "key": {
+        "x": {
+            "item": "earlygame:lashing"
+        },
+        "y": {
+            "item": "minecraft:stick"
+        }
+    },
+    "result": {
+        "item": "earlygame:fire_starter",
+        "count": 1
+    }
+}

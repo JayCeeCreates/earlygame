@@ -1,4 +1,4 @@
-package jayceecreates.earlygame.mixin;
+/*package jayceecreates.earlygame.mixin;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -21,4 +21,4 @@ public class CopperOreGenMixin {
         builder.feature(GenerationStep.Feature.UNDERGROUND_ORES, CopperOreGen.COPPER_ORE_GEN);
     }
 
-}
+}*/
