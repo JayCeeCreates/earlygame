@@ -4,7 +4,7 @@
     "name": "EarlyGame",
     "version": "1.16.x-1.0.0",
     "environment": "*",
-    "license": "GPL-3.0",
+    "license": "MIT",
     "icon": "assets/earlygame/icon.png",
     "description": "A Fabric mod that focuses on changing early game progression that makes the gameplay feel more \"realistic\".",
     "authors": [
