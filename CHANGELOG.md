@@ -2,7 +2,21 @@
 
 ***
 
-## 1.16.X-1.1.1b
+## 1.16.x-1.0.0
+EarlyGame is now a stable release!
+- (+) Added fire starter, success chance is configurable
+- (+) Slingshots are added, lesser range than bow
+- (+) You can get a flint shard by using a knife (#8)
+- (+) Tall grass can now drop two plant fibers with same chance (#10)
+- (*) Relicensed to MIT (hooray!)
+- (*) Fixed recipes not unlocking
+- (*) Revamped recipe remover to only remove plank recipes if an ingredient is a log
+- (*) Fixed Bits and Chisels incompatibility (#7)
+- (*) Fixed wood chopping event incompatibility with modded tools (#9)
+- (*) Configuration is now defined in common side (#11, #12)
+- (*) Copper ore generation can now be disabled (#14)
+
+## 1.16.x-1.1.1b
 - (*) Retextured copper ore and reverted copper textures per request (Discord)
 - (*) Along with that, flint shard is also slightly retextured
 
