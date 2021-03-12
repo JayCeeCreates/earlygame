@@ -2,6 +2,9 @@
 
 ***
 
+## 1.16.x-1.0.1
+- (*) Fixed sandstone rock blocks not dropping upon break (woops)
+
 ## 1.16.x-1.0.0
 EarlyGame is now a stable release!
 - (+) Added fire starter, success chance is configurable
