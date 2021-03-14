@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "  y",
+        " yx",
+        "yx "
+    ],
+    "key": {
+        "x": {
+            "tag": "c:copper_ingots"
+        },
+        "y": {
+            "tag": "atbyw:sticks"
+        }
+    },
+    "result": {
+        "item": "earlygame:copper_saw",
+        "count": 1
+    },
+    "group": "atbyw_crafting"
+}

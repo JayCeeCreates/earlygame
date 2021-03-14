@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "xzx",
+        " y ",
+        " x "
+    ],
+    "key": {
+        "x": {
+            "tag": "atbyw:sticks"
+        },
+        "y": {
+            "tag": "minecraft:planks"
+        },
+        "z": {
+            "item": "earlygame:lashing"
+        }
+    },
+    "result": {
+        "item": "earlygame:slingshot",
+        "count": 1
+    },
+    "group": "atbyw_crafting"
+}

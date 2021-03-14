@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "x",
+        "y"
+    ],
+    "key": {
+        "x": {
+            "item": "minecraft:diamond"
+        },
+        "y": {
+            "tag": "atbyw:sticks"
+        }
+    },
+    "result": {
+        "item": "earlygame:diamond_knife",
+        "count": 1
+    },
+    "group": "atbyw_crafting"
+}
