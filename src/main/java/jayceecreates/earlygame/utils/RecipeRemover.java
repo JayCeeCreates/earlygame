@@ -83,6 +83,7 @@ public class RecipeRemover {
         final int recipesRemoved = removeRecipes(recipeManager, recipe -> {
             final ItemStack recipeOutput = recipe.getOutput();
             for (Ingredient ing : recipe.getPreviewInputs()) {
+                // EarlyGame.LOGGER.info("{}", ing.getMatchingStacksClient().toString());
                 for (ItemStack stack : ing.getMatchingStacksClient()) {
                     if (ItemTags.LOGS.contains(stack.getItem())) {
                         return !recipeOutput.isEmpty() && recipeOutput.getItem().isIn(ItemTags.PLANKS);

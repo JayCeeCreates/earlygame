@@ -2,6 +2,10 @@
 
 ***
 
+## 1.16.x-1.0.2
+- (+) You can now get plant fiber from ferns
+- (*) Compatibility with sticks from ATBYW (#17)
+
 ## 1.16.x-1.0.1
 - (*) Fixed sandstone rock blocks not dropping upon break (woops)
 
