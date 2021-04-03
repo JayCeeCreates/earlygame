@@ -1,7 +1,6 @@
 {
     "replace": false,
     "values": [
-        "earlygame:copper_hoe",
-        "smithee:base_smithee_hoe"
+        "earlygame:copper_hoe"
     ]
 }

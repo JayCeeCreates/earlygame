@@ -55,6 +55,8 @@ More details are in the [wiki](https://github.com/JayCeeCreates/earlygame/wiki).
 
 ## Known Issues
 
+- **\[Incompatibility\]** Smithee's tools are incompatible with existing mechanics. (#20)
+
 Incompatibilities and bugs can be reported in the [issues](https://github.com/JayCeeCreates/earlygame/issues) section.
 
 ## Credits
