@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "  y",
+        " yx",
+        "yx "
+    ],
+    "key": {
+        "x": {
+            "item": "minecraft:gold_ingot"
+        },
+        "y": {
+            "tag": "atbyw:sticks"
+        }
+    },
+    "result": {
+        "item": "earlygame:golden_saw",
+        "count": 1
+    },
+    "group": "atbyw_crafting"
+}

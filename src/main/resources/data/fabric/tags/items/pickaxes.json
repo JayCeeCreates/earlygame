@@ -2,6 +2,7 @@
     "replace": false,
     "values": [
         "earlygame:flint_pickaxe",
-        "earlygame:copper_pickaxe"
+        "earlygame:copper_pickaxe",
+        "smithee:base_smithee_pickaxe"
     ]
 }

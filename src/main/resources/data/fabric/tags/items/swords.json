@@ -7,6 +7,7 @@
         "earlygame:iron_knife",
         "earlygame:golden_knife",
         "earlygame:diamond_knife",
-        "earlygame:netherite_knife"
+        "earlygame:netherite_knife",
+        "smithee:base_smithee_sword"
     ]
 }

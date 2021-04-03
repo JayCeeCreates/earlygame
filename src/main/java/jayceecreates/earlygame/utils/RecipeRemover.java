@@ -8,6 +8,7 @@ import com.google.common.collect.ImmutableMap;
 import it.unimi.dsi.fastutil.objects.Object2IntMap;
 import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap;
 import jayceecreates.earlygame.EarlyGame;
+import jayceecreates.earlygame.mixin.MatchingStackAccessor;
 import jayceecreates.earlygame.mixin.RecipeFieldAccessor;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.minecraft.item.Item;
@@ -83,7 +84,7 @@ public class RecipeRemover {
         final int recipesRemoved = removeRecipes(recipeManager, recipe -> {
             final ItemStack recipeOutput = recipe.getOutput();
             for (Ingredient ing : recipe.getPreviewInputs()) {
-                for (ItemStack stack : ing.getMatchingStacksClient()) {
+                for (ItemStack stack : ((MatchingStackAccessor) (Object) ing).getMatchingStacks()) {
                     if (ItemTags.LOGS.contains(stack.getItem())) {
                         return !recipeOutput.isEmpty() && recipeOutput.getItem().isIn(ItemTags.PLANKS);
                     }

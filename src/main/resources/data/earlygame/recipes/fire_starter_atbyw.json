@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "xy",
+        "yx"
+    ],
+    "key": {
+        "x": {
+            "item": "earlygame:lashing"
+        },
+        "y": {
+            "tag": "atbyw:sticks"
+        }
+    },
+    "result": {
+        "item": "earlygame:fire_starter",
+        "count": 1
+    },
+    "group": "atbyw_crafting"
+}

@@ -8,6 +8,7 @@
         "earlygame:iron_saw",
         "earlygame:golden_saw",
         "earlygame:diamond_saw",
-        "earlygame:netherite_saw"
+        "earlygame:netherite_saw",
+        "smithee:base_smithee_axe"
     ]
 }
