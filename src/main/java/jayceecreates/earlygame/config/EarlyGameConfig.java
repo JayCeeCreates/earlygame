@@ -11,6 +11,11 @@ public class EarlyGameConfig implements ConfigData {
     public boolean warningMessage = false;
 
     @ConfigEntry.Gui.Tooltip(count = 6)
+    @ConfigEntry.Gui.RequiresRestart
+    public boolean generateStones = true;
+
+    @ConfigEntry.Gui.Tooltip(count = 6)
+    @ConfigEntry.Gui.RequiresRestart
     public boolean generateSticks = true;
 
     @ConfigEntry.Gui.Tooltip(count = 8)

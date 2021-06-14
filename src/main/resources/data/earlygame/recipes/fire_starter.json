@@ -9,7 +9,7 @@
             "item": "earlygame:lashing"
         },
         "y": {
-            "item": "minecraft:stick"
+            "tag": "c:sticks"
         }
     },
     "result": {

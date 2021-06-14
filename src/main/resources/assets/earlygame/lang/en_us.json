@@ -12,13 +12,21 @@
     "text.autoconfig.earlygame.option.warningMessage.@Tooltip[3]": "a wooden or stone material.",
     "text.autoconfig.earlygame.option.warningMessage.@Tooltip[4]": "§7§o(Default: false)",
 
+    "text.autoconfig.earlygame.option.generateStones": "Generate Stones",
+    "text.autoconfig.earlygame.option.generateStones.@Tooltip[0]": "§6§lGenerate Stones",
+    "text.autoconfig.earlygame.option.generateStones.@Tooltip[1]": "Set whether you want stones to be generated",
+    "text.autoconfig.earlygame.option.generateStones.@Tooltip[2]": "in your world or not. If disabled, you can",
+    "text.autoconfig.earlygame.option.generateStones.@Tooltip[3]": "still mine for rocks with a flint pickaxe.",
+    "text.autoconfig.earlygame.option.generateStones.@Tooltip[4]": "Requires creation of new world.",
+    "text.autoconfig.earlygame.option.generateStones.@Tooltip[5]": "§7§o(Default: true; Requires restart)",
+
     "text.autoconfig.earlygame.option.generateSticks": "Generate Sticks",
     "text.autoconfig.earlygame.option.generateSticks.@Tooltip[0]": "§6§lGenerate Sticks",
     "text.autoconfig.earlygame.option.generateSticks.@Tooltip[1]": "Set whether you want sticks to be generated",
     "text.autoconfig.earlygame.option.generateSticks.@Tooltip[2]": "in your world or not. If disabled, you can",
-    "text.autoconfig.earlygame.option.generateSticks.@Tooltip[3]": "still get sticks from leaves. You might need",
-    "text.autoconfig.earlygame.option.generateSticks.@Tooltip[4]": "to create a new world for it to take effect.",
-    "text.autoconfig.earlygame.option.generateSticks.@Tooltip[5]": "§7§o(Default: true)",
+    "text.autoconfig.earlygame.option.generateSticks.@Tooltip[3]": "still get sticks from leaves. Requires",
+    "text.autoconfig.earlygame.option.generateSticks.@Tooltip[4]": "creation of new world.",
+    "text.autoconfig.earlygame.option.generateSticks.@Tooltip[5]": "§7§o(Default: true; Requires restart)",
 
     "text.autoconfig.earlygame.option.generateCopper": "Generate Copper Ores",
     "text.autoconfig.earlygame.option.generateCopper.@Tooltip[0]": "§6§lGenerate Copper Ores",
@@ -28,7 +36,7 @@
     "text.autoconfig.earlygame.option.generateCopper.@Tooltip[4]": "are disabled may make your game virtually",
     "text.autoconfig.earlygame.option.generateCopper.@Tooltip[5]": "impossible. You might need to create a",
     "text.autoconfig.earlygame.option.generateCopper.@Tooltip[6]": "new world for it to take effect.",
-    "text.autoconfig.earlygame.option.generateCopper.@Tooltip[7]": "§7§o(Default: true; Requires restart!)",
+    "text.autoconfig.earlygame.option.generateCopper.@Tooltip[7]": "§7§o(Default: true; Requires restart)",
 
     "text.autoconfig.earlygame.option.harderGroundBlocks": "Make Ground Blocks Harder",
     "text.autoconfig.earlygame.option.harderGroundBlocks.@Tooltip[0]": "§6§lMake Ground Blocks Harder",

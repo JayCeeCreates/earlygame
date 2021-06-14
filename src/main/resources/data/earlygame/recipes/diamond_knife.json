@@ -9,7 +9,7 @@
             "item": "minecraft:diamond"
         },
         "y": {
-            "item": "minecraft:stick"
+            "tag": "c:sticks"
         }
     },
     "result": {

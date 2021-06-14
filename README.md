@@ -1,7 +1,7 @@
 <p align="center">
 <a href="https://github.com/JayCeeCreates/earlygame/blob/master/LICENSE"><img src="https://img.shields.io/github/license/jayceecreates/earlygame?style=for-the-badge"></a>
 <img src="https://img.shields.io/badge/mc%20version-1.16.x-brightgreen?style=for-the-badge">
-<img src="https://img.shields.io/badge/mod%20version-1.0.2-yellow?style=for-the-badge">
+<img src="https://img.shields.io/badge/mod%20version-1.0.3-yellow?style=for-the-badge">
 <a href="https://fabricmc.net"><img src="https://img.shields.io/badge/modloader-fabric-blue?style=for-the-badge"></a>
 </p>
 
@@ -56,6 +56,10 @@ More details are in the [wiki](https://github.com/JayCeeCreates/earlygame/wiki).
 ## Known Issues
 
 Incompatibilities and bugs can be reported in the [issues](https://github.com/JayCeeCreates/earlygame/issues) section.
+
+## Recommended Mods
+
+- **[Unlit Campfire](https://www.curseforge.com/minecraft/mc-mods/unlit-campfire)**: placing campfires on unlit state by default
 
 ## Credits
 

@@ -10,7 +10,7 @@
             "item": "earlygame:flint_shard"
         },
         "y": {
-            "item": "minecraft:stick"
+            "tag": "c:sticks"
         },
         "z": {
             "item": "earlygame:lashing"

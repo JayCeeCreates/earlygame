@@ -1,11 +1,9 @@
 {
     "schemaVersion": 1,
     "id": "earlygame",
+    "version": "1.16.x-1.0.3",
+
     "name": "EarlyGame",
-    "version": "1.16.x-1.0.2",
-    "environment": "*",
-    "license": "MIT",
-    "icon": "assets/earlygame/icon.png",
     "description": "A Fabric mod that focuses on changing early game progression that makes the gameplay feel more \"realistic\".",
     "authors": [
         "JayCeeCreates"
@@ -15,8 +13,11 @@
         "sources": "https://github.com/JayCeeCreates/earlygame.git",
         "issues": "https://github.com/JayCeeCreates/earlygame/issues"
     },
+
+    "license": "MIT",
+    "icon": "assets/earlygame/icon.png",
   
-  
+    "environment": "*",
     "entrypoints": {
         "main": [
             "jayceecreates.earlygame.EarlyGame"
@@ -33,7 +34,7 @@
     ],
   
     "depends": {
-        "fabricloader": ">=0.7.4",
+        "fabricloader": ">=0.11.1",
         "fabric": "*",
         "minecraft": "1.16.x"
     },

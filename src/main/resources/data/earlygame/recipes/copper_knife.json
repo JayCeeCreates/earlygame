@@ -9,7 +9,7 @@
             "tag": "c:copper_ingots"
         },
         "y": {
-            "item": "minecraft:stick"
+            "tag": "c:sticks"
         }
     },
     "result": {
