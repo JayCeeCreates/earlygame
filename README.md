@@ -1,6 +1,6 @@
 <p align="center">
 <a href="https://github.com/JayCeeCreates/earlygame/blob/master/LICENSE"><img src="https://img.shields.io/github/license/jayceecreates/earlygame?style=for-the-badge"></a>
-<img src="https://img.shields.io/badge/mc%20version-1.16.x-brightgreen?style=for-the-badge">
+<img src="https://img.shields.io/badge/mc%20version-1.16--1.17-brightgreen?style=for-the-badge">
 <img src="https://img.shields.io/badge/mod%20version-1.0.3-yellow?style=for-the-badge">
 <a href="https://fabricmc.net"><img src="https://img.shields.io/badge/modloader-fabric-blue?style=for-the-badge"></a>
 </p>
@@ -16,7 +16,7 @@
 
 ## Background
 
-This idea revolves around the fact that as of this writing, no such mods for early game realism are present in the Fabric mod database. Then I thought, "Fine, I'll do it myself." Moreover, it was inspired by two particular Forge mods that have the same premise, namely [No Tree Punching (1.12.2/1.15.2/1.16.5)](https://www.curseforge.com/minecraft/mc-mods/no-tree-punching) and [Natural Progression (1.14.4/1.15.2/1.16.5)](https://www.curseforge.com/minecraft/mc-mods/natural-progressions).
+This idea revolves around the fact that as of this writing, no such mods for early game realism are present in the Fabric mod database. Then I thought, "Fine, I'll do it myself." Moreover, it was inspired by two particular Forge mods that have the same premise, namely [No Tree Punching](https://www.curseforge.com/minecraft/mc-mods/no-tree-punching) and [Natural Progression](https://www.curseforge.com/minecraft/mc-mods/natural-progressions).
 
 ## Features
 
@@ -46,7 +46,10 @@ More details are in the [wiki](https://github.com/JayCeeCreates/earlygame/wiki).
 
 ### Required
 
-- **[Fabric API](https://www.curseforge.com/minecraft/mc-mods/fabric-api)** (0.30.0+1.16 and above)
+- **[Fabric API](https://www.curseforge.com/minecraft/mc-mods/fabric-api)**
+  - 1.16: 0.30.0+1.16 and above
+  - 1.17: 0.34.9+1.17 and above
+- **[Cloth Config](https://www.curseforge.com/minecraft/mc-mods/cloth-config)**: required for 1.17
 
 ### Optional
 
@@ -59,7 +62,7 @@ Incompatibilities and bugs can be reported in the [issues](https://github.com/Ja
 
 ## Recommended Mods
 
-- **[Unlit Campfire](https://www.curseforge.com/minecraft/mc-mods/unlit-campfire)**: placing campfires on unlit state by default
+- **[Unlit Campfire](https://www.curseforge.com/minecraft/mc-mods/unlit-campfire)**: placing campfires on unlit state by default (1.16)
 
 ## Credits
 
