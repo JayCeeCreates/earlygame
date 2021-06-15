@@ -22,7 +22,7 @@
       "conditions": {
         "items": [
           {
-            "item": "minecraft:iron_helmet"
+            "items": [ "minecraft:iron_helmet" ]
           }
         ]
       }
@@ -32,7 +32,7 @@
       "conditions": {
         "items": [
           {
-            "item": "minecraft:iron_chestplate"
+            "items": [ "minecraft:iron_chestplate" ]
           }
         ]
       }
@@ -42,7 +42,7 @@
       "conditions": {
         "items": [
           {
-            "item": "minecraft:iron_leggings"
+            "items": [ "minecraft:iron_leggings" ]
           }
         ]
       }
@@ -52,7 +52,7 @@
       "conditions": {
         "items": [
           {
-            "item": "minecraft:iron_boots"
+            "items": [ "minecraft:iron_boots" ]
           }
         ]
       }
@@ -62,7 +62,7 @@
       "conditions": {
         "items": [
           {
-            "item": "earlygame:copper_helmet"
+            "items": [ "earlygame:copper_helmet" ]
           }
         ]
       }
@@ -72,7 +72,7 @@
       "conditions": {
         "items": [
           {
-            "item": "earlygame:copper_chestplate"
+            "items": [ "earlygame:copper_chestplate" ]
           }
         ]
       }
@@ -82,7 +82,7 @@
       "conditions": {
         "items": [
           {
-            "item": "earlygame:copper_leggings"
+            "items": [ "earlygame:copper_leggings" ]
           }
         ]
       }
@@ -92,7 +92,7 @@
       "conditions": {
         "items": [
           {
-            "item": "earlygame:copper_boots"
+            "items": [ "earlygame:copper_boots" ]
           }
         ]
       }

@@ -69,7 +69,7 @@ public class RecipeRemover {
     private static void removeRecipes(final RecipeManager recipeManager, final Tag<Item> tag) {
         final int recipesRemoved = removeRecipes(recipeManager, recipe -> {
             final ItemStack recipeOutput = recipe.getOutput();
-            return !recipeOutput.isEmpty() && recipeOutput.getItem().isIn(tag);
+            return !recipeOutput.isEmpty() && recipeOutput.isIn(tag);
         });
 
         EarlyGame.LOGGER.info("Removed {} recipe(s)", recipesRemoved);
@@ -83,10 +83,10 @@ public class RecipeRemover {
     private static void removePlankRecipes(final RecipeManager recipeManager) {
         final int recipesRemoved = removeRecipes(recipeManager, recipe -> {
             final ItemStack recipeOutput = recipe.getOutput();
-            for (Ingredient ing : recipe.getPreviewInputs()) {
+            for (Ingredient ing : recipe.getIngredients()) {
                 for (ItemStack stack : ((MatchingStackAccessor) (Object) ing).getMatchingStacks()) {
                     if (ItemTags.LOGS.contains(stack.getItem())) {
-                        return !recipeOutput.isEmpty() && recipeOutput.getItem().isIn(ItemTags.PLANKS);
+                        return !recipeOutput.isEmpty() && recipeOutput.isIn(ItemTags.PLANKS);
                     }
                 }
             }

@@ -17,29 +17,27 @@ public class DisableWoodStoneTools {
             
             if (player == null) return ActionResult.PASS;
 
-            ItemStack itemHeld = player.inventory.getMainHandStack();
+            ItemStack itemHeld = player.getInventory().getMainHandStack();
             ActionResult a = ActionResult.PASS;
             // if player is not in creative
             if (!player.isCreative()) {
                 if (itemHeld.getItem() instanceof ToolItem) {
-                    ToolItem tool = (ToolItem) itemHeld.getItem();
                     if (!EarlyGame.CONFIG.crafting.enableWoodenTools) {
-                        if (tool.isIn(ModItemTags.WOODEN_TOOLS))
+                        if (itemHeld.isIn(ModItemTags.WOODEN_TOOLS))
                         a = ActionResult.FAIL;
                     }
                     if (!EarlyGame.CONFIG.crafting.enableStoneTools) {
-                        if (tool.isIn(ModItemTags.STONE_TOOLS))
+                        if (itemHeld.isIn(ModItemTags.STONE_TOOLS))
                         a = ActionResult.FAIL;
                     }
                 }
                 else if (itemHeld.getItem() instanceof SwordItem) {
-                    SwordItem sword = (SwordItem) itemHeld.getItem();
                     if (!EarlyGame.CONFIG.crafting.enableWoodenTools) {
-                        if (sword.isIn(ModItemTags.WOODEN_TOOLS))
+                        if (itemHeld.isIn(ModItemTags.WOODEN_TOOLS))
                         a = ActionResult.FAIL;
                     }
                     if (!EarlyGame.CONFIG.crafting.enableStoneTools) {
-                        if (sword.isIn(ModItemTags.STONE_TOOLS))
+                        if (itemHeld.isIn(ModItemTags.STONE_TOOLS))
                         a = ActionResult.FAIL;
                     }
                 }
@@ -55,29 +53,27 @@ public class DisableWoodStoneTools {
 
             if (player == null) return ActionResult.PASS;
 
-            ItemStack itemHeld = player.inventory.getMainHandStack();
+            ItemStack itemHeld = player.getInventory().getMainHandStack();
             ActionResult a = ActionResult.PASS;
             // if player is not in creative
             if (!player.isCreative()) {
                 if (itemHeld.getItem() instanceof ToolItem) {
-                    ToolItem tool = (ToolItem) itemHeld.getItem();
                     if (!EarlyGame.CONFIG.crafting.enableWoodenTools) {
-                        if (tool.isIn(ModItemTags.WOODEN_TOOLS))
+                        if (itemHeld.isIn(ModItemTags.WOODEN_TOOLS))
                         a = ActionResult.FAIL;
                     }
                     if (!EarlyGame.CONFIG.crafting.enableStoneTools) {
-                        if (tool.isIn(ModItemTags.STONE_TOOLS))
+                        if (itemHeld.isIn(ModItemTags.STONE_TOOLS))
                         a = ActionResult.FAIL;
                     }
                 }
                 else if (itemHeld.getItem() instanceof SwordItem) {
-                    SwordItem sword = (SwordItem) itemHeld.getItem();
                     if (!EarlyGame.CONFIG.crafting.enableWoodenTools) {
-                        if (sword.isIn(ModItemTags.WOODEN_TOOLS))
+                        if (itemHeld.isIn(ModItemTags.WOODEN_TOOLS))
                         a = ActionResult.FAIL;
                     }
                     if (!EarlyGame.CONFIG.crafting.enableStoneTools) {
-                        if (sword.isIn(ModItemTags.STONE_TOOLS))
+                        if (itemHeld.isIn(ModItemTags.STONE_TOOLS))
                         a = ActionResult.FAIL;
                     }
                 }
@@ -95,29 +91,27 @@ public class DisableWoodStoneTools {
                 return ActionResult.PASS;
             }
             
-            ItemStack itemHeld = player.inventory.getMainHandStack();
+            ItemStack itemHeld = player.getInventory().getMainHandStack();
             ActionResult a = ActionResult.PASS;
             // if player is not in creative
             if (!player.isCreative()) {
                 if (itemHeld.getItem() instanceof ToolItem) {
-                    ToolItem tool = (ToolItem) itemHeld.getItem();
                     if (!EarlyGame.CONFIG.crafting.enableWoodenTools) {
-                        if (tool.isIn(ModItemTags.WOODEN_TOOLS))
+                        if (itemHeld.isIn(ModItemTags.WOODEN_TOOLS))
                         a = ActionResult.FAIL;
                     }
                     if (!EarlyGame.CONFIG.crafting.enableStoneTools) {
-                        if (tool.isIn(ModItemTags.STONE_TOOLS))
+                        if (itemHeld.isIn(ModItemTags.STONE_TOOLS))
                         a = ActionResult.FAIL;
                     }
                 }
                 else if (itemHeld.getItem() instanceof SwordItem) {
-                    SwordItem sword = (SwordItem) itemHeld.getItem();
                     if (!EarlyGame.CONFIG.crafting.enableWoodenTools) {
-                        if (sword.isIn(ModItemTags.WOODEN_TOOLS))
+                        if (itemHeld.isIn(ModItemTags.WOODEN_TOOLS))
                         a = ActionResult.FAIL;
                     }
                     if (!EarlyGame.CONFIG.crafting.enableStoneTools) {
-                        if (sword.isIn(ModItemTags.STONE_TOOLS))
+                        if (itemHeld.isIn(ModItemTags.STONE_TOOLS))
                         a = ActionResult.FAIL;
                     }
                 }
@@ -133,29 +127,27 @@ public class DisableWoodStoneTools {
             if (player == null)
                 return ActionResult.PASS;
 
-            ItemStack itemHeld = player.inventory.getMainHandStack();
+            ItemStack itemHeld = player.getInventory().getMainHandStack();
             ActionResult a = ActionResult.PASS;
             // if player is not in creative
             if (!player.isCreative()) {
                 if (itemHeld.getItem() instanceof ToolItem) {
-                    ToolItem tool = (ToolItem) itemHeld.getItem();
                     if (!EarlyGame.CONFIG.crafting.enableWoodenTools) {
-                        if (tool.isIn(ModItemTags.WOODEN_TOOLS))
+                        if (itemHeld.isIn(ModItemTags.WOODEN_TOOLS))
                         a = ActionResult.FAIL;
                     }
                     if (!EarlyGame.CONFIG.crafting.enableStoneTools) {
-                        if (tool.isIn(ModItemTags.STONE_TOOLS))
+                        if (itemHeld.isIn(ModItemTags.STONE_TOOLS))
                         a = ActionResult.FAIL;
                     }
                 }
                 else if (itemHeld.getItem() instanceof SwordItem) {
-                    SwordItem sword = (SwordItem) itemHeld.getItem();
                     if (!EarlyGame.CONFIG.crafting.enableWoodenTools) {
-                        if (sword.isIn(ModItemTags.WOODEN_TOOLS))
+                        if (itemHeld.isIn(ModItemTags.WOODEN_TOOLS))
                         a = ActionResult.FAIL;
                     }
                     if (!EarlyGame.CONFIG.crafting.enableStoneTools) {
-                        if (sword.isIn(ModItemTags.STONE_TOOLS))
+                        if (itemHeld.isIn(ModItemTags.STONE_TOOLS))
                         a = ActionResult.FAIL;
                     }
                 }

@@ -10,7 +10,7 @@ import net.minecraft.util.Hand;
 
 public abstract class ModRangedWeaponItem extends Item {
     public static final Predicate < ItemStack > SLINGSHOT_PROJECTILES = (stack) -> {
-        return stack.getItem().isIn(ModItemTags.ROCKS);
+        return stack.isIn(ModItemTags.ROCKS);
     };
 
     public ModRangedWeaponItem(Item.Settings settings) {

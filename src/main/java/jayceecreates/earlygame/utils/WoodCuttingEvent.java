@@ -35,10 +35,10 @@ public class WoodCuttingEvent {
             int r2 = 0;
 
             boolean
-                isAxe = player.inventory.getMainHandStack().getItem().isIn(FabricToolTags.AXES),
-                isSaw = player.inventory.getMainHandStack().getItem().isIn(ModItemTags.SAWS),
-                isLog = state.getBlock().isIn(BlockTags.LOGS),
-                isPlank = state.getBlock().isIn(BlockTags.PLANKS);
+                isAxe = player.getInventory().getMainHandStack().isIn(FabricToolTags.AXES),
+                isSaw = player.getInventory().getMainHandStack().isIn(ModItemTags.SAWS),
+                isLog = state.isIn(BlockTags.LOGS),
+                isPlank = state.isIn(BlockTags.PLANKS);
 
             if (state == null || player == null)
                 return ActionResult.PASS;

@@ -28,16 +28,6 @@
     "text.autoconfig.earlygame.option.generateSticks.@Tooltip[4]": "creation of new world.",
     "text.autoconfig.earlygame.option.generateSticks.@Tooltip[5]": "§7§o(Default: true; Requires restart)",
 
-    "text.autoconfig.earlygame.option.generateCopper": "Generate Copper Ores",
-    "text.autoconfig.earlygame.option.generateCopper.@Tooltip[0]": "§6§lGenerate Copper Ores",
-    "text.autoconfig.earlygame.option.generateCopper.@Tooltip[1]": "Set whether you want copper ores to be",
-    "text.autoconfig.earlygame.option.generateCopper.@Tooltip[2]": "generated in your world or not. Note that",
-    "text.autoconfig.earlygame.option.generateCopper.@Tooltip[3]": "disabling it while wooden and stone tools",
-    "text.autoconfig.earlygame.option.generateCopper.@Tooltip[4]": "are disabled may make your game virtually",
-    "text.autoconfig.earlygame.option.generateCopper.@Tooltip[5]": "impossible. You might need to create a",
-    "text.autoconfig.earlygame.option.generateCopper.@Tooltip[6]": "new world for it to take effect.",
-    "text.autoconfig.earlygame.option.generateCopper.@Tooltip[7]": "§7§o(Default: true; Requires restart)",
-
     "text.autoconfig.earlygame.option.harderGroundBlocks": "Make Ground Blocks Harder",
     "text.autoconfig.earlygame.option.harderGroundBlocks.@Tooltip[0]": "§6§lMake Ground Blocks Harder",
     "text.autoconfig.earlygame.option.harderGroundBlocks.@Tooltip[1]": "Set whether you like to make the digging",
@@ -111,7 +101,6 @@
     "item.earlygame.flint_axe": "Flint Axe",
     "item.earlygame.flint_saw": "Flint Saw",
 
-    "item.earlygame.copper_ingot": "Copper Ingot",
     "item.earlygame.copper_nugget": "Copper Nugget",
     "item.earlygame.copper_helmet": "Copper Helmet",
     "item.earlygame.copper_chestplate": "Copper Chestplate",
@@ -146,8 +135,6 @@
     "block.earlygame.andesite_cobblestone": "Andesite Cobblestone",
     "block.earlygame.diorite_cobblestone": "Diorite Cobblestone",
     "block.earlygame.granite_cobblestone": "Granite Cobblestone",
-    "block.earlygame.copper_ore": "Copper Ore",
-    "block.earlygame.copper_block": "Copper Block",
 
     "itemGroup.earlygame.eggroup": "EarlyGame"
 }

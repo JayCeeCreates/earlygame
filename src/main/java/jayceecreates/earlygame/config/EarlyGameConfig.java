@@ -1,8 +1,8 @@
 package jayceecreates.earlygame.config;
 
-import me.sargunvohra.mcmods.autoconfig1u.ConfigData;
-import me.sargunvohra.mcmods.autoconfig1u.annotation.Config;
-import me.sargunvohra.mcmods.autoconfig1u.annotation.ConfigEntry;
+import me.shedaniel.autoconfig.ConfigData;
+import me.shedaniel.autoconfig.annotation.Config;
+import me.shedaniel.autoconfig.annotation.ConfigEntry;
 
 @Config(name = "earlygame")
 public class EarlyGameConfig implements ConfigData {
@@ -17,10 +17,6 @@ public class EarlyGameConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip(count = 6)
     @ConfigEntry.Gui.RequiresRestart
     public boolean generateSticks = true;
-
-    @ConfigEntry.Gui.Tooltip(count = 8)
-    @ConfigEntry.Gui.RequiresRestart
-    public boolean generateCopper = true;
 
     @ConfigEntry.Gui.Tooltip(count = 4)
     public boolean harderGroundBlocks = true;

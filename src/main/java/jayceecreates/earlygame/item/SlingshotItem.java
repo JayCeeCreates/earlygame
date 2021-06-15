@@ -29,7 +29,7 @@ public class SlingshotItem extends ModRangedWeaponItem implements Vanishable {
     public void onStoppedUsing(ItemStack stack, World world, LivingEntity user, int remainingUseTicks) {
         if (user instanceof PlayerEntity) {
             PlayerEntity playerEntity = (PlayerEntity) user;
-            boolean bl = playerEntity.abilities.creativeMode || EnchantmentHelper.getLevel(Enchantments.INFINITY, stack) > 0;
+            boolean bl = playerEntity.getAbilities().creativeMode || EnchantmentHelper.getLevel(Enchantments.INFINITY, stack) > 0;
             ItemStack itemStack = getRockType(playerEntity, stack);
             if (!itemStack.isEmpty() || bl) {
                 if (itemStack.isEmpty()) {
@@ -44,7 +44,7 @@ public class SlingshotItem extends ModRangedWeaponItem implements Vanishable {
                         EarlyGame.LOGGER.info("Use Tick: " + f);
                         RockEntity rockEn = new RockEntity(world, user);
                         rockEn.setItem(itemStack);
-                        rockEn.setProperties(user, user.pitch, user.yaw, 0.0F, f * 1.5F, 1.0F);
+                        rockEn.setProperties(user, user.getPitch(), user.getYaw(), 0.0F, f * 1.5F, 1.0F);
 
                         int j = EnchantmentHelper.getLevel(Enchantments.POWER, stack);
                         if (j > 0) {
@@ -67,11 +67,11 @@ public class SlingshotItem extends ModRangedWeaponItem implements Vanishable {
                         world.spawnEntity(rockEn);
                     }
 
-                    world.playSound(null, playerEntity.getX(), playerEntity.getY(), playerEntity.getZ(), SoundEvents.ENTITY_ARROW_SHOOT, SoundCategory.PLAYERS, 1.0F, 1.0F / (RANDOM.nextFloat() * 0.4F + 1.2F) + f * 0.5F);
-                    if (!bl2 && !playerEntity.abilities.creativeMode) {
+                    world.playSound(null, playerEntity.getX(), playerEntity.getY(), playerEntity.getZ(), SoundEvents.ENTITY_ARROW_SHOOT, SoundCategory.PLAYERS, 1.0F, 1.0F / (world.getRandom().nextFloat() * 0.4F + 1.2F) + f * 0.5F);
+                    if (!bl2 && !playerEntity.getAbilities().creativeMode) {
                         itemStack.decrement(1);
                         if (itemStack.isEmpty()) {
-                            playerEntity.inventory.removeOne(itemStack);
+                            playerEntity.getInventory().removeOne(itemStack);
                         }
                     }
 
@@ -102,7 +102,7 @@ public class SlingshotItem extends ModRangedWeaponItem implements Vanishable {
     public TypedActionResult <ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack itemStack = user.getStackInHand(hand);
         boolean bl = !getRockType(user, itemStack).isEmpty();
-        if (!user.abilities.creativeMode && !bl) {
+        if (!user.getAbilities().creativeMode && !bl) {
             return TypedActionResult.fail(itemStack);
         } else {
             user.setCurrentHand(hand);
@@ -121,14 +121,14 @@ public class SlingshotItem extends ModRangedWeaponItem implements Vanishable {
             } else {
                 predicate = ((ModRangedWeaponItem)stack.getItem()).getProjectiles();
   
-                for(int i = 0; i < player.inventory.size(); ++i) {
-                    ItemStack itemStack2 = player.inventory.getStack(i);
+                for(int i = 0; i < player.getInventory().size(); ++i) {
+                    ItemStack itemStack2 = player.getInventory().getStack(i);
                     if (predicate.test(itemStack2)) {
                         return itemStack2;
                     }
                 }
   
-                return player.abilities.creativeMode ? new ItemStack(ItemsInit.STONE_ROCK) : ItemStack.EMPTY;
+                return player.getAbilities().creativeMode ? new ItemStack(ItemsInit.STONE_ROCK) : ItemStack.EMPTY;
             }
         }
     }

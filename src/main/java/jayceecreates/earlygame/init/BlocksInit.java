@@ -23,10 +23,6 @@ public class BlocksInit {
     public static final Block DIORITE_COBBLESTONE = new Cobblestone();
     public static final Block GRANITE_COBBLESTONE = new Cobblestone();
 
-    // copper
-    public static final Block COPPER_ORE = new CopperOre();
-    public static final Block COPPER_BLOCK = new CopperBlock();
-
     // stick
     public static final Block STICK_TWIG_BLOCK = new StickTwigBlock();
 
@@ -53,12 +49,6 @@ public class BlocksInit {
         Registry.register(Registry.BLOCK, new Identifier("earlygame", "andesite_cobblestone"), ANDESITE_COBBLESTONE);
         Registry.register(Registry.BLOCK, new Identifier("earlygame", "diorite_cobblestone"), DIORITE_COBBLESTONE);
         Registry.register(Registry.BLOCK, new Identifier("earlygame", "granite_cobblestone"), GRANITE_COBBLESTONE);
-
-        // copper
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "copper_ore"), new BlockItem(COPPER_ORE, new Item.Settings().group(ModItemGroup.EARLYGAME)));
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "copper_block"), new BlockItem(COPPER_BLOCK, new Item.Settings().group(ModItemGroup.EARLYGAME)));
-        Registry.register(Registry.BLOCK, new Identifier("earlygame", "copper_ore"), COPPER_ORE);
-        Registry.register(Registry.BLOCK, new Identifier("earlygame", "copper_block"), COPPER_BLOCK);
         
         // stick
         Registry.register(Registry.BLOCK, new Identifier("earlygame", "stick_twig"), STICK_TWIG_BLOCK);

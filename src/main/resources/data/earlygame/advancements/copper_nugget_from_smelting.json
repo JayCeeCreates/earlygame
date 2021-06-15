@@ -11,7 +11,7 @@
           "conditions": {
             "items": [
               {
-                "item": "earlygame:copper_pickaxe"
+                "items": [ "earlygame:copper_pickaxe" ]
               }
             ]
           }
@@ -21,7 +21,7 @@
           "conditions": {
             "items": [
               {
-                "item": "earlygame:copper_shovel"
+                "items": [ "earlygame:copper_shovel" ]
               }
             ]
           }
@@ -31,7 +31,7 @@
           "conditions": {
             "items": [
               {
-                "item": "earlygame:copper_axe"
+                "items": [ "earlygame:copper_axe" ]
               }
             ]
           }
@@ -41,7 +41,7 @@
           "conditions": {
             "items": [
               {
-                "item": "earlygame:copper_hoe"
+                "items": [ "earlygame:copper_hoe" ]
               }
             ]
           }
@@ -51,7 +51,7 @@
           "conditions": {
             "items": [
               {
-                "item": "earlygame:copper_sword"
+                "items": [ "earlygame:copper_sword" ]
               }
             ]
           }
@@ -61,7 +61,7 @@
           "conditions": {
             "items": [
               {
-                "item": "earlygame:copper_knife"
+                "items": [ "earlygame:copper_knife" ]
               }
             ]
           }
@@ -71,7 +71,7 @@
           "conditions": {
             "items": [
               {
-                "item": "earlygame:copper_saw"
+                "items": [ "earlygame:copper_saw" ]
               }
             ]
           }
@@ -81,7 +81,7 @@
           "conditions": {
             "items": [
               {
-                "item": "earlygame:copper_helmet"
+                "items": [ "earlygame:copper_helmet" ]
               }
             ]
           }
@@ -91,7 +91,7 @@
           "conditions": {
             "items": [
               {
-                "item": "earlygame:copper_chestplate"
+                "items": [ "earlygame:copper_chestplate" ]
               }
             ]
           }
@@ -101,7 +101,7 @@
           "conditions": {
             "items": [
               {
-                "item": "earlygame:copper_leggings"
+                "items": [ "earlygame:copper_leggings" ]
               }
             ]
           }
@@ -111,7 +111,7 @@
           "conditions": {
             "items": [
               {
-                "item": "earlygame:copper_boots"
+                "items": [ "earlygame:copper_boots" ]
               }
             ]
           }

@@ -6,7 +6,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
-import net.minecraft.block.MaterialColor;
+import net.minecraft.block.MapColor;
 import net.minecraft.block.ShapeContext;
 import net.minecraft.block.Waterloggable;
 import net.minecraft.entity.ai.pathing.NavigationType;
@@ -38,7 +38,7 @@ public class RockBlock extends Block implements Waterloggable {
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 
     public RockBlock() {
-        super(FabricBlockSettings.of(Material.STONE, MaterialColor.LIGHT_GRAY).strength(0.15F, 0.15F).breakByHand(true).sounds(BlockSoundGroup.STONE).noCollision().collidable(false));
+        super(FabricBlockSettings.of(Material.STONE, MapColor.LIGHT_GRAY).strength(0.15F, 0.15F).breakByHand(true).sounds(BlockSoundGroup.STONE).noCollision().collidable(false));
         this.setDefaultState((BlockState)this.getDefaultState().with(WATERLOGGED, Boolean.FALSE));
     }
 

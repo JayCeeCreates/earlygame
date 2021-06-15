@@ -2,7 +2,7 @@
   "parent": "minecraft:story/mine_stone",
   "display": {
     "icon": {
-      "item": "earlygame:copper_ingot"
+      "item": "minecraft:copper_ingot"
     },
     "title": {
       "translate": "advancements.story.smelt_copper.title"
@@ -21,7 +21,7 @@
       "conditions": {
         "items": [
           {
-            "item": "earlygame:copper_ingot"
+            "items": [ "minecraft:copper_ingot" ]
           }
         ]
       }

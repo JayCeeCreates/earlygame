@@ -1,6 +1,6 @@
 package jayceecreates.earlygame.item;
 
-import jayceecreates.earlygame.init.ItemsInit;
+import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 
@@ -33,7 +33,7 @@ public class CopperToolBase implements ToolMaterial {
 
     @Override
     public Ingredient getRepairIngredient() {
-        return Ingredient.ofItems(ItemsInit.COPPER_INGOT);
+        return Ingredient.ofItems(Items.COPPER_INGOT);
     }
     
 }

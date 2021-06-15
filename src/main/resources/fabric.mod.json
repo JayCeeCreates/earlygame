@@ -1,7 +1,7 @@
 {
     "schemaVersion": 1,
     "id": "earlygame",
-    "version": "1.16.x-1.0.3",
+    "version": "1.17.x-1.0.3",
 
     "name": "EarlyGame",
     "description": "A Fabric mod that focuses on changing early game progression that makes the gameplay feel more \"realistic\".",
@@ -32,13 +32,15 @@
     "mixins": [
         "earlygame.mixins.json"
     ],
+    "accessWidener" : "earlygame.accesswidener",
   
     "depends": {
-        "fabricloader": ">=0.11.1",
+        "fabricloader": ">=0.11.3",
         "fabric": "*",
-        "minecraft": "1.16.x"
+        "minecraft": "1.17.x",
+        "java": ">=16"
     },
     "suggests": {
-        "flamingo": "*"
+        "another-mod": "*"
     }
 }

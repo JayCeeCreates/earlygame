@@ -19,12 +19,12 @@ public class EarlyGameClient implements ClientModInitializer {
     }
 
     public static void slingshotPredicates(SlingshotItem item) {
-        FabricModelPredicateProviderRegistry.register(item, new Identifier("pull"),(itemStack, clientWorld, livingEntity) -> {
+        FabricModelPredicateProviderRegistry.register(item, new Identifier("pull"),(itemStack, clientWorld, livingEntity, seed) -> {
             if (livingEntity == null) return 0.0F;
             else return livingEntity.getActiveItem() != itemStack ? 0.0F : (float)(itemStack.getMaxUseTime() - livingEntity.getItemUseTimeLeft()) / 15.0F;
         });
 
-        FabricModelPredicateProviderRegistry.register(item, new Identifier("pulling"), (itemStack, clientWorld, livingEntity) ->
+        FabricModelPredicateProviderRegistry.register(item, new Identifier("pulling"), (itemStack, clientWorld, livingEntity, seed) ->
                 livingEntity != null && livingEntity.isUsingItem() && livingEntity.getActiveItem() == itemStack ? 1.0F : 0.0F);
     }
 }

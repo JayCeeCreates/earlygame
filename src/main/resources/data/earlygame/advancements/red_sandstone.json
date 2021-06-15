@@ -6,7 +6,7 @@
         "conditions": {
           "items": [
             {
-              "item": "earlygame:red_sandstone_rock"
+              "items": [ "earlygame:red_sandstone_rock" ]
             }
           ]
         }

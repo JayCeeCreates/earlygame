@@ -31,8 +31,8 @@ public class FlintKnifeKnapEvent {
             double r2 = RANDOM.nextDouble();
 
             boolean
-                isKnife = player.inventory.getMainHandStack().getItem().isIn(ModItemTags.KNIVES),
-                isRock = state.getBlock().isIn(ModBlockTags.ROCKS);
+                isKnife = player.getInventory().getMainHandStack().isIn(ModItemTags.KNIVES),
+                isRock = state.isIn(ModBlockTags.ROCKS);
 
             if (state == null || player == null)
                 return ActionResult.PASS;

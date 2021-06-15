@@ -31,8 +31,8 @@ public class FireStarterItem extends Item {
         BlockState blockState = world.getBlockState(blockPos);
 
         double rand = Math.random();
-        if (CampfireBlock.method_30035(blockState)) {
-            world.playSound(playerEntity, blockPos, SoundEvents.ITEM_FLINTANDSTEEL_USE, SoundCategory.BLOCKS, 1.0F, RANDOM.nextFloat() * 0.4F + 0.8F);
+        if (CampfireBlock.canBeLit(blockState)) {
+            world.playSound(playerEntity, blockPos, SoundEvents.ITEM_FLINTANDSTEEL_USE, SoundCategory.BLOCKS, 1.0F, world.getRandom().nextFloat() * 0.4F + 0.8F);
             if (rand <= EarlyGame.CONFIG.fireStartProb && !world.isClient)
                 world.setBlockState(blockPos, (BlockState)blockState.with(Properties.LIT, true), 11);
             if (playerEntity != null) {
@@ -44,8 +44,8 @@ public class FireStarterItem extends Item {
         }
         else {
             BlockPos blockPos2 = blockPos.offset(context.getSide());
-            if (AbstractFireBlock.method_30032(world, blockPos2, context.getPlayerFacing())) {
-                world.playSound(playerEntity, blockPos2, SoundEvents.ITEM_FLINTANDSTEEL_USE, SoundCategory.BLOCKS, 1.0F, RANDOM.nextFloat() * 0.4F + 0.8F);
+            if (AbstractFireBlock.canPlaceAt(world, blockPos2, context.getPlayerFacing())) {
+                world.playSound(playerEntity, blockPos2, SoundEvents.ITEM_FLINTANDSTEEL_USE, SoundCategory.BLOCKS, 1.0F, world.getRandom().nextFloat() * 0.4F + 0.8F);
                 if (rand <= EarlyGame.CONFIG.fireStartProb && !world.isClient) {
                     BlockState blockState2 = AbstractFireBlock.getState(world, blockPos2);
                     world.setBlockState(blockPos2, blockState2, 11);

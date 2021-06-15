@@ -3,10 +3,9 @@ package jayceecreates.earlygame;
 import jayceecreates.earlygame.config.EarlyGameConfig;
 import jayceecreates.earlygame.init.*;
 import jayceecreates.earlygame.utils.ModConfiguredFeatures;
-import jayceecreates.earlygame.world.CopperOreGen;
 
-import me.sargunvohra.mcmods.autoconfig1u.AutoConfig;
-import me.sargunvohra.mcmods.autoconfig1u.serializer.GsonConfigSerializer;
+import me.shedaniel.autoconfig.AutoConfig;
+import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
@@ -40,13 +39,10 @@ public class EarlyGame implements ModInitializer {
         EventsInit.init();
 
         // world gen
-        RegistryKey<ConfiguredFeature<?, ?>> copperOreGen = RegistryKey.of(Registry.CONFIGURED_FEATURE_WORLDGEN, new Identifier("earlygame", "copper_ore_gen"));
-        RegistryKey<ConfiguredFeature<?, ?>> stickTwigGen = RegistryKey.of(Registry.CONFIGURED_FEATURE_WORLDGEN, new Identifier("earlygame", "stick_twig_gen"));
-        RegistryKey<ConfiguredFeature<?, ?>> stoneRockGen = RegistryKey.of(Registry.CONFIGURED_FEATURE_WORLDGEN, new Identifier("earlygame", "stone_rock_gen"));
-        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, copperOreGen.getValue(), CopperOreGen.COPPER_ORE_GEN);
+        RegistryKey<ConfiguredFeature<?, ?>> stickTwigGen = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY, new Identifier("earlygame", "stick_twig_gen"));
+        RegistryKey<ConfiguredFeature<?, ?>> stoneRockGen = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY, new Identifier("earlygame", "stone_rock_gen"));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, stickTwigGen.getValue(), ModConfiguredFeatures.STICK_TWIG);
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, stoneRockGen.getValue(), ModConfiguredFeatures.ROCK_BLOCK);
-        if (CONFIG.generateCopper) BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, copperOreGen);
         if (CONFIG.generateSticks) BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.VEGETAL_DECORATION, stickTwigGen);
         if (CONFIG.generateStones) BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.VEGETAL_DECORATION, stoneRockGen);
         

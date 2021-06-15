@@ -39,7 +39,6 @@ public class ItemsInit {
     public static final Item FLINT_SAW = new FlintSaw(new FlintToolBase(), new Item.Settings().group(ModItemGroup.EARLYGAME));
 
     // copper
-    public static final Item COPPER_INGOT = new Item(new Item.Settings().group(ModItemGroup.EARLYGAME));
     public static final Item COPPER_NUGGET = new Item(new Item.Settings().group(ModItemGroup.EARLYGAME));
     public static final ArmorMaterial COPPER_ARMOR = new CopperArmorBase();
     public static final Item COPPER_SWORD = new SwordBase(new CopperToolBase(), new Item.Settings().group(ModItemGroup.EARLYGAME));
@@ -84,7 +83,6 @@ public class ItemsInit {
         Registry.register(Registry.ITEM, new Identifier("earlygame", "flint_saw"), FLINT_SAW);
 
         // copper
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "copper_ingot"), COPPER_INGOT);
         Registry.register(Registry.ITEM, new Identifier("earlygame", "copper_nugget"), COPPER_NUGGET);
         Registry.register(Registry.ITEM, new Identifier("earlygame", "copper_helmet"), new BaseArmor(COPPER_ARMOR, EquipmentSlot.HEAD, new Item.Settings().group(ModItemGroup.EARLYGAME)));
         Registry.register(Registry.ITEM, new Identifier("earlygame", "copper_chestplate"), new BaseArmor(COPPER_ARMOR, EquipmentSlot.CHEST, new Item.Settings().group(ModItemGroup.EARLYGAME)));

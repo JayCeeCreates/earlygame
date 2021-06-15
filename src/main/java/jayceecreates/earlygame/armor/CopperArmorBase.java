@@ -1,8 +1,8 @@
 package jayceecreates.earlygame.armor;
 
-import jayceecreates.earlygame.init.ItemsInit;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorMaterial;
+import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
@@ -41,7 +41,7 @@ public class CopperArmorBase implements ArmorMaterial {
     @Override
     public Ingredient getRepairIngredient() {
         
-        return Ingredient.ofItems(ItemsInit.COPPER_INGOT);
+        return Ingredient.ofItems(Items.COPPER_INGOT);
     }
 
     @Override

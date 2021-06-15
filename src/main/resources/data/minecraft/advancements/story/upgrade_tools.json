@@ -22,7 +22,7 @@
       "conditions": {
         "items": [
           {
-            "item": "earlygame:copper_pickaxe"
+            "items": [ "earlygame:copper_pickaxe" ]
           }
         ]
       }

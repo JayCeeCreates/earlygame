@@ -6,7 +6,7 @@
         "conditions": {
           "items": [
             {
-              "item": "earlygame:plant_fiber"
+              "items": [ "earlygame:plant_fiber" ]
             }
           ]
         }

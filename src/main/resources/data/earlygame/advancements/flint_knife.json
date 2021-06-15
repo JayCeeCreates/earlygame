@@ -11,7 +11,7 @@
             "conditions": {
                 "items": [
                     {
-                        "item": "earlygame:flint_shard"
+                        "items": [ "earlygame:flint_shard" ]
                     }
                 ]
             }

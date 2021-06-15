@@ -21,7 +21,7 @@
           "conditions": {
               "items": [
                   {
-                      "item": "earlygame:lashing"
+                      "items": [ "earlygame:lashing" ]
                   }
               ]
           }
