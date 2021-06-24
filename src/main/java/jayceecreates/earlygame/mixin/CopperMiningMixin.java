@@ -30,16 +30,14 @@ public abstract class CopperMiningMixin extends LivingEntity {
         at = @At("HEAD"),
         cancellable = true
     )
-    private void canHarvest(BlockState state, CallbackInfoReturnable < Boolean > cir) {
+    private void canHarvest(BlockState state, CallbackInfoReturnable<Boolean> cir) {
         Item heldItem = this.inventory.getMainHandStack().getItem();
 
-        if (heldItem instanceof ToolItem) {
-            int miningLevel = ((ToolItem) heldItem).getMaterial().getMiningLevel();
+        if (heldItem instanceof PickaxeItem) {
+            int miningLevel = ((PickaxeItem) heldItem).getMaterial().getMiningLevel();
             String blockName = Registry.BLOCK.getId(state.getBlock()).toString();
-
-            if (heldItem instanceof PickaxeItem)
-                if (miningLevel == 0 && blockName.equals("minecraft:copper_ore"))
-                    cir.setReturnValue(true);
+            if (miningLevel == 0 && blockName.equals("minecraft:copper_ore"))
+                cir.setReturnValue(true);
         }
     }
 
