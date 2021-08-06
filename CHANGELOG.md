@@ -2,6 +2,16 @@
 
 ***
 
+## 1.17.x-1.0.3
+EarlyGame has successfully been ported to 1.17!
+- (+) All features from 1.16.x versions
+- (*) Moved to Java 16
+- (*) Recolored copper tools and armor to match vanilla textures
+- (*) You can now mine regular copper ores at mining level 0 (i.e. wooden level)
+- (-) Removed the modded copper ore generation to make way for the vanilla one
+- (-) Yeeted the old AutoConfig and replaced with the new Cloth Config (with new embedded AutoConfig)
+    - **NOTE**: Cloth Config is now a required dependency.
+
 ## 1.16.x-1.0.3
 Since 1.17 is out now, the quest to port EarlyGame to 1.17 has begun! Updates are still slow, but I'll try my best to update as much as I can!
 - (*) Common stick tag in all tool recipes for better compatibility with mods that add modded sticks
