@@ -1,7 +1,7 @@
 {
     "type": "minecraft:smelting",
     "ingredient": {
-      "item": "earlygame:granite_cobblestone"
+      "item": "earlygame:cobbled_granite"
     },
     "result": "minecraft:granite",
     "experience": 0.1,

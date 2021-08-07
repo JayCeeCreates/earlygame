@@ -1,6 +1,6 @@
 {
     "parent": "minecraft:block/cube_all",
     "textures": {
-      "all": "earlygame:block/granite_cobblestone"
+      "all": "earlygame:block/cobbled_diorite"
     }
   }

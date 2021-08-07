@@ -24,7 +24,7 @@ import net.minecraft.world.WorldView;
 
 public class StickTwigBlock extends Block {
 
-    protected static final VoxelShape SHAPE = Block.createCuboidShape(4D, 0D, 4D, 12D, 0.01D, 12D);
+    protected static final VoxelShape SHAPE = Block.createCuboidShape(4D, 0.01D, 4D, 12D, 0.02D, 12D);
     
     public StickTwigBlock() {
         super(FabricBlockSettings.of(Material.WOOD).breakByHand(true).sounds(BlockSoundGroup.WOOD).strength(0.15F, 0.15F).noCollision().collidable(false));

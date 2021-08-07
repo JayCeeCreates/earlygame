@@ -6,11 +6,11 @@
     ],
     "key": {
         "x": {
-            "item": "earlygame:andesite_rock"
+            "item": "earlygame:diorite_rock"
         }
     },
     "result": {
-        "item": "earlygame:andesite_cobblestone",
+        "item": "earlygame:cobbled_diorite",
         "count": 1
     }
 }

@@ -14,7 +14,7 @@
       "has_the_recipe": {
         "trigger": "minecraft:recipe_unlocked",
         "conditions": {
-          "recipe": "earlygame:diorite_cobblestone"
+          "recipe": "earlygame:cobbled_diorite"
         }
       }
     },
@@ -26,7 +26,7 @@
     ],
     "rewards": {
       "recipes": [
-        "earlygame:diorite_cobblestone"
+        "earlygame:cobbled_diorite"
       ]
     }
   }

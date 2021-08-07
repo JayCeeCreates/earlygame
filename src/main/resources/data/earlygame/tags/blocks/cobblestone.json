@@ -2,8 +2,8 @@
     "replace": false,
     "values": [
       "minecraft:cobblestone",
-      "earlygame:granite_cobblestone",
-      "earlygame:andesite_cobblestone",
-      "earlygame:diorite_cobblestone"
+      "earlygame:cobbled_granite",
+      "earlygame:cobbled_andesite",
+      "earlygame:cobbled_diorite"
     ]
   }

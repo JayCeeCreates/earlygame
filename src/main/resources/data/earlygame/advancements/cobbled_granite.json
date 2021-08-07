@@ -14,7 +14,7 @@
       "has_the_recipe": {
         "trigger": "minecraft:recipe_unlocked",
         "conditions": {
-          "recipe": "earlygame:granite_cobblestone"
+          "recipe": "earlygame:cobbled_granite"
         }
       }
     },
@@ -26,7 +26,7 @@
     ],
     "rewards": {
       "recipes": [
-        "earlygame:granite_cobblestone"
+        "earlygame:cobbled_granite"
       ]
     }
   }

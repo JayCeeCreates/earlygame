@@ -2,6 +2,10 @@
 
 ***
 
+## 1.16.x-1.0.4
+- (*) Adjusted the height of stick block to prevent possible Z-fighting
+- (*) Renamed all cobblestone variants to match the official naming convention in 1.17 (e.g. Cobbled Diorite)
+
 ## 1.16.x-1.0.3
 Since 1.17 is out now, the quest to port EarlyGame to 1.17 has begun! Updates are still slow, but I'll try my best to update as much as I can!
 - (*) Common stick tag in all tool recipes for better compatibility with mods that add modded sticks

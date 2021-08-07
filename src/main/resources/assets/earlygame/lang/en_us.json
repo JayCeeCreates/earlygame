@@ -143,9 +143,9 @@
     "block.earlygame.granite_rock_block": "Granite Rock",
     "block.earlygame.sandstone_rock_block": "Sandstone Rock",
     "block.earlygame.red_sandstone_rock_block": "Red Sandstone Rock",
-    "block.earlygame.andesite_cobblestone": "Andesite Cobblestone",
-    "block.earlygame.diorite_cobblestone": "Diorite Cobblestone",
-    "block.earlygame.granite_cobblestone": "Granite Cobblestone",
+    "block.earlygame.cobbled_andesite": "Cobbled Andesite",
+    "block.earlygame.cobbled_diorite": "Cobbled Diorite",
+    "block.earlygame.cobbled_granite": "Cobbled Granite",
     "block.earlygame.copper_ore": "Copper Ore",
     "block.earlygame.copper_block": "Copper Block",
 
