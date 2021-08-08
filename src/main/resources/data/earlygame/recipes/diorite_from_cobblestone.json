@@ -1,7 +1,7 @@
 {
     "type": "minecraft:smelting",
     "ingredient": {
-      "item": "earlygame:diorite_cobblestone"
+      "item": "earlygame:cobbled_diorite"
     },
     "result": "minecraft:diorite",
     "experience": 0.1,

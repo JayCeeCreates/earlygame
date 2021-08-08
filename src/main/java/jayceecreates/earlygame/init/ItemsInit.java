@@ -28,6 +28,9 @@ public class ItemsInit {
     public static final Item ANDESITE_STONE_ROCK = new BlockItem(BlocksInit.ANDESITE_ROCK_BLOCK, new Item.Settings().group(ModItemGroup.EARLYGAME));
     public static final Item DIORITE_STONE_ROCK = new BlockItem(BlocksInit.DIORITE_ROCK_BLOCK, new Item.Settings().group(ModItemGroup.EARLYGAME));
     public static final Item GRANITE_STONE_ROCK = new BlockItem(BlocksInit.GRANITE_ROCK_BLOCK, new Item.Settings().group(ModItemGroup.EARLYGAME));
+    public static final Item DEEPSLATE_STONE_ROCK = new BlockItem(BlocksInit.DEEPSLATE_ROCK_BLOCK, new Item.Settings().group(ModItemGroup.EARLYGAME));
+    public static final Item CALCITE_STONE_ROCK = new BlockItem(BlocksInit.CALCITE_ROCK_BLOCK, new Item.Settings().group(ModItemGroup.EARLYGAME));
+    public static final Item TUFF_STONE_ROCK = new BlockItem(BlocksInit.TUFF_ROCK_BLOCK, new Item.Settings().group(ModItemGroup.EARLYGAME));
     public static final Item SANDSTONE_ROCK = new BlockItem(BlocksInit.SANDSTONE_ROCK_BLOCK, new Item.Settings().group(ModItemGroup.EARLYGAME));
     public static final Item RED_SANDSTONE_ROCK = new BlockItem(BlocksInit.RED_SANDSTONE_ROCK_BLOCK, new Item.Settings().group(ModItemGroup.EARLYGAME));
 

@@ -1,0 +1,6 @@
+{
+    "parent": "earlygame:block/rock_block",
+    "textures": {
+        "all": "minecraft:block/tuff"
+    }
+}

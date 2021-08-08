@@ -2,6 +2,12 @@
 
 ***
 
+## 1.17.x-1.1.0
+- (+) Added cobblestone and rock variants for the new stone blocks (deepslate, calcite, tuff)
+- (*) Adjusted the height of stick block to prevent possible Z-fighting
+- (*) Fixed a bug where you cannot mine modded blocks due to the changes in mining in 1.17 (#25)
+- (*) Renamed all cobblestone variants to match the official naming convention (e.g. Cobbled Diorite)
+
 ## 1.17.x-1.0.3
 EarlyGame has successfully been ported to 1.17!
 - (+) All features from [1.16.x](https://github.com/JayCeeCreates/earlygame/blob/1.16/CHANGELOG.md) versions

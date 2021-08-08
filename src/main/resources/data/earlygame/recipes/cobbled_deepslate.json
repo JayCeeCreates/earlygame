@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "xx",
+        "xx"
+    ],
+    "key": {
+        "x": {
+            "item": "earlygame:deepslate_rock"
+        }
+    },
+    "result": {
+        "item": "earlygame:cobbled_deepslate",
+        "count": 1
+    }
+}

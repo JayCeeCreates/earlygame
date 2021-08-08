@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "xx",
+        "xx"
+    ],
+    "key": {
+        "x": {
+            "item": "earlygame:tuff_rock"
+        }
+    },
+    "result": {
+        "item": "earlygame:cobbled_tuff",
+        "count": 1
+    }
+}
