@@ -2,6 +2,9 @@
 
 ***
 
+## 1.17.x-1.1.1
+- (*) Fixed cobbled deepslate unable to be crafted (#30)
+
 ## 1.17.x-1.1.0
 - (+) Added cobblestone and rock variants for the new stone blocks (deepslate, calcite, tuff)
 - (*) Adjusted the height of stick block to prevent possible Z-fighting
