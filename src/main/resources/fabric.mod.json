@@ -1,7 +1,7 @@
 {
     "schemaVersion": 1,
     "id": "earlygame",
-    "version": "1.17.x-1.1.0",
+    "version": "1.17.x-1.1.1",
 
     "name": "EarlyGame",
     "description": "A Fabric mod that focuses on changing early game progression that makes the gameplay feel more \"realistic\".",
