@@ -10,7 +10,7 @@
     ],
     "contact": {
         "homepage": "https://www.curseforge.com/minecraft/mc-mods/earlygame",
-        "sources": "https://github.com/JayCeeCreates/earlygame.git",
+        "sources": "https://github.com/JayCeeCreates/earlygame",
         "issues": "https://github.com/JayCeeCreates/earlygame/issues"
     },
 
@@ -39,8 +39,5 @@
         "fabric": "*",
         "minecraft": "1.17.x",
         "java": ">=16"
-    },
-    "suggests": {
-        "another-mod": "*"
     }
 }
