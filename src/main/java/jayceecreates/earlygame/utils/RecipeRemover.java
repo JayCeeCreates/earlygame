@@ -53,7 +53,7 @@ public class RecipeRemover {
     private static void removeRecipes(final RecipeManager recipeManager, final ItemStack stack) {
         final int recipesRemoved = removeRecipes(recipeManager, recipe -> {
             final ItemStack recipeOutput = recipe.getOutput();
-            return !recipeOutput.isEmpty() && (!stack.isEmpty() && recipeOutput.getCount() == stack.getCount() && recipeOutput.getItem() == stack.getItem() &&ItemStack.areTagsEqual(recipeOutput, stack));
+            return !recipeOutput.isEmpty() && (!stack.isEmpty() && recipeOutput.getCount() == stack.getCount() && recipeOutput.getItem() == stack.getItem() &&ItemStack.areNbtEqual(recipeOutput, stack));
         });
 
         EarlyGame.LOGGER.info("Removed {} recipe(s)", recipesRemoved);

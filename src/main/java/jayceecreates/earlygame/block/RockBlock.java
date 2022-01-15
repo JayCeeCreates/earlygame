@@ -94,7 +94,7 @@ public class RockBlock extends Block implements Waterloggable {
         if (!this.canPlaceAt(state, worldIn, pos))
             worldIn.breakBlock(pos, true);
         else if (state.get(WATERLOGGED))
-            worldIn.getFluidTickScheduler().schedule(pos, Fluids.WATER, Fluids.WATER.getTickRate(worldIn));
+            worldIn.createAndScheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(worldIn));
     }
 
     public BlockState asWaterlogged() {
@@ -114,7 +114,7 @@ public class RockBlock extends Block implements Waterloggable {
     @Override
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState newState, WorldAccess world, BlockPos pos, BlockPos posFrom) {
         if ((Boolean)state.get(WATERLOGGED)) {
-            world.getFluidTickScheduler().schedule(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
+            world.createAndScheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
         }
  
         return super.getStateForNeighborUpdate(state, direction, newState, world, pos, posFrom);

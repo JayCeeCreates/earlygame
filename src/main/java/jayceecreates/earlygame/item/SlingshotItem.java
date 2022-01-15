@@ -44,7 +44,8 @@ public class SlingshotItem extends ModRangedWeaponItem implements Vanishable {
                         EarlyGame.LOGGER.info("Use Tick: " + f);
                         RockEntity rockEn = new RockEntity(world, user);
                         rockEn.setItem(itemStack);
-                        rockEn.setProperties(user, user.getPitch(), user.getYaw(), 0.0F, f * 1.5F, 1.0F);
+                        //rockEn.setProperties(user, user.getPitch(), user.getYaw(), 0.0F, f * 1.5F, 1.0F);
+                        rockEn.updatePositionAndAngles(0.0f, f * 1.5f, 1.0f, user.getYaw(), user.getPitch());
 
                         int j = EnchantmentHelper.getLevel(Enchantments.POWER, stack);
                         if (j > 0) {
