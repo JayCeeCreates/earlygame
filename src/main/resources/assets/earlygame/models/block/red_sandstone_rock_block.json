@@ -1,6 +1,0 @@
-{
-    "parent": "earlygame:block/rock_block",
-    "textures": {
-        "all": "minecraft:block/red_sandstone_bottom"
-    }
-}
