@@ -2,20 +2,21 @@
 <html>
     <head>
         <title>EarlyGame - Home</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta name="color-scheme" content="light dark">
         <link rel="icon" type="image/x-icon" href="./favicon.png">
         <link href="css/main.css" rel="stylesheet" />
         <link href="css/animation.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css" crossorigin="anonymous"/>
         <script src="https://code.jquery.com/jquery-3.6.0.js" type="text/javascript"></script>
     </head>
-    <body>
+    <body style="background-color: black;">
         <div class="video-bg">
             <video preload autoplay muted loop>
                 <source src="https://a.pomf.cat/iwlaft.mp4" type="video/mp4" />
             </video>
         </div>
-        <div class="header">
+        <div class="header header-home">
             <div class="container">
                 <!--<div class="nav-left">EARLYGAME</div>-->
                 <div class="nav-right">
@@ -25,13 +26,12 @@
         </div>
         <div class="section1">
             <img id="eg-logo" src="https://raw.githubusercontent.com/JayCeeCreates/earlygame/resources/earlygame_header.png" alt="EarlyGame logo" /><br />
-            <p id="eg-oneliner">
+            <p id="eg-oneliner" style="margin-bottom: 16px;">
                 A Minecraft Fabric mod that aims to tweak early game progression to make it feel more "realistic".
             </p>
-            <button id="eg-btn-download" type="button" class="button1 slide-in-right-3" onclick="alert('Work in progress!');">Download</button> 
-            <button id="eg-btn-wiki" type="button" class="button2 slide-in-right-3" onclick="alert('Work in progress!');">Documentation</button> 
+            <a href="./use/index.html" style="margin-right:16pt"><button id="eg-btn-download" type="button" class="button1">Use</button></a><button id="eg-btn-wiki" type="button" class="button2" onclick="alert('Work in progress!');">Wiki</button>
         </div>
-        <div style="position:absolute;bottom:16px;right:16px;color:white;font-size: 10pt;">
+        <div style="position:fixed;bottom:16px;right:16px;color:white;font-size: 10pt;z-index: 1;">
             Powered by GitHub Pages
         </div>
 
@@ -54,15 +54,6 @@
                     $('.section1 #eg-btn-download').addClass("slide-in-right-3");
                     $('.section1 #eg-btn-wiki').addClass("slide-in-right-3");
                     $('.section1').removeClass("slide-in-up");
-                }
-            });
-
-            $win.on('scroll', function () {
-                var top = $win.scrollTop();
-                if (top > 400) {
-                    $header.addClass("scrolled");
-                } else {
-                    $header.removeClass("scrolled");
                 }
             });
         </script>

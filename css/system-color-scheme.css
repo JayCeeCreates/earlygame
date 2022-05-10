@@ -1,0 +1,22 @@
+:root {
+    --bg-color-pri: 255, 255, 255;
+    --bg-color-sec: 230, 230, 230;
+
+    --txt-color-pri: 34, 34, 34;
+    --txt-color-sec: 38, 38, 38;
+
+    --fg-color-pri-1: 102, 210, 60;
+    --fg-color-sec-1: 72, 156, 38;
+    --fg-color-pri-2: 255, 94, 0;
+    --fg-color-sec-2: 190, 79, 15;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color-pri: 36, 38, 40;
+        --bg-color-sec: 52, 56, 60;
+    
+        --txt-color-pri: 255, 255, 255;
+        --txt-color-sec: 230, 230, 230;
+    }
+}
