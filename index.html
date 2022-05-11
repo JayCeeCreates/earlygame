@@ -16,20 +16,22 @@
                 <source src="https://a.pomf.cat/iwlaft.mp4" type="video/mp4" />
             </video>
         </div>
-        <div class="header header-home">
+        <header class="header-home">
             <div class="container">
-                <!--<div class="nav-left">EARLYGAME</div>-->
                 <div class="nav-right">
-                    <a href="https://github.com/JayCeeCreates/earlygame">SOURCE</a>
+                    <a href="./use/">USE</a>
+                    <a href="./wiki/">WIKI</a>
+                    <a href="./source/">SOURCE</a>
+                    <a href="./donate/">DONATE</a>
                 </div>
             </div>
-        </div>
+        </header>
         <div class="section1">
             <img id="eg-logo" src="https://raw.githubusercontent.com/JayCeeCreates/earlygame/resources/earlygame_header.png" alt="EarlyGame logo" /><br />
             <p id="eg-oneliner" style="margin-bottom: 16px;">
-                A Minecraft Fabric mod that aims to tweak early game progression to make it feel more "realistic".
+                A Minecraft Fabric mod that aims to change early game progression to make it feel more "realistic".
             </p>
-            <a href="./use" style="margin-right:16pt"><button id="eg-btn-download" type="button" class="button1">Use</button></a><button id="eg-btn-wiki" type="button" class="button2" onclick="alert('Work in progress!');">Wiki</button>
+            <a href="./use" style="margin-right:16pt"><button id="eg-btn-download" type="button" class="button1">Use</button></a><a href="./wiki"><button id="eg-btn-wiki" type="button" class="button2">Wiki</button></a>
         </div>
         <div style="position:fixed;bottom:16px;right:16px;color:white;font-size: 10pt;z-index: 1;">
             Powered by GitHub Pages
@@ -41,7 +43,7 @@
             var $winWidth = $win.width();
 
             $win.ready(function () {
-                if ($winWidth < 800) {
+                if ($winWidth < 810) {
                     $('.section1 #eg-logo').removeClass("slide-in-right-1");
                     $('.section1 #eg-oneliner').removeClass("slide-in-right-2");
                     $('.section1 #eg-btn-download').removeClass("slide-in-right-3");

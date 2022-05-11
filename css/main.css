@@ -24,7 +24,7 @@ p {
 .desktop-view { display: block; }
 .mobile-view { display: none; }
 
-.header {
+header {
     position: fixed;
     z-index: 1;
     background-color: rgb(var(--bg-color-pri));
@@ -34,29 +34,29 @@ p {
     overflow: hidden;
     filter: drop-shadow(0 2px 3px #0000007f);
 }
-.header .container {
+header .container {
     width: 80%;
     margin: 0 auto;
 }
-.header .container .nav-left {
+header .container .nav-left {
     float:left;
     padding: 24px 0;
     font-weight: 900;
 }
-.header .container .nav-left a {
+header .container .nav-left a {
     text-decoration: none;
     color: inherit;
 }
-.header .container .nav-right {
+header .container .nav-right {
     float:right;
     padding: 24px 0;
 }
-.header .container .nav-right a {
+header .container .nav-right a {
     margin-left: 32px;
     color: inherit;
     transition: color 0.3s ease;
 }
-.header .container .nav-right a:hover {
+header .container .nav-right a:hover {
     color: rgb(var(--fg-color-pri-1));
 }
 a {
@@ -75,7 +75,7 @@ a:hover {
     color: #fff;
 }
 
-.footer {
+footer {
     background-color: rgb(var(--bg-color-sec));
     color: rgb(var(--txt-color-pri));
     font-size: 12pt;
@@ -197,7 +197,7 @@ button {
     background: url('../resources/use_light.png') center no-repeat;
     background-size: cover;
     text-align: center;
-    width: 100vw;
+    width: 100%;
     height: 400pt;
 }
 .section2::before {
@@ -217,15 +217,38 @@ button {
     width: 40%;
     margin: auto;
 }
+.wiki {
+    display: flex;
+    padding: 16px;
+}
+.wiki-pages {
+    flex: 1;
+    width: 20%;
+    height: 100%;
+}
+.wiki-pages ul li {
+    padding: 8px 0;
+}
+.wiki-body {
+    flex: 3;
+    padding: 32px;
+    background-color: rgb(var(--bg-color-sec));
+    border: 1px solid #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px #0000007f;
+}
 
 @media (prefers-color-scheme: dark) {
     .section2 {
         background: url('../resources/use_dark.png') center no-repeat;
         background-size: cover;
     }
+    .wiki-body {
+        border: 1px solid #3B434C;
+    }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 810px) {
     :root {
         font-size: 12pt;
     }
@@ -233,14 +256,14 @@ button {
     .desktop-view { display: none; }
     .mobile-view { display: block; }
 
-    .header {
+    header {
         font-size: 16pt;
     }
-    .header .container .nav-left {
+    header .container .nav-left {
         padding: 16px;
         text-align: center;
     }
-    .header .container .nav-right {
+    header .container .nav-right {
         display: none !important;
     }
 
@@ -272,5 +295,43 @@ button {
     }
     .section2::before {
         height: 200pt;
+    }
+
+    .body-content {
+        width: 90%;
+    }
+
+    .wiki {
+        display: block;
+        padding: initial;
+    }
+    .wiki-pages {
+        padding: 16px;
+        background-color: rgb(var(--bg-color-sec));
+        border: 1px solid #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px #0000007f;
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 32px;
+        color: rgb(var(--txt-color-pri));
+        font-family: "Montserrat", Arial, sans-serif;
+        font-weight: normal;
+        font-size:10pt;
+    }
+
+    .wiki-body {
+        flex: initial;
+        padding: 0px;
+        background-color: initial;
+        border: 0;
+        border-radius: 0;
+        box-shadow: initial;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        .wiki-pages {
+            border: 1px solid #3B434C;
+        }
     }
 }
