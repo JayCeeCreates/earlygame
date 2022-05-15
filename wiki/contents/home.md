@@ -14,9 +14,9 @@
     </video>
 </div>
 <p align="center">
-<a href="https://github.com/JayCeeCreates/earlygame/blob/master/LICENSE"><img src="https://img.shields.io/github/license/jayceecreates/earlygame?style=for-the-badge"></a>
+<a href="https://github.com/JayCeeCreates/earlygame/master/LICENSE"><img src="https://img.shields.io/github/license/jayceecreates/earlygame?style=for-the-badge"></a>
 <img src="https://img.shields.io/badge/mc%20version-1.16--1.18-299137?style=for-the-badge">
 <a href="https://fabricmc.net"><img src="https://img.shields.io/badge/modloader-fabric-red?style=for-the-badge"></a>
 </p>
 
-**TODO:** finish the wiki
+**TODO:** revise the wiki

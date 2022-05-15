@@ -27,7 +27,7 @@ p {
 header {
     position: fixed;
     z-index: 1;
-    background-color: rgb(var(--bg-color-pri));
+    background-color: rgb(var(--bg-color-sec));
     color: rgb(var(--txt-color-pri));
     top: 0;
     width: 100%;
