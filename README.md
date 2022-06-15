@@ -41,10 +41,8 @@ More details are in the [wiki](https://github.com/JayCeeCreates/earlygame/wiki).
 
 ### Required
 
-- **[Fabric API](https://www.curseforge.com/minecraft/mc-mods/fabric-api)**
-  - 1.16: 0.30.0+1.16 and above
-  - 1.17: 0.34.9+1.17 and above
-- **[Cloth Config](https://www.curseforge.com/minecraft/mc-mods/cloth-config)**: required for 1.17
+- **[Fabric API](https://www.curseforge.com/minecraft/mc-mods/fabric-api)**: 0.51.1+1.18.2 and above
+- **[Cloth Config](https://www.curseforge.com/minecraft/mc-mods/cloth-config)**
 
 ### Optional
 
@@ -54,10 +52,6 @@ More details are in the [wiki](https://github.com/JayCeeCreates/earlygame/wiki).
 ## Known Issues
 
 Incompatibilities and bugs can be reported in the [issues](https://github.com/JayCeeCreates/earlygame/issues) section.
-
-## Recommended Mods
-
-- **[Unlit Campfire](https://www.curseforge.com/minecraft/mc-mods/unlit-campfire)**: placing campfires on unlit state by default (1.16)
 
 ## Credits
 
