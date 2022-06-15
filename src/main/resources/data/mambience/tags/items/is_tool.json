@@ -1,0 +1,12 @@
+{
+    "replace": false,
+    "values": [
+        "earlygame:flint_axe",
+        "earlygame:flint_pickaxe",
+        "earlygame:copper_axe",
+        "earlygame:copper_pickaxe",
+        "earlygame:copper_shovel",
+        "earlygame:copper_hoe",
+        "#earlygame:saws"
+    ]
+}

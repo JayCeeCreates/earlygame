@@ -38,7 +38,7 @@ public class RockBlock extends Block implements Waterloggable {
     public static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 
     public RockBlock() {
-        super(FabricBlockSettings.of(Material.STONE, MapColor.LIGHT_GRAY).strength(0.15F, 0.15F).breakByHand(true).sounds(BlockSoundGroup.STONE).noCollision().collidable(false));
+        super(FabricBlockSettings.of(Material.STONE, MapColor.LIGHT_GRAY).strength(0.15F, 0.15F).sounds(BlockSoundGroup.STONE).noCollision().collidable(false));
         this.setDefaultState((BlockState)this.getDefaultState().with(WATERLOGGED, Boolean.FALSE));
     }
 

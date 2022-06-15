@@ -1,0 +1,7 @@
+{
+    "replace": false,
+    "values": [
+        "earlygame:copper_sword",
+        "#earlygame:knives"
+    ]
+}

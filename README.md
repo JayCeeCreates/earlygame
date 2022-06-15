@@ -1,17 +1,15 @@
 <p align="center">
 <a href="https://github.com/JayCeeCreates/earlygame/blob/master/LICENSE"><img src="https://img.shields.io/github/license/jayceecreates/earlygame?style=for-the-badge"></a>
-<img src="https://img.shields.io/badge/mc%20version-1.16--1.17-yellow?style=for-the-badge">
-<a href="https://fabricmc.net"><img src="https://img.shields.io/badge/modloader-fabric-blue?style=for-the-badge"></a>
+<img src="https://img.shields.io/badge/mc%20version-1.16--1.18-299137?style=for-the-badge">
+<a href="https://fabricmc.net"><img src="https://img.shields.io/badge/modloader-fabric-red?style=for-the-badge"></a>
+<a href="https://www.paypal.com/cgi-bin/webscr?return=https://github.com/JayCeeCreates/earlygame&amp;cn=Add+special+instructions+to+the+addon+author()&amp;business=jaycee.creates%40gmail.com&amp;bn=PP-DonationsBF:btn_donateCC_LG.gif:NonHosted&amp;cancel_return=https://github.com/JayCeeCreates/earlygame&amp;lc=US&amp;item_name=EarlyGame+(from+github.com)&amp;cmd=_donations&amp;rm=1&amp;no_shipping=1&amp;currency_code=USD" target="_blank"><img src="https://img.shields.io/badge/donate-paypal-blue?style=for-the-badge"></a>
 </p>
 
 <p align="center">
-  <img width="384" height="384" src="https://cdn.discordapp.com/attachments/669587583034064919/753223254474227762/icon.png">
+  <img width="100%" src="https://github.com/JayCeeCreates/earlygame/raw/resources/earlygame_header.png">
 </p>
 
-<h1 align="center">EarlyGame</h1>
-<p align="center">A Fabric mod that focuses on changing early game progression that makes the gameplay feel more "realistic".</p>
-
-<p align="center"><a href="https://www.paypal.com/cgi-bin/webscr?return=https://github.com/JayCeeCreates/earlygame&amp;cn=Add+special+instructions+to+the+addon+author()&amp;business=jaycee.creates%40gmail.com&amp;bn=PP-DonationsBF:btn_donateCC_LG.gif:NonHosted&amp;cancel_return=https://github.com/JayCeeCreates/earlygame&amp;lc=US&amp;item_name=EarlyGame+(from+github.com)&amp;cmd=_donations&amp;rm=1&amp;no_shipping=1&amp;currency_code=USD" target="_blank"><img src="https://vetsupportusa.com/wp-content/uploads/donate-paypal-main-1.png" width=30%></a></p>
+<h4 align="center">A Fabric mod that focuses on changing early game progression that makes the gameplay feel more "realistic".</h4>
 
 ## Background
 
@@ -32,14 +30,12 @@ More details are in the [wiki](https://github.com/JayCeeCreates/earlygame/wiki).
 
 ## Screenshots
 
-<details><summary>Show</summary>
 <p align="center">
 <img width="640" height="360" src="https://media.discordapp.net/attachments/807114433787854868/810885401043533824/2021-02-15_22.26.53.png">
 <img width="640" height="360" src="https://media.discordapp.net/attachments/807114433787854868/810885396292042822/2021-02-15_22.34.08.png">
 <img width="640" height="360" src="https://media.discordapp.net/attachments/807114433787854868/810886920053194782/2021-02-15_22.19.59.png">
 <img width="640" height="360" src="https://media.discordapp.net/attachments/807114433787854868/810885400595922954/2021-02-15_22.18.33.png">
 </p>
-</details>
 
 ## Dependencies
 

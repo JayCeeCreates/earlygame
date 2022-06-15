@@ -1,22 +1,8 @@
 (+) = Added | (*) = Improved | (-) = Removed
 
 ***
-
-## 1.17.x-1.1.1
-- (*) Fixed cobbled deepslate unable to be crafted (#30)
-
-## 1.17.x-1.1.0
-- (+) Added cobblestone and rock variants for the new stone blocks (deepslate, calcite, tuff)
-- (*) Adjusted the height of stick block to prevent possible Z-fighting
-- (*) Fixed a bug where you cannot mine modded blocks due to the changes in mining in 1.17 (#25)
-- (*) Renamed all cobblestone variants to match the official naming convention (e.g. Cobbled Diorite)
-
-## 1.17.x-1.0.3
-EarlyGame has successfully been ported to 1.17!
-- (+) All features from [1.16.x](https://github.com/JayCeeCreates/earlygame/blob/1.16/CHANGELOG.md) versions
-- (*) Moved to Java 16
-- (*) Recolored copper tools and armor to match vanilla textures
-- (*) You can now mine regular copper ores at mining level 0 (i.e. wooden level)
-- (-) Removed the modded copper ore generation to make way for the vanilla one
-- (-) Yeeted the old AutoConfig and replaced with the new Cloth Config (with new embedded AutoConfig)
-    - **NOTE**: Cloth Config is now a required dependency.
+## 1.18.2-1.1.2
+EarlyGame has successfully been ported to 1.18.2! Bear in mind there will be no backporting of this mod to previous point releases to focus on the latest one. This applies to every Minecraft major release. With all that said, sorry for the VERY long wait and I hope you enjoy!
+- (+) All features from [1.17.x](https://github.com/JayCeeCreates/earlygame/blob/1.17/CHANGELOG.md) versions
+- (+) Parity with MAmbience's sound effects when equipping tools and weapons
+- (*) Changed the algorithm of sticks and rocks generation in line with the new worldgen update (#35 #36 #37 very huge thanks, Jurklein!)

@@ -23,7 +23,7 @@ public class StickTwigGen extends Feature<DefaultFeatureConfig> {
 
         BlockState stateAt = world.getBlockState(pos);
         BlockState stateDown = world.getBlockState(pos.down());
-        if (stateAt.isAir() && ModBlockTags.ROCK_PLACEABLE_ON.contains(stateDown.getBlock())) {
+        if (stateAt.isAir() && stateDown.isIn(ModBlockTags.ROCK_PLACEABLE_ON)) {
             world.setBlockState(pos, BlocksInit.STICK_TWIG_BLOCK.getDefaultState(), 3);
             return true;
         }

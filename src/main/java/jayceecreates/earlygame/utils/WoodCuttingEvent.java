@@ -2,15 +2,17 @@ package jayceecreates.earlygame.utils;
 
 import jayceecreates.earlygame.EarlyGame;
 import net.fabricmc.fabric.api.event.player.UseBlockCallback;
+import net.fabricmc.fabric.api.tag.convention.v1.ConventionalItemTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
+import net.minecraft.util.registry.Registry;
+import net.minecraft.util.registry.RegistryEntry;
 
 import java.util.Random;
 
-import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.ItemEntity;
@@ -35,7 +37,7 @@ public class WoodCuttingEvent {
             int r2 = 0;
 
             boolean
-                isAxe = player.getInventory().getMainHandStack().isIn(FabricToolTags.AXES),
+                isAxe = player.getInventory().getMainHandStack().isIn(ConventionalItemTags.AXES),
                 isSaw = player.getInventory().getMainHandStack().isIn(ModItemTags.SAWS),
                 isLog = state.isIn(BlockTags.LOGS),
                 isPlank = state.isIn(BlockTags.PLANKS);
@@ -49,33 +51,33 @@ public class WoodCuttingEvent {
                         world.breakBlock(pos, false);
                         ItemEntity itemEntity = null;
                         if (isLog) {
-                            if (isSaw) r2 = 4; else r2 = RANDOM.nextInt(3) + 2;
-                            for (Block obj : BlockTags.LOGS.values()) {
-                                if (state.getBlock() == obj) {
-                                    String replacement = obj.toString().replace("stripped_", "").replace("log", "planks").replace("bark", "planks").replace("wood", "planks").replace("stem", "planks").replace("hyphae", "planks");
-                                    for (Block planks : BlockTags.PLANKS.values()) {
-                                        System.out.println(replacement);
-                                        System.out.println(planks.toString() + "a");
-                                        System.out.println(replacement.equals(planks.toString()));
-                                        if (replacement.equals(planks.toString())) {
-                                            itemEntity = new ItemEntity(player.world, block.getPos().x, block.getPos().y - 0.5, block.getPos().z, new ItemStack(planks, r2));
+                            r2 = isSaw ? 4 : RANDOM.nextInt(3) + 2;
+
+                            for (RegistryEntry<Block> obj : Registry.BLOCK.iterateEntries(BlockTags.LOGS)) {
+                                if (state.getBlock() == obj.value()) {
+                                    String planksString = obj.value().toString().replace("stripped_", "").replaceAll("_.*$", "_planks}");
+                                    for (RegistryEntry<Block> planks : Registry.BLOCK.iterateEntries(BlockTags.PLANKS)) {
+                                        if (planks.value().toString().equals(planksString)) {
+                                            itemEntity = new ItemEntity(
+                                                player.world,
+                                                block.getPos().x,
+                                                block.getPos().y - 0.5,
+                                                block.getPos().z,
+                                                new ItemStack(planks.value(), r2));
                                             break;
                                         }
                                     }
-                                    break;
                                 }
                             }
                         }
                         if (isPlank) {
-                            if (isSaw) r2 = 2; else r2 = RANDOM.nextInt(2) + 1;
+                            r2 = isSaw ? 2 : RANDOM.nextInt(2) + 1;
                             itemEntity = new ItemEntity(
                                 player.world,
                                 block.getPos().x,
                                 block.getPos().y - 0.5,
                                 block.getPos().z,
-                                new ItemStack(
-                                    Items.STICK,
-                                    r2));
+                                new ItemStack(Items.STICK, r2));
                         }
                         player.world.spawnEntity(itemEntity);
                     }

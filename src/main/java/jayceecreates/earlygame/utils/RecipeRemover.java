@@ -19,12 +19,12 @@ import net.minecraft.recipe.Recipe;
 import net.minecraft.recipe.RecipeManager;
 import net.minecraft.recipe.RecipeType;
 import net.minecraft.tag.ItemTags;
-import net.minecraft.tag.Tag;
+import net.minecraft.tag.TagKey;
 import net.minecraft.util.Identifier;
 
 // Most of the code below was made by Choonster@github (https://bit.ly/2BLB9t3), used under MIT License,
 // modified to make it Fabric compatible.
-// © Choonster 2015-2021
+// © Choonster 2015-2022
 
 public class RecipeRemover {
 
@@ -66,7 +66,7 @@ public class RecipeRemover {
      * @param recipeManager The recipe manager
      * @param tag           The tag
      */
-    private static void removeRecipes(final RecipeManager recipeManager, final Tag<Item> tag) {
+    private static void removeRecipes(final RecipeManager recipeManager, final TagKey<Item> tag) {
         final int recipesRemoved = removeRecipes(recipeManager, recipe -> {
             final ItemStack recipeOutput = recipe.getOutput();
             return !recipeOutput.isEmpty() && recipeOutput.isIn(tag);
@@ -85,7 +85,7 @@ public class RecipeRemover {
             final ItemStack recipeOutput = recipe.getOutput();
             for (Ingredient ing : recipe.getIngredients()) {
                 for (ItemStack stack : ((MatchingStackAccessor) (Object) ing).getMatchingStacks()) {
-                    if (ItemTags.LOGS.contains(stack.getItem())) {
+                    if (stack.isIn(ItemTags.LOGS)) {
                         return !recipeOutput.isEmpty() && recipeOutput.isIn(ItemTags.PLANKS);
                     }
                 }

@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import jayceecreates.earlygame.init.BlocksInit;
 import jayceecreates.earlygame.utils.MiningDamageSource;
 import jayceecreates.earlygame.utils.ModBlockTags;
-import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
+import net.fabricmc.fabric.api.tag.convention.v1.ConventionalItemTags;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Material;
 import net.minecraft.entity.EntityType;
@@ -38,8 +38,8 @@ public abstract class BlockMiningMixin extends LivingEntity {
         double rand = Math.random();
 
         if (EarlyGame.CONFIG.harderGroundBlocks) {
-            if (!player.getInventory().getMainHandStack().isIn(FabricToolTags.SHOVELS)
-                    && ModBlockTags.SLOW_DIGGING.contains(state.getBlock()))
+            if (!player.getInventory().getMainHandStack().isIn(ConventionalItemTags.SHOVELS)
+                    && state.isIn(ModBlockTags.SLOW_DIGGING))
                 cir.setReturnValue(cir.getReturnValue() / 3.8F);
         }
     
@@ -55,8 +55,8 @@ public abstract class BlockMiningMixin extends LivingEntity {
             boolean isBlacklisted = state.isIn(ModBlockTags.BLACKLISTED_BLOCKS);
             if (isStone)
                 if (!isBlacklisted ?
-                        !player.getInventory().getMainHandStack().isIn(FabricToolTags.PICKAXES) :
-                        !player.getInventory().getMainHandStack().isIn(FabricToolTags.AXES))
+                        !player.getInventory().getMainHandStack().isIn(ConventionalItemTags.PICKAXES) :
+                        !player.getInventory().getMainHandStack().isIn(ConventionalItemTags.AXES))
                 {
                     if (EarlyGame.CONFIG.warningMessage)
                         player.sendMessage(new TranslatableText(!isBlacklisted ? "earlygame.pick_required" : "earlygame.axe_required"), true);
@@ -70,8 +70,8 @@ public abstract class BlockMiningMixin extends LivingEntity {
 
             if (isWood)
                 if (!isBlacklisted ?
-                        !player.getInventory().getMainHandStack().isIn(FabricToolTags.AXES) :
-                        !player.getInventory().getMainHandStack().isIn(FabricToolTags.PICKAXES))
+                        !player.getInventory().getMainHandStack().isIn(ConventionalItemTags.AXES) :
+                        !player.getInventory().getMainHandStack().isIn(ConventionalItemTags.PICKAXES))
                 {
                     if (EarlyGame.CONFIG.warningMessage)
                         player.sendMessage(new TranslatableText(!isBlacklisted ? "earlygame.axe_required" : "earlygame.pick_required"), true);
