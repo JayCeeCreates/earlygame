@@ -2,7 +2,7 @@
 <a href="https://github.com/JayCeeCreates/earlygame/blob/master/LICENSE"><img src="https://img.shields.io/github/license/jayceecreates/earlygame?style=for-the-badge"></a>
 <img src="https://img.shields.io/badge/mc%20version-1.16--1.18-299137?style=for-the-badge">
 <a href="https://fabricmc.net"><img src="https://img.shields.io/badge/modloader-fabric-red?style=for-the-badge"></a>
-<a href="https://www.paypal.com/cgi-bin/webscr?return=https://github.com/JayCeeCreates/earlygame&amp;cn=Add+special+instructions+to+the+addon+author()&amp;business=jaycee.creates%40gmail.com&amp;bn=PP-DonationsBF:btn_donateCC_LG.gif:NonHosted&amp;cancel_return=https://github.com/JayCeeCreates/earlygame&amp;lc=US&amp;item_name=EarlyGame+(from+github.com)&amp;cmd=_donations&amp;rm=1&amp;no_shipping=1&amp;currency_code=USD" target="_blank"><img src="https://img.shields.io/badge/donate-paypal-blue?style=for-the-badge"></a>
+<a href="https://jayceecreates.github.io/earlygame/donate" target="_blank"><img src="https://img.shields.io/badge/donate-paypal-blue?style=for-the-badge"></a>
 </p>
 
 <p align="center">
@@ -26,7 +26,7 @@ This idea revolves around the fact that as of this writing, no such mods for ear
 - Copper items, tools and armor
 - Knives and saws serving as alternatives
 
-More details are in the [wiki](https://github.com/JayCeeCreates/earlygame/wiki).
+More details are in the [wiki](https://jayceecreates.github.io/earlygame/wiki).
 
 ## Screenshots
 
