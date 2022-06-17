@@ -10,6 +10,10 @@ This mod may bear some similarities with the two aforementioned mods, but I alwa
 
 I've always seen it as some sort of a personal/hobby project, but it's also one that I would like everyone to enjoy. That being said, I don't really have a particular roadmap as to where this is going, but I do have a vision for this and many other projects that may or may not come. Because of the open source nature of the mod, **EarlyGame is a project with effort from the community** who loves Minecraft and realism mods, and collaboration is one way to produce progress.
 
+#### Is it coming for \*insert Minecraft version here\*?
+
+I'll try my best to port it to later versions, but if you are willing to do so, feel free! If you are done, open up a pull request and I'll get to work on it.
+
 #### May I use this in my modpack?
 
 Sure thing! Give credit where it's due~
