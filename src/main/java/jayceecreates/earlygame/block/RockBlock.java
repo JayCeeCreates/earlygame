@@ -61,7 +61,7 @@ public class RockBlock extends Block implements Waterloggable {
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
 
         if (!player.isSneaking()) {
-            world.breakBlock(pos, (player.isCreative() ? false : true));
+            world.breakBlock(pos, !player.isCreative());
             return ActionResult.SUCCESS;
         }
         return ActionResult.PASS;
