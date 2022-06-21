@@ -24,8 +24,7 @@ public class RockEntity extends SnowballEntity {
       Entity entity = entityHitResult.getEntity();
       if (entity.damage(DamageSource.thrownProjectile(this, this.getOwner()), (float)damage)) {
          if (entity.getType() == EntityType.ENDERMAN) return;
-         if (entity instanceof LivingEntity) {
-            LivingEntity livingEntity = (LivingEntity) entity;
+         if (entity instanceof LivingEntity livingEntity) {
             if (this.punch > 0) {
                Vec3d vec3d = this.getVelocity().multiply(1.0D, 0.0D, 1.0D).normalize().multiply((double)this.punch * 0.6D);
                if (vec3d.lengthSquared() > 0.0D) {

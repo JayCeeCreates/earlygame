@@ -31,9 +31,8 @@ public class SlingshotItem extends ModRangedWeaponItem implements Vanishable {
         int i = this.getMaxUseTime(stack) - remainingUseTicks;
         float f = getPullProgress(i);
         
-        if (!(user instanceof PlayerEntity)) return;
+        if (!(user instanceof PlayerEntity playerEntity)) return;
 
-        PlayerEntity playerEntity = (PlayerEntity)user;
         boolean bl = playerEntity.getAbilities().creativeMode || EnchantmentHelper.getLevel(Enchantments.INFINITY, stack) > 0;
         ItemStack itemStack = getRockType(playerEntity, stack);
 
