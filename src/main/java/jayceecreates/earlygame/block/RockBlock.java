@@ -39,7 +39,7 @@ public class RockBlock extends Block implements Waterloggable {
 
     public RockBlock() {
         super(FabricBlockSettings.of(Material.STONE, MapColor.LIGHT_GRAY).strength(0.15F, 0.15F).sounds(BlockSoundGroup.STONE).noCollision().collidable(false));
-        this.setDefaultState((BlockState)this.getDefaultState().with(WATERLOGGED, Boolean.FALSE));
+        this.setDefaultState(this.getDefaultState().with(WATERLOGGED, Boolean.FALSE));
     }
 
     @Override
@@ -47,8 +47,8 @@ public class RockBlock extends Block implements Waterloggable {
         WorldAccess worldAccess = ctx.getWorld();
         BlockPos blockPos = ctx.getBlockPos();
         boolean bl = worldAccess.getBlockState(blockPos).getBlock() == Blocks.WATER;
-        if (bl) return (BlockState)this.getDefaultState().with(WATERLOGGED, Boolean.TRUE);
-        return (BlockState)this.getDefaultState();
+        if (bl) return this.getDefaultState().with(WATERLOGGED, Boolean.TRUE);
+        return this.getDefaultState();
     }
 
     @Override
@@ -84,7 +84,7 @@ public class RockBlock extends Block implements Waterloggable {
     }
 
     public FluidState getFluidState(BlockState state) {
-        return (Boolean)state.get(WATERLOGGED) ? Fluids.WATER.getStill(false) : super.getFluidState(state);
+        return state.get(WATERLOGGED) ? Fluids.WATER.getStill(false) : super.getFluidState(state);
     }
 
     @Override
@@ -98,7 +98,7 @@ public class RockBlock extends Block implements Waterloggable {
     }
 
     public BlockState asWaterlogged() {
-        return (BlockState)this.getDefaultState().with(WATERLOGGED, Boolean.TRUE);
+        return this.getDefaultState().with(WATERLOGGED, Boolean.TRUE);
     }
 
     @Override
@@ -113,7 +113,7 @@ public class RockBlock extends Block implements Waterloggable {
 
     @Override
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState newState, WorldAccess world, BlockPos pos, BlockPos posFrom) {
-        if ((Boolean)state.get(WATERLOGGED)) {
+        if (state.get(WATERLOGGED)) {
             world.createAndScheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
         }
  
