@@ -122,16 +122,11 @@ public class RockBlock extends Block implements Waterloggable {
 
     @Override
     public boolean canPathfindThrough(BlockState state, BlockView world, BlockPos pos, NavigationType type) {
-        switch(type) {
-        case LAND:
-            return false;
-        case WATER:
+        if (type == NavigationType.WATER) {
             return world.getFluidState(pos).isIn(FluidTags.WATER);
-        case AIR:
-            return false;
-        default:
-            return false;
         }
+
+        return false;
     }
 
     @Override
