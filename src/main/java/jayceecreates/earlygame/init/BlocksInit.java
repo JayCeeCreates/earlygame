@@ -32,17 +32,7 @@ public class BlocksInit {
     public static final Block STICK_TWIG_BLOCK = new StickTwigBlock();
 
     public static void init() {
-
         // rocks
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "stone_rock"), ItemsInit.STONE_ROCK);
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "andesite_rock"), ItemsInit.ANDESITE_STONE_ROCK);
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "diorite_rock"), ItemsInit.DIORITE_STONE_ROCK);
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "granite_rock"), ItemsInit.GRANITE_STONE_ROCK);
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "deepslate_rock"), ItemsInit.DEEPSLATE_STONE_ROCK);
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "calcite_rock"), ItemsInit.CALCITE_STONE_ROCK);
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "tuff_rock"), ItemsInit.TUFF_STONE_ROCK);
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "sandstone_rock"), ItemsInit.SANDSTONE_ROCK);
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "red_sandstone_rock"), ItemsInit.RED_SANDSTONE_ROCK);
         Registry.register(Registry.BLOCK, new Identifier("earlygame", "stone_rock_block"), STONE_ROCK_BLOCK);
         Registry.register(Registry.BLOCK, new Identifier("earlygame", "andesite_rock_block"), ANDESITE_ROCK_BLOCK);
         Registry.register(Registry.BLOCK, new Identifier("earlygame", "diorite_rock_block"), DIORITE_ROCK_BLOCK);
@@ -54,11 +44,6 @@ public class BlocksInit {
         Registry.register(Registry.BLOCK, new Identifier("earlygame", "red_sandstone_rock_block"), RED_SANDSTONE_ROCK_BLOCK);
 
         // cobblestone
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "cobbled_andesite"), new BlockItem(COBBLED_ANDESITE, new Item.Settings().group(ModItemGroup.EARLYGAME)));
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "cobbled_diorite"), new BlockItem(COBBLED_DIORITE, new Item.Settings().group(ModItemGroup.EARLYGAME)));
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "cobbled_granite"), new BlockItem(COBBLED_GRANITE, new Item.Settings().group(ModItemGroup.EARLYGAME)));
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "cobbled_calcite"), new BlockItem(COBBLED_CALCITE, new Item.Settings().group(ModItemGroup.EARLYGAME)));
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "cobbled_tuff"), new BlockItem(COBBLED_TUFF, new Item.Settings().group(ModItemGroup.EARLYGAME)));
         Registry.register(Registry.BLOCK, new Identifier("earlygame", "cobbled_andesite"), COBBLED_ANDESITE);
         Registry.register(Registry.BLOCK, new Identifier("earlygame", "cobbled_diorite"), COBBLED_DIORITE);
         Registry.register(Registry.BLOCK, new Identifier("earlygame", "cobbled_granite"), COBBLED_GRANITE);

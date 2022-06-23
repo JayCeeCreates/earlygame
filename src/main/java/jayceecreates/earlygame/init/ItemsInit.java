@@ -13,6 +13,8 @@ import net.minecraft.item.ToolMaterials;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
+import static jayceecreates.earlygame.init.BlocksInit.*;
+
 public class ItemsInit {
 
     // plant
@@ -69,6 +71,24 @@ public class ItemsInit {
     public static final Item NETHERITE_SAW = new SawBase(ToolMaterials.NETHERITE, new Item.Settings().group(ModItemGroup.EARLYGAME));
 
     public static void init() {
+
+        // rocks
+        Registry.register(Registry.ITEM, new Identifier("earlygame", "stone_rock"), ItemsInit.STONE_ROCK);
+        Registry.register(Registry.ITEM, new Identifier("earlygame", "andesite_rock"), ItemsInit.ANDESITE_STONE_ROCK);
+        Registry.register(Registry.ITEM, new Identifier("earlygame", "diorite_rock"), ItemsInit.DIORITE_STONE_ROCK);
+        Registry.register(Registry.ITEM, new Identifier("earlygame", "granite_rock"), ItemsInit.GRANITE_STONE_ROCK);
+        Registry.register(Registry.ITEM, new Identifier("earlygame", "deepslate_rock"), ItemsInit.DEEPSLATE_STONE_ROCK);
+        Registry.register(Registry.ITEM, new Identifier("earlygame", "calcite_rock"), ItemsInit.CALCITE_STONE_ROCK);
+        Registry.register(Registry.ITEM, new Identifier("earlygame", "tuff_rock"), ItemsInit.TUFF_STONE_ROCK);
+        Registry.register(Registry.ITEM, new Identifier("earlygame", "sandstone_rock"), ItemsInit.SANDSTONE_ROCK);
+        Registry.register(Registry.ITEM, new Identifier("earlygame", "red_sandstone_rock"), ItemsInit.RED_SANDSTONE_ROCK);
+
+        // cobblestone
+        Registry.register(Registry.ITEM, new Identifier("earlygame", "cobbled_andesite"), new BlockItem(COBBLED_ANDESITE, new Item.Settings().group(ModItemGroup.EARLYGAME)));
+        Registry.register(Registry.ITEM, new Identifier("earlygame", "cobbled_diorite"), new BlockItem(COBBLED_DIORITE, new Item.Settings().group(ModItemGroup.EARLYGAME)));
+        Registry.register(Registry.ITEM, new Identifier("earlygame", "cobbled_granite"), new BlockItem(COBBLED_GRANITE, new Item.Settings().group(ModItemGroup.EARLYGAME)));
+        Registry.register(Registry.ITEM, new Identifier("earlygame", "cobbled_calcite"), new BlockItem(COBBLED_CALCITE, new Item.Settings().group(ModItemGroup.EARLYGAME)));
+        Registry.register(Registry.ITEM, new Identifier("earlygame", "cobbled_tuff"), new BlockItem(COBBLED_TUFF, new Item.Settings().group(ModItemGroup.EARLYGAME)));
 
         // plant
         Registry.register(Registry.ITEM, new Identifier("earlygame", "plant_fiber"), PLANT_FIBER);
