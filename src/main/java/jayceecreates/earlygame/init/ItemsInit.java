@@ -1,5 +1,6 @@
 package jayceecreates.earlygame.init;
 
+import jayceecreates.earlygame.EarlyGame;
 import jayceecreates.earlygame.armor.BaseArmor;
 import jayceecreates.earlygame.armor.CopperArmorBase;
 import jayceecreates.earlygame.item.*;
@@ -70,70 +71,74 @@ public class ItemsInit {
     public static final Item NETHERITE_KNIFE = new KnifeBase(ToolMaterials.NETHERITE, new Item.Settings().group(ModItemGroup.EARLYGAME));
     public static final Item NETHERITE_SAW = new SawBase(ToolMaterials.NETHERITE, new Item.Settings().group(ModItemGroup.EARLYGAME));
 
+    private static void add(String name, Item item) {
+        Registry.register(Registry.ITEM, new Identifier(EarlyGame.MOD_ID, name), item);
+    }
+
     public static void init() {
 
         // rocks
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "stone_rock"), ItemsInit.STONE_ROCK);
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "andesite_rock"), ItemsInit.ANDESITE_STONE_ROCK);
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "diorite_rock"), ItemsInit.DIORITE_STONE_ROCK);
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "granite_rock"), ItemsInit.GRANITE_STONE_ROCK);
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "deepslate_rock"), ItemsInit.DEEPSLATE_STONE_ROCK);
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "calcite_rock"), ItemsInit.CALCITE_STONE_ROCK);
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "tuff_rock"), ItemsInit.TUFF_STONE_ROCK);
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "sandstone_rock"), ItemsInit.SANDSTONE_ROCK);
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "red_sandstone_rock"), ItemsInit.RED_SANDSTONE_ROCK);
+        add("stone_rock", STONE_ROCK);
+        add("andesite_rock", ANDESITE_STONE_ROCK);
+        add("diorite_rock", DIORITE_STONE_ROCK);
+        add("granite_rock", GRANITE_STONE_ROCK);
+        add("deepslate_rock", DEEPSLATE_STONE_ROCK);
+        add("calcite_rock", CALCITE_STONE_ROCK);
+        add("tuff_rock", TUFF_STONE_ROCK);
+        add("sandstone_rock", SANDSTONE_ROCK);
+        add("red_sandstone_rock", RED_SANDSTONE_ROCK);
 
         // cobblestone
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "cobbled_andesite"), new BlockItem(COBBLED_ANDESITE, new Item.Settings().group(ModItemGroup.EARLYGAME)));
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "cobbled_diorite"), new BlockItem(COBBLED_DIORITE, new Item.Settings().group(ModItemGroup.EARLYGAME)));
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "cobbled_granite"), new BlockItem(COBBLED_GRANITE, new Item.Settings().group(ModItemGroup.EARLYGAME)));
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "cobbled_calcite"), new BlockItem(COBBLED_CALCITE, new Item.Settings().group(ModItemGroup.EARLYGAME)));
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "cobbled_tuff"), new BlockItem(COBBLED_TUFF, new Item.Settings().group(ModItemGroup.EARLYGAME)));
+        add("cobbled_andesite", new BlockItem(COBBLED_ANDESITE, new Item.Settings().group(ModItemGroup.EARLYGAME)));
+        add("cobbled_diorite", new BlockItem(COBBLED_DIORITE, new Item.Settings().group(ModItemGroup.EARLYGAME)));
+        add("cobbled_granite", new BlockItem(COBBLED_GRANITE, new Item.Settings().group(ModItemGroup.EARLYGAME)));
+        add("cobbled_calcite", new BlockItem(COBBLED_CALCITE, new Item.Settings().group(ModItemGroup.EARLYGAME)));
+        add("cobbled_tuff", new BlockItem(COBBLED_TUFF, new Item.Settings().group(ModItemGroup.EARLYGAME)));
 
         // plant
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "plant_fiber"), PLANT_FIBER);
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "lashing"), LASHING);
+        add("plant_fiber", PLANT_FIBER);
+        add("lashing", LASHING);
 
         // fire starter
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "fire_starter"), FIRE_STARTER);
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "slingshot"), SLINGSHOT);
+        add("fire_starter", FIRE_STARTER);
+        add("slingshot", SLINGSHOT);
 
         // flint
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "flint_shard"), FLINT_SHARD);
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "flint_pickaxe"), FLINT_PICKAXE);
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "flint_axe"), FLINT_AXE);
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "flint_knife"), FLINT_KNIFE);
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "flint_saw"), FLINT_SAW);
+        add("flint_shard", FLINT_SHARD);
+        add("flint_pickaxe", FLINT_PICKAXE);
+        add("flint_axe", FLINT_AXE);
+        add("flint_knife", FLINT_KNIFE);
+        add("flint_saw", FLINT_SAW);
 
         // copper
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "copper_nugget"), COPPER_NUGGET);
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "copper_helmet"), new BaseArmor(COPPER_ARMOR, EquipmentSlot.HEAD, new Item.Settings().group(ModItemGroup.EARLYGAME)));
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "copper_chestplate"), new BaseArmor(COPPER_ARMOR, EquipmentSlot.CHEST, new Item.Settings().group(ModItemGroup.EARLYGAME)));
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "copper_leggings"), new BaseArmor(COPPER_ARMOR, EquipmentSlot.LEGS, new Item.Settings().group(ModItemGroup.EARLYGAME)));
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "copper_boots"), new BaseArmor(COPPER_ARMOR, EquipmentSlot.FEET, new Item.Settings().group(ModItemGroup.EARLYGAME)));
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "copper_sword"), COPPER_SWORD);
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "copper_knife"), COPPER_KNIFE);
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "copper_shovel"), COPPER_SHOVEL);
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "copper_pickaxe"), COPPER_PICKAXE);
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "copper_axe"), COPPER_AXE);
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "copper_saw"), COPPER_SAW);
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "copper_hoe"), COPPER_HOE);
+        add("copper_nugget", COPPER_NUGGET);
+        add("copper_helmet", new BaseArmor(COPPER_ARMOR, EquipmentSlot.HEAD, new Item.Settings().group(ModItemGroup.EARLYGAME)));
+        add("copper_chestplate", new BaseArmor(COPPER_ARMOR, EquipmentSlot.CHEST, new Item.Settings().group(ModItemGroup.EARLYGAME)));
+        add("copper_leggings", new BaseArmor(COPPER_ARMOR, EquipmentSlot.LEGS, new Item.Settings().group(ModItemGroup.EARLYGAME)));
+        add("copper_boots", new BaseArmor(COPPER_ARMOR, EquipmentSlot.FEET, new Item.Settings().group(ModItemGroup.EARLYGAME)));
+        add("copper_sword", COPPER_SWORD);
+        add("copper_knife", COPPER_KNIFE);
+        add("copper_shovel", COPPER_SHOVEL);
+        add("copper_pickaxe", COPPER_PICKAXE);
+        add("copper_axe", COPPER_AXE);
+        add("copper_saw", COPPER_SAW);
+        add("copper_hoe", COPPER_HOE);
 
         // iron
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "iron_knife"), IRON_KNIFE);
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "iron_saw"), IRON_SAW);
+        add("iron_knife", IRON_KNIFE);
+        add("iron_saw", IRON_SAW);
 
         // gold
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "golden_knife"), GOLDEN_KNIFE);
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "golden_saw"), GOLDEN_SAW);
+        add("golden_knife", GOLDEN_KNIFE);
+        add("golden_saw", GOLDEN_SAW);
 
         // diamond
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "diamond_knife"), DIAMOND_KNIFE);
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "diamond_saw"), DIAMOND_SAW);
+        add("diamond_knife", DIAMOND_KNIFE);
+        add("diamond_saw", DIAMOND_SAW);
 
         // netherite (prefix is dumb please replace it with ancient prefix)
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "netherite_knife"), NETHERITE_KNIFE);
-        Registry.register(Registry.ITEM, new Identifier("earlygame", "netherite_saw"), NETHERITE_SAW);
+        add("netherite_knife", NETHERITE_KNIFE);
+        add("netherite_saw", NETHERITE_SAW);
 
     }
 
