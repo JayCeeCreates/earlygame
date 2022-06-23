@@ -39,7 +39,7 @@ public class RockBlock extends Block implements Waterloggable {
 
     public RockBlock() {
         super(FabricBlockSettings.of(Material.STONE, MapColor.LIGHT_GRAY).strength(0.15F, 0.15F).sounds(BlockSoundGroup.STONE).noCollision().collidable(false));
-        this.setDefaultState(this.getDefaultState().with(WATERLOGGED, Boolean.FALSE));
+        this.setDefaultState(this.getDefaultState().with(WATERLOGGED, false));
     }
 
     @Override
@@ -94,7 +94,7 @@ public class RockBlock extends Block implements Waterloggable {
     }
 
     public BlockState asWaterlogged() {
-        return this.getDefaultState().with(WATERLOGGED, Boolean.TRUE);
+        return this.getDefaultState().with(WATERLOGGED, true);
     }
 
     @Override
