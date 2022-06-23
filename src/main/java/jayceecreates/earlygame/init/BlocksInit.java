@@ -23,11 +23,11 @@ public class BlocksInit {
     public static final Block RED_SANDSTONE_ROCK_BLOCK = new RockBlock();
     
     // cobblestone
-    public static final Block COBBLED_ANDESITE = new Cobblestone();
-    public static final Block COBBLED_DIORITE = new Cobblestone();
-    public static final Block COBBLED_GRANITE = new Cobblestone();
-    public static final Block COBBLED_CALCITE = new CobbledCalcite();
-    public static final Block COBBLED_TUFF = new CobbledTuff();
+    public static final Block COBBLED_ANDESITE = new CobblestoneBlock();
+    public static final Block COBBLED_DIORITE = new CobblestoneBlock();
+    public static final Block COBBLED_GRANITE = new CobblestoneBlock();
+    public static final Block COBBLED_CALCITE = new CobbledCalciteBlock();
+    public static final Block COBBLED_TUFF = new CobbledTuffBlock();
 
     // stick
     public static final Block STICK_TWIG_BLOCK = new StickTwigBlock();
