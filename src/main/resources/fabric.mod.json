@@ -38,5 +38,14 @@
         "fabric": "*",
         "minecraft": "1.18.2",
         "java": ">=16"
+    },
+    "custom": {
+        "modmenu": {
+            "links": {
+                "modmenu.curseforge": "https://www.curseforge.com/minecraft/mc-mods/earlygame",
+                "modmenu.modrinth": "https://modrinth.com/mod/earlygame",
+                "modmenu.wiki": "https://jayceecreates.github.io/earlygame/wiki/home.html"
+            }
+        }
     }
 }
