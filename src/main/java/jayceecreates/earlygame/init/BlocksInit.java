@@ -1,5 +1,6 @@
 package jayceecreates.earlygame.init;
 
+import jayceecreates.earlygame.EarlyGame;
 import jayceecreates.earlygame.block.*;
 import jayceecreates.earlygame.item.ModItemGroup;
 import net.minecraft.block.Block;
@@ -31,27 +32,31 @@ public class BlocksInit {
     // stick
     public static final Block STICK_TWIG_BLOCK = new StickTwigBlock();
 
+    private static void add(String name, Block block) {
+        Registry.register(Registry.BLOCK, new Identifier(EarlyGame.MOD_ID, name), block);
+    }
+
     public static void init() {
         // rocks
-        Registry.register(Registry.BLOCK, new Identifier("earlygame", "stone_rock_block"), STONE_ROCK_BLOCK);
-        Registry.register(Registry.BLOCK, new Identifier("earlygame", "andesite_rock_block"), ANDESITE_ROCK_BLOCK);
-        Registry.register(Registry.BLOCK, new Identifier("earlygame", "diorite_rock_block"), DIORITE_ROCK_BLOCK);
-        Registry.register(Registry.BLOCK, new Identifier("earlygame", "granite_rock_block"), GRANITE_ROCK_BLOCK);
-        Registry.register(Registry.BLOCK, new Identifier("earlygame", "deepslate_rock_block"), DEEPSLATE_ROCK_BLOCK);
-        Registry.register(Registry.BLOCK, new Identifier("earlygame", "calcite_rock_block"), CALCITE_ROCK_BLOCK);
-        Registry.register(Registry.BLOCK, new Identifier("earlygame", "tuff_rock_block"), TUFF_ROCK_BLOCK);
-        Registry.register(Registry.BLOCK, new Identifier("earlygame", "sandstone_rock_block"), SANDSTONE_ROCK_BLOCK);
-        Registry.register(Registry.BLOCK, new Identifier("earlygame", "red_sandstone_rock_block"), RED_SANDSTONE_ROCK_BLOCK);
+        add("stone_rock_block", STONE_ROCK_BLOCK);
+        add("andesite_rock_block", ANDESITE_ROCK_BLOCK);
+        add("diorite_rock_block", DIORITE_ROCK_BLOCK);
+        add("granite_rock_block", GRANITE_ROCK_BLOCK);
+        add("deepslate_rock_block", DEEPSLATE_ROCK_BLOCK);
+        add("calcite_rock_block", CALCITE_ROCK_BLOCK);
+        add("tuff_rock_block", TUFF_ROCK_BLOCK);
+        add("sandstone_rock_block", SANDSTONE_ROCK_BLOCK);
+        add("red_sandstone_rock_block", RED_SANDSTONE_ROCK_BLOCK);
 
         // cobblestone
-        Registry.register(Registry.BLOCK, new Identifier("earlygame", "cobbled_andesite"), COBBLED_ANDESITE);
-        Registry.register(Registry.BLOCK, new Identifier("earlygame", "cobbled_diorite"), COBBLED_DIORITE);
-        Registry.register(Registry.BLOCK, new Identifier("earlygame", "cobbled_granite"), COBBLED_GRANITE);
-        Registry.register(Registry.BLOCK, new Identifier("earlygame", "cobbled_calcite"), COBBLED_CALCITE);
-        Registry.register(Registry.BLOCK, new Identifier("earlygame", "cobbled_tuff"), COBBLED_TUFF);
-        
+        add("cobbled_andesite", COBBLED_ANDESITE);
+        add("cobbled_diorite", COBBLED_DIORITE);
+        add("cobbled_granite", COBBLED_GRANITE);
+        add("cobbled_calcite", COBBLED_CALCITE);
+        add("cobbled_tuff", COBBLED_TUFF);
+
         // stick
-        Registry.register(Registry.BLOCK, new Identifier("earlygame", "stick_twig"), STICK_TWIG_BLOCK);
+        add("stick_twig", STICK_TWIG_BLOCK);
     }
 
     
