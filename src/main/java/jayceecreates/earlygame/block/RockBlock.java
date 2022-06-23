@@ -44,11 +44,7 @@ public class RockBlock extends Block implements Waterloggable {
 
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
-        WorldAccess worldAccess = ctx.getWorld();
-        BlockPos blockPos = ctx.getBlockPos();
-        boolean bl = worldAccess.getBlockState(blockPos).getBlock() == Blocks.WATER;
-        if (bl) return this.getDefaultState().with(WATERLOGGED, Boolean.TRUE);
-        return this.getDefaultState();
+        return this.getDefaultState().with(WATERLOGGED, ctx.getWorld().getBlockState(ctx.getBlockPos()).getBlock() == Blocks.WATER);
     }
 
     @Override
