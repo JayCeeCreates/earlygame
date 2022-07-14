@@ -27,7 +27,7 @@ public class StickTwigBlock extends Block {
     protected static final VoxelShape SHAPE = Block.createCuboidShape(4D, 0.01D, 4D, 12D, 0.02D, 12D);
     
     public StickTwigBlock() {
-        super(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).strength(0.15F, 0.15F).noCollision().collidable(false));
+        super(FabricBlockSettings.of(Material.WOOD).sounds(BlockSoundGroup.WOOD).strength(0.15F, 0.15F).noCollision().collidable(false).offsetType(AbstractBlock.OffsetType.XZ));
     }
 
     protected boolean canPlaceOnTop(BlockState floor, BlockView world, BlockPos pos) {
@@ -61,11 +61,6 @@ public class StickTwigBlock extends Block {
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
         BlockPos blockPos = pos.down();
         return this.canPlaceOnTop(world.getBlockState(blockPos), world, blockPos);
-    }
-    
-    @Override
-    public AbstractBlock.OffsetType getOffsetType() {
-       return AbstractBlock.OffsetType.XZ;
     }
 
     @Override

@@ -17,7 +17,7 @@ import net.minecraft.block.Material;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.text.TranslatableText;
+import net.minecraft.text.Text;
 import net.minecraft.world.World;
 
 @Mixin(PlayerEntity.class)
@@ -59,7 +59,7 @@ public abstract class BlockMiningMixin extends LivingEntity {
                         !player.getInventory().getMainHandStack().isIn(ConventionalItemTags.AXES))
                 {
                     if (EarlyGame.CONFIG.warningMessage)
-                        player.sendMessage(new TranslatableText(!isBlacklisted ? "earlygame.pick_required" : "earlygame.axe_required"), true);
+                        player.sendMessage(Text.translatable(!isBlacklisted ? "earlygame.pick_required" : "earlygame.axe_required"), true);
                     cir.setReturnValue(0.0F);
                     if (player.getInventory().getMainHandStack().isEmpty() && rand <= EarlyGame.CONFIG.damageProbability * .01)
                         if (!isBlacklisted)
@@ -74,7 +74,7 @@ public abstract class BlockMiningMixin extends LivingEntity {
                         !player.getInventory().getMainHandStack().isIn(ConventionalItemTags.PICKAXES))
                 {
                     if (EarlyGame.CONFIG.warningMessage)
-                        player.sendMessage(new TranslatableText(!isBlacklisted ? "earlygame.axe_required" : "earlygame.pick_required"), true);
+                        player.sendMessage(Text.translatable(!isBlacklisted ? "earlygame.axe_required" : "earlygame.pick_required"), true);
                     cir.setReturnValue(0.0F);
                     if (player.getInventory().getMainHandStack().isEmpty() && rand <= EarlyGame.CONFIG.damageProbability * .01)
                     if (!isBlacklisted)

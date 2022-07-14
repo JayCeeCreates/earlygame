@@ -4,7 +4,6 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
 
 public class MiningDamageSource {
 
@@ -21,7 +20,7 @@ public class MiningDamageSource {
         
         @Override
         public Text getDeathMessage(LivingEntity entity) {
-            return new TranslatableText("earlygame.splintered", entity.getDisplayName());
+            return Text.translatable("earlygame.splintered", entity.getDisplayName());
         }
 
     }
@@ -39,7 +38,7 @@ public class MiningDamageSource {
         
         @Override
         public Text getDeathMessage(LivingEntity entity) {
-            return new TranslatableText("earlygame.broken_bones", entity.getDisplayName());
+            return Text.translatable("earlygame.broken_bones", entity.getDisplayName());
         }
 
     }

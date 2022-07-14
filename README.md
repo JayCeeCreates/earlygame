@@ -1,6 +1,6 @@
 <p align="center">
 <a href="https://github.com/JayCeeCreates/earlygame/blob/master/LICENSE"><img src="https://img.shields.io/github/license/jayceecreates/earlygame?style=for-the-badge"></a>
-<img src="https://img.shields.io/badge/mc%20version-1.16--1.18-299137?style=for-the-badge">
+<img src="https://img.shields.io/badge/mc%20version-1.16--1.19-299137?style=for-the-badge">
 <a href="https://fabricmc.net"><img src="https://img.shields.io/badge/modloader-fabric-red?style=for-the-badge"></a>
 <a href="https://jayceecreates.github.io/earlygame/donate" target="_blank"><img src="https://img.shields.io/badge/donate-paypal-blue?style=for-the-badge"></a>
 </p>
@@ -17,7 +17,7 @@ This idea revolves around the fact that as of this writing, no such mods for ear
 
 ## Features
 
-- Disabled the ability to get wood from punching trees
+- Disables the ability to get wood from punching trees
 - Proper tools are required to collect stone and wood
 - Chopping logs to make planks, and planks to sticks
 - Rocks and sticks are naturally generated around the world
@@ -41,7 +41,7 @@ More details are in the [wiki](https://jayceecreates.github.io/earlygame/wiki).
 
 ### Required
 
-- **[Fabric API](https://www.curseforge.com/minecraft/mc-mods/fabric-api)**: 0.51.1+1.18.2 and above
+- **[Fabric API](https://www.curseforge.com/minecraft/mc-mods/fabric-api)**: 0.57.0+1.19 and above
 - **[Cloth Config](https://www.curseforge.com/minecraft/mc-mods/cloth-config)**
 
 ### Optional
@@ -58,7 +58,3 @@ Incompatibilities and bugs can be reported in the [issues](https://github.com/Ja
 - **Fabric Discord community** (a great help for the code)
 - **Contributors** (for the help with issue fixes and other modifications)
 - **You** (for playing with this mod!)
-
-### Any plans for a Forge version?
-
-A Forge version of this particular mod is not necessary. I recommend the two aforementioned mods if you want to play an early game mod on Forge.
