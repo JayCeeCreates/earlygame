@@ -2,6 +2,11 @@
 
 ***
 
+## 1.16.5-1.0.5
+To make the mod inline with the roadmap to only support the latest point releases from now on.
+- (*) Updated dependencies
+- (-) Dropped support for the previous point releases
+
 ## 1.16.x-1.0.4
 - (*) Adjusted the height of stick block to prevent possible Z-fighting
 - (*) Renamed all cobblestone variants to match the official naming convention in 1.17 (e.g. Cobbled Diorite)

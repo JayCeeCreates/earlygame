@@ -20,7 +20,6 @@ import net.minecraft.world.gen.GenerationStep;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-@SuppressWarnings("deprecation")
 public class EarlyGame implements ModInitializer {
     
     public static EarlyGameConfig CONFIG;
