@@ -24,7 +24,7 @@ import net.minecraft.util.Identifier;
 
 // Most of the code below was made by Choonster@github (https://bit.ly/2BLB9t3), used under MIT License,
 // modified to make it Fabric compatible.
-// © Choonster 2015-2022
+// © Choonster 2015
 
 public class RecipeRemover {
 
@@ -104,11 +104,7 @@ public class RecipeRemover {
      * @return The number of recipes removed
      */
     private static int removeRecipes(final RecipeManager recipeManager, final Predicate<Recipe<?>> predicate) {
-        
-        final Map<RecipeType<?>, Map<Identifier, Recipe<?>>> existingRecipes;
-
-        final Map<RecipeType<?>, Map<Identifier, Recipe<?>>> recipesMap = ((RecipeFieldAccessor) recipeManager).getRecipeField();
-        existingRecipes = recipesMap;
+        final Map<RecipeType<?>, Map<Identifier, Recipe<?>>> existingRecipes = ((RecipeFieldAccessor) recipeManager).getRecipeField();
 
         final Object2IntMap<RecipeType<?>> removedCounts = new Object2IntOpenHashMap<>();
         final ImmutableMap.Builder<RecipeType<?>, Map<Identifier, Recipe<?>>> newRecipes = ImmutableMap

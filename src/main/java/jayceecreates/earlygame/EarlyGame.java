@@ -14,7 +14,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class EarlyGame implements ModInitializer {
-    
+    public static final String MOD_ID = "earlygame";
+
     public static EarlyGameConfig CONFIG;
 
     public static final Logger LOGGER = LogManager.getLogger("EarlyGame");

@@ -9,9 +9,9 @@
         "JayCeeCreates"
     ],
     "contact": {
-        "homepage": "https://www.curseforge.com/minecraft/mc-mods/earlygame",
-        "sources": "https://github.com/JayCeeCreates/earlygame.git",
-        "issues": "https://github.com/JayCeeCreates/earlygame/issues"
+        "homepage": "https://jayceecreates.github.io/earlygame/",
+        "sources": "https://github.com/JayCeeCreates/earlygame/",
+        "issues": "https://github.com/JayCeeCreates/earlygame/issues/"
     },
 
     "license": "MIT",
@@ -39,7 +39,13 @@
         "minecraft": "1.18.2",
         "java": ">=16"
     },
-    "suggests": {
-        "another-mod": "*"
+    "custom": {
+        "modmenu": {
+            "links": {
+                "modmenu.curseforge": "https://www.curseforge.com/minecraft/mc-mods/earlygame",
+                "modmenu.modrinth": "https://modrinth.com/mod/earlygame",
+                "modmenu.wiki": "https://jayceecreates.github.io/earlygame/wiki/home.html"
+            }
+        }
     }
 }
