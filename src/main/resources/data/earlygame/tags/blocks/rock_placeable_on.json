@@ -7,13 +7,13 @@
     "minecraft:gravel",
     "minecraft:sand",
     "minecraft:red_sand",
-    "minecraft:terracotta",
     "minecraft:stone",
     "minecraft:andesite",
     "minecraft:diorite",
     "minecraft:granite",
     "minecraft:sandstone",
     "minecraft:red_sandstone",
-    "minecraft:podzol"
+    "minecraft:podzol",
+    "#minecraft:terracotta"
   ]
 }
