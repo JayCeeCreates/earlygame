@@ -13,8 +13,8 @@ import net.minecraft.util.Identifier;
 @Mixin(RecipeManager.class)
 public interface RecipeFieldAccessor {
     @Accessor("recipes")
-    public Map<RecipeType<?>, Map<Identifier, Recipe<?>>> getRecipeField();
+    Map<RecipeType<?>, Map<Identifier, Recipe<?>>> getRecipeField();
     
     @Accessor("recipes")
-    public void setRecipeField(Map<RecipeType<?>, Map<Identifier, Recipe<?>>> recipe);
+    void setRecipeField(Map<RecipeType<?>, Map<Identifier, Recipe<?>>> recipe);
 }
