@@ -39,16 +39,12 @@ public class RockBlock extends Block implements Waterloggable {
 
     public RockBlock() {
         super(FabricBlockSettings.of(Material.STONE, MapColor.LIGHT_GRAY).strength(0.15F, 0.15F).sounds(BlockSoundGroup.STONE).noCollision().collidable(false).offsetType(AbstractBlock.OffsetType.XZ));
-        this.setDefaultState((BlockState)this.getDefaultState().with(WATERLOGGED, Boolean.FALSE));
+        this.setDefaultState(this.getDefaultState().with(WATERLOGGED, false));
     }
 
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
-        WorldAccess worldAccess = ctx.getWorld();
-        BlockPos blockPos = ctx.getBlockPos();
-        boolean bl = worldAccess.getBlockState(blockPos).getBlock() == Blocks.WATER;
-        if (bl) return (BlockState)this.getDefaultState().with(WATERLOGGED, Boolean.TRUE);
-        return (BlockState)this.getDefaultState();
+        return this.getDefaultState().with(WATERLOGGED, ctx.getWorld().getBlockState(ctx.getBlockPos()).getBlock() == Blocks.WATER);
     }
 
     @Override
@@ -61,7 +57,7 @@ public class RockBlock extends Block implements Waterloggable {
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
 
         if (!player.isSneaking()) {
-            world.breakBlock(pos, (player.isCreative() ? false : true));
+            world.breakBlock(pos, player.isCreative());
             return ActionResult.SUCCESS;
         }
         return ActionResult.PASS;
@@ -79,7 +75,7 @@ public class RockBlock extends Block implements Waterloggable {
     }
 
     public FluidState getFluidState(BlockState state) {
-        return (Boolean)state.get(WATERLOGGED) ? Fluids.WATER.getStill(false) : super.getFluidState(state);
+        return state.get(WATERLOGGED) ? Fluids.WATER.getStill(false) : super.getFluidState(state);
     }
 
     @Override
@@ -93,7 +89,7 @@ public class RockBlock extends Block implements Waterloggable {
     }
 
     public BlockState asWaterlogged() {
-        return (BlockState)this.getDefaultState().with(WATERLOGGED, Boolean.TRUE);
+        return this.getDefaultState().with(WATERLOGGED, true);
     }
 
     @Override
@@ -108,7 +104,7 @@ public class RockBlock extends Block implements Waterloggable {
 
     @Override
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState newState, WorldAccess world, BlockPos pos, BlockPos posFrom) {
-        if ((Boolean)state.get(WATERLOGGED)) {
+        if (state.get(WATERLOGGED)) {
             world.createAndScheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
         }
         return super.getStateForNeighborUpdate(state, direction, newState, world, pos, posFrom);
@@ -116,16 +112,10 @@ public class RockBlock extends Block implements Waterloggable {
 
     @Override
     public boolean canPathfindThrough(BlockState state, BlockView world, BlockPos pos, NavigationType type) {
-        switch(type) {
-        case LAND:
-            return false;
-        case WATER:
+        if (type == NavigationType.WATER) {
             return world.getFluidState(pos).isIn(FluidTags.WATER);
-        case AIR:
-            return false;
-        default:
-            return false;
         }
+        return false;
     }
 
     @Override
