@@ -7,7 +7,7 @@
     "minecraft:gravel",
     "minecraft:sand",
     "minecraft:red_sand",
-    "minecraft:terracotta",
+    "#minecraft:terracotta",
     "minecraft:stone",
     "minecraft:andesite",
     "minecraft:diorite",
