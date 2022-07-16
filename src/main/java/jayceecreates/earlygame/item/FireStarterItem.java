@@ -34,11 +34,9 @@ public class FireStarterItem extends Item {
         if (CampfireBlock.method_30035(blockState)) {
             world.playSound(playerEntity, blockPos, SoundEvents.ITEM_FLINTANDSTEEL_USE, SoundCategory.BLOCKS, 1.0F, RANDOM.nextFloat() * 0.4F + 0.8F);
             if (rand <= EarlyGame.CONFIG.fireStartProb && !world.isClient)
-                world.setBlockState(blockPos, (BlockState)blockState.with(Properties.LIT, true), 11);
+                world.setBlockState(blockPos, blockState.with(Properties.LIT, true), 11);
             if (playerEntity != null) {
-                context.getStack().damage(1, (LivingEntity)playerEntity, (p -> {
-                    ((LivingEntity) p).sendToolBreakStatus(context.getHand());
-                }));
+                context.getStack().damage(1, (LivingEntity)playerEntity, (p -> p.sendToolBreakStatus(context.getHand())));
             }
             return ActionResult.success(world.isClient());
         }
@@ -53,9 +51,7 @@ public class FireStarterItem extends Item {
                 ItemStack itemStack = context.getStack();
                 if (playerEntity instanceof ServerPlayerEntity) {
                     Criteria.PLACED_BLOCK.trigger((ServerPlayerEntity)playerEntity, blockPos2, itemStack);
-                    itemStack.damage(1, (LivingEntity)playerEntity, (p -> {
-                        ((LivingEntity) p).sendToolBreakStatus(context.getHand());
-                    }));
+                    itemStack.damage(1, (LivingEntity)playerEntity, (p -> p.sendToolBreakStatus(context.getHand())));
                 }
                 return ActionResult.success(world.isClient());
             }

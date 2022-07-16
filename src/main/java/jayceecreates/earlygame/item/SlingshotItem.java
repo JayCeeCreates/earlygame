@@ -27,58 +27,54 @@ public class SlingshotItem extends ModRangedWeaponItem implements Vanishable {
     }
 
     public void onStoppedUsing(ItemStack stack, World world, LivingEntity user, int remainingUseTicks) {
-        if (user instanceof PlayerEntity) {
-            PlayerEntity playerEntity = (PlayerEntity) user;
-            boolean bl = playerEntity.abilities.creativeMode || EnchantmentHelper.getLevel(Enchantments.INFINITY, stack) > 0;
-            ItemStack itemStack = getRockType(playerEntity, stack);
-            if (!itemStack.isEmpty() || bl) {
-                if (itemStack.isEmpty()) {
-                    itemStack = new ItemStack(ItemsInit.STONE_ROCK);
-                }
+        int i = this.getMaxUseTime(stack) - remainingUseTicks;
+        float f = getPullProgress(i);
 
-                int i = this.getMaxUseTime(stack) - remainingUseTicks;
-                float f = getPullProgress(i);
-                if ((double) f >= 0.1D) {
-                    boolean bl2 = bl && itemStack.getItem() == ItemsInit.STONE_ROCK;
-                    if (!world.isClient) {
-                        EarlyGame.LOGGER.info("Use Tick: " + f);
-                        RockEntity rockEn = new RockEntity(world, user);
-                        rockEn.setItem(itemStack);
-                        rockEn.setProperties(user, user.pitch, user.yaw, 0.0F, f * 1.5F, 1.0F);
+        if (!(user instanceof PlayerEntity)) return;
 
-                        int j = EnchantmentHelper.getLevel(Enchantments.POWER, stack);
-                        if (j > 0) {
-                            rockEn.setDamage(rockEn.getDamage() + (double)j * 0.5D + 0.5D);
-                        }
+        PlayerEntity playerEntity = (PlayerEntity) user;
+        boolean bl = playerEntity.abilities.creativeMode || EnchantmentHelper.getLevel(Enchantments.INFINITY, stack) > 0;
+        ItemStack itemStack = getRockType(playerEntity, stack);
 
-                        int k = EnchantmentHelper.getLevel(Enchantments.PUNCH, stack);
-                        if (k > 0) {
-                            rockEn.setPunch(k);
-                        }
+        if (itemStack.isEmpty()) {
+            if (!bl) return;
+            itemStack = new ItemStack(ItemsInit.STONE_ROCK);
+        }
 
-                        if (EnchantmentHelper.getLevel(Enchantments.FLAME, stack) > 0) {
-                            rockEn.setOnFireFor(100);
-                        }
+        if ((double) f < 0.1D) return;
 
-                        stack.damage(1, (LivingEntity) playerEntity, ((p) -> {
-                            p.sendToolBreakStatus(playerEntity.getActiveHand());
-                        }));
-                        
-                        world.spawnEntity(rockEn);
-                    }
+        boolean bl2 = bl && itemStack.getItem() == ItemsInit.STONE_ROCK;
+        
+        if (!world.isClient) {
+            EarlyGame.LOGGER.info("Use Tick: " + f);
+            RockEntity rockEn = new RockEntity(world, user);
+            rockEn.setItem(itemStack);
+            rockEn.setProperties(user, user.pitch, user.yaw, 0.0F, f * 1.5F, 1.0F);
 
-                    world.playSound(null, playerEntity.getX(), playerEntity.getY(), playerEntity.getZ(), SoundEvents.ENTITY_ARROW_SHOOT, SoundCategory.PLAYERS, 1.0F, 1.0F / (RANDOM.nextFloat() * 0.4F + 1.2F) + f * 0.5F);
-                    if (!bl2 && !playerEntity.abilities.creativeMode) {
-                        itemStack.decrement(1);
-                        if (itemStack.isEmpty()) {
-                            playerEntity.inventory.removeOne(itemStack);
-                        }
-                    }
+            int j = EnchantmentHelper.getLevel(Enchantments.POWER, stack);
+            int k = EnchantmentHelper.getLevel(Enchantments.PUNCH, stack);
+            int l = EnchantmentHelper.getLevel(Enchantments.FLAME, stack);
+            if (j <= 0 && k <= 0 && l <= 0) return;
 
-                    playerEntity.incrementStat(Stats.USED.getOrCreateStat(this));
-                }
+            rockEn.setDamage(rockEn.getDamage() + (double)j * 0.5D + 0.5D);
+            rockEn.setPunch(k);
+            rockEn.setOnFireFor(100);
+
+            stack.damage(1, (LivingEntity) playerEntity, ((p) -> p.sendToolBreakStatus(playerEntity.getActiveHand())));
+            
+            world.spawnEntity(rockEn);
+        }
+
+        if (!bl2 && !playerEntity.abilities.creativeMode) {
+            itemStack.decrement(1);
+            if (itemStack.isEmpty()) {
+                playerEntity.inventory.removeOne(itemStack);
             }
         }
+
+        world.playSound(null, playerEntity.getX(), playerEntity.getY(), playerEntity.getZ(), SoundEvents.ENTITY_ARROW_SHOOT, SoundCategory.PLAYERS, 1.0F, 1.0F / (RANDOM.nextFloat() * 0.4F + 1.2F) + f * 0.5F);
+
+        playerEntity.incrementStat(Stats.USED.getOrCreateStat(this));
     }
 
     public static float getPullProgress(int useTicks) {

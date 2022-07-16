@@ -24,7 +24,7 @@ public class FlintSaw extends AxeItem {
     }
 
     static {
-        WOODEN_MATERIAL = Sets.newHashSet(new Material[]{Material.WOOD, Material.NETHER_WOOD, Material.PLANT, Material.REPLACEABLE_PLANT, Material.BAMBOO, Material.GOURD});
+        WOODEN_MATERIAL = Sets.newHashSet(Material.WOOD, Material.NETHER_WOOD, Material.PLANT, Material.REPLACEABLE_PLANT, Material.BAMBOO, Material.GOURD);
     }
 
 }

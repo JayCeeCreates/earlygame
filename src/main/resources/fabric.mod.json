@@ -1,7 +1,7 @@
 {
     "schemaVersion": 1,
     "id": "earlygame",
-    "version": "1.16.5-1.1.2",
+    "version": "1.16.5-1.1.3",
 
     "name": "EarlyGame",
     "description": "A Fabric mod that focuses on changing early game progression that makes the gameplay feel more \"realistic\".",
@@ -9,9 +9,9 @@
         "JayCeeCreates"
     ],
     "contact": {
-        "homepage": "https://www.curseforge.com/minecraft/mc-mods/earlygame",
-        "sources": "https://github.com/JayCeeCreates/earlygame.git",
-        "issues": "https://github.com/JayCeeCreates/earlygame/issues"
+        "homepage": "https://jayceecreates.github.io/earlygame/",
+        "sources": "https://github.com/JayCeeCreates/earlygame/",
+        "issues": "https://github.com/JayCeeCreates/earlygame/issues/"
     },
 
     "license": "MIT",
@@ -38,7 +38,13 @@
         "fabric": "*",
         "minecraft": "1.16.5"
     },
-    "suggests": {
-        "flamingo": "*"
+    "custom": {
+        "modmenu": {
+            "links": {
+                "modmenu.curseforge": "https://www.curseforge.com/minecraft/mc-mods/earlygame",
+                "modmenu.modrinth": "https://modrinth.com/mod/earlygame",
+                "modmenu.wiki": "https://jayceecreates.github.io/earlygame/wiki/home.html"
+            }
+        }
     }
 }

@@ -54,7 +54,7 @@ public class StickTwigBlock extends Block {
 
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-        world.breakBlock(pos, (player.isCreative() ? false : true));
+        world.breakBlock(pos, player.isCreative());
         return ActionResult.SUCCESS;
     }
 

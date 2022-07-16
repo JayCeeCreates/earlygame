@@ -4,9 +4,9 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 
-public class CopperOre extends Block {
+public class CopperOreBlock extends Block {
 
-    public CopperOre() {
+    public CopperOreBlock() {
         super(FabricBlockSettings.copy(Blocks.COAL_ORE));
     }
     
