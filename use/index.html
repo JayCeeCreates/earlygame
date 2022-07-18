@@ -1,117 +1,163 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>EarlyGame - Use</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"> 
-        <link rel="icon" type="image/x-icon" href="../favicon.png">
-        <link href="../css/main.css" rel="stylesheet" />
-        <link href="../css/animation.css" rel="stylesheet" />
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css" crossorigin="anonymous"/>
-        <script src="https://code.jquery.com/jquery-3.6.0.js" type="text/javascript"></script>
-    </head>
-    <body>
-        <header>
-            <div class="container">
-                <div class="nav-left">
-                    <a id="toggleMenu" style="cursor:pointer"><i class="fa-solid fa-bars"></i></a><a href="../">EARLYGAME</a>
-                </div>
-                <div class="nav-right">
-                    <a href="../use/">USE</a>
-                    <a href="../wiki/">WIKI</a>
-                    <a href="../source/">SOURCE</a>
-                    <a href="../donate/">DONATE</a>
-                </div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Use - EarlyGame</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css" />
+    <link rel="stylesheet" href="../resources/css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="../resources/css/main.css" />
+    <style>
+        #ddVersion {
+            padding: 8px;
+            background-color: rgb(var(--var-bg-primary), 0.8);
+            color: rgb(var(--var-txt-primary));
+            border: 1px solid rgb(var(--var-bg-secondary));
+            border-radius: 8px;
+            margin-left: 8px;
+            box-shadow: 0 4px 6px #0000007f;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        #usebg {
+            background-image: url('../resources/img/use_light.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .dark-mode #usebg {
+            background-image: url('../resources/img/use_dark.png');
+        }
+    </style>
+</head>
+    <header class="overflow-hidden fixed-top">
+        <div class="container-sm fs-5">
+            <div class="fw-bolder float-start py-3 py-sm-4">
+                <span class="d-inline-block d-sm-none">
+                    <span id="btnMenu" class="ps-3 pe-4"><i class="fa-solid fa-bars"></i></span>EARLYGAME
+                </span>
+                <span class="d-none d-sm-inline-block">
+                    <a href="../">EARLYGAME</a>
+                </span>
             </div>
-        </header>
-
-        <div class="mobile-menu">
-            <a href="../use/"><div class="mobile-menu-select">USE</div></a>
-            <a href="../wiki/"><div class="mobile-menu-select">WIKI</div></a>
-            <a href="../source/"><div class="mobile-menu-select">SOURCE</div></a>
-            <a href="../donate/"><div class="mobile-menu-select">DONATE</div></a>
-        </div>
-
-        <div class="section2" style="margin-top: 55px; box-shadow: inset 0 -8px 8px -8px #0000007f;">
-            <div class="bg-content desktop-view fade-in-slow">
-                <span style="font-size: 36pt; font-weight: 700; text-transform: uppercase;">GET THE MOD NOW!</span>
-                <p style="margin-bottom: 16px;">For instructions on how to install the mod, please proceed to the wiki.</p>
-                <a href="https://github.com/JayCeeCreates/earlygame/releases/download/1.18.2-1.1.2/earlygame-1.18.2-1.1.2.jar"><button type="button" class="button1">Download</button></a>
-            </div>
-        </div>
-        
-        <div class="body-content">
-            <div class="mobile-view fade-in-slow">
-                <div style="text-align: center; padding-top: 16pt;">
-                    <span style="font-size: 18pt; font-weight: 700; text-transform: uppercase;">GET THE MOD NOW!</span>
-                    <p style="margin-bottom: 16px;">For instructions on how to install the mod, please proceed to the wiki.</p>
-                    <a href="https://github.com/JayCeeCreates/earlygame/releases/download/1.18.2-1.1.2/earlygame-1.18.2-1.1.2.jar"><button type="button" class="button1">Download</button></a>
-                </div>
-            </div>
-            <div style="text-align: center; padding: 32pt 0;">
-                <div id="altDownloads">
-                    <span style="font-size: 18pt; font-weight: 700; text-transform: uppercase;">Alternate Downloads</span>
-                    <p style="margin-bottom: 8px;">Alternatively, you can choose to download from one of the mirrors below.</p>
-                    <a href="https://modrinth.com/mod/earlygame"><button type="button" class="button2" style="margin:8px 16px">Modrinth</button></a>
-                    <a href="https://www.curseforge.com/minecraft/mc-mods/earlygame"><button type="button" class="button2" style="margin:8px 16px">CurseForge</button></a>
-                </div>
-                <div style="font-size: 12pt; margin-top: 16pt;">
-                    <p>All downloads listed above are official links. Do not download this mod from any other sites as it may impose potential privacy and security threats.</p>
-                </div>
+            <div id="topNav" class="float-end py-3 py-sm-4 d-none d-sm-block">
+                <span class="me-4"><a href="../use/">USE</a></span>
+                <span class="me-4"><a href="../wiki/">WIKI</a></span>
+                <span class="me-4"><a href="../source/">SOURCE</a></span>
+                <span class="me-4"><a href="../donate/">DONATE</a></span>
+                <span id="btnTheme1"><i class="fa-solid fa-moon"></i></span>
             </div>
         </div>
+    </header>
 
-        <footer>
-            <div class="body-content table" style="width: 60%;">
-                <div class="table-row">
-                    <div class="table-cell">
-                        <h4>ABOUT EARLYGAME</h4>
-                        <p>EarlyGame is an open-source Minecraft mod for Fabric that aims to tweak the early game progression. EarlyGame is a project driven by the community, for the community. Everyone is welcome to contribute!</p>
-                    </div>
-                    <div class="table-cell">
-                        <h4 style="text-transform:uppercase">Navigate</h4>
-                        <ul style="list-style-type:none; padding: 0 8pt;">
-                            <li><a href="../">Home</a></li>
-                            <li><a href="../use/">Use</a></li>
-                            <li><a href="../wiki/">Wiki</a></li>
-                            <li><a href="../source/">Source</a></li>
-                            <li><a href="../donate/">Donate</a></li>
-                        </ul>
-                    </div>
-                    <div class="table-cell">
-                        <h4 style="text-transform:uppercase">Socials</h4>
-                        <ul style="list-style-type:none; padding: 0 8pt;">
-                            <li><a href="https://twitter.com/jaycee_creates"><i class="fa-brands fa-twitter" style="width:24px"></i> Twitter</a></li>
-                            <li><a href="https://instagram.com/jayceecreates"><i class="fa-brands fa-instagram" style="width:24px"></i> Instagram</a></li>
-                            <li><a href="https://github.com/JayCeeCreates"><i class="fa-brands fa-github" style="width:24px"></i> GitHub</a></li>
-                            <li><i class="fa-brands fa-discord" style="width:24px"></i> Discord (JayCee#1620)</li>
-                        </ul>
-                    </div>
-                </div><br />
-                <div class="table-row">
-                    <div class="table-cell">
-                        <div style="font-size:10pt">This project is not an official Mojang product and is not affiliated with Mojang. Made with 💜 by JayCee Creates. Powered by GitHub Pages.</div>
+    <div id="topmenu" class="d-sm-none" style="display: none;">
+        <div class="p-4" style="text-align: center">
+            <a href="../"><div class="navbutton">Home</div></a>
+            <a href="../wiki/"><div class="navbutton">Wiki</div></a>
+            <a href="../source/"><div class="navbutton">Source</div></a>
+            <a href="../donate/"><div class="navbutton">Donate</div></a>
+            <br />
+            <span id="btnTheme2" style="font-size: 2.5rem"><i class="fa-solid fa-moon"></i></span>
+        </div>
+    </div>
+
+    <section>
+        <div class="my-5"></div>
+
+        <div class="d-none d-sm-block">
+            <div id="usebg" style="height: 50vh;">
+                <div style="background-color: rgba(var(--var-bg-primary), 0.3); height: 50vh;">
+                    <div class="px-5 py-3 rounded mx-auto fade-in" style="width: fit-content; background-color: rgba(var(--var-bg-primary), 0.5); text-align: center; position: relative; top: 50%; transform: translateY(-50%); box-shadow: 0 2px 16px #0000007f">
+                        <div class="fs-1 fw-bolder">GET THE MOD NOW!</div>
+                        <div>For instructions on how to install the mod, please proceed to the wiki.</div>
+                        <div class="my-3">
+                            <a id="btnDownload"><button type="button" class="button1">Download</button></a>
+                        </div>
+                        <div>
+                            <label for="ddVersion">Choose a version...</label>
+                            <select name="ddVersion" id="ddVersion">
+                                <option value="19" selected>1.19</option>
+                                <option value="18">1.18.2</option>
+                                <option value="16">1.16.5</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
             </div>
-        </footer>
+            <div class="container-sm my-4" style="text-align: center">
+                <div class="fs-2 fw-bolder">ALTERNATIVE DOWNLOADS</div>
+                <p style="margin: 0">Alternatively, you can choose to download from one of the mirrors below.</p>
+                <div class="my-4">
+                    <a href="https://modrinth.com/mod/earlygame" class="me-4"><button type="button" class="button2">Modrinth</button></a><a href="https://www.curseforge.com/minecraft/mc-mods/earlygame"><button type="button" class="button2">CurseForge</button></a>
+                </div>
+                <p>All downloads listed above are official links. Do not download this mod from any other sites as it may impose potential privacy and security threats.</p>
+            </div>
+        </div>
+        <div class="container-sm my-4 d-sm-none" style="text-align: center">
+            <i class="fa-solid fa-face-sad-tear m-5 fade-in" style="color: #adb5bd; font-size: 128pt" oncontextmenu="return false;"></i>
+            <div class="fs-2 fw-bolder">SORRY!</div>
+            <p>This mod is not compatible with Bedrock Edition. To experience EarlyGame, you must download it on your PC with Minecraft Java Edition.</p>
+        </div>
 
-        <script type="text/javascript">
-            var $header = $('.header');
-            var $win = $(window);
-            var $winWidth = $win.width();
+    </section>
 
-            $win.ready(function () {
-                if ($winWidth < 810) {
-                    $('#altDownloads').addClass("fade-in-slow");
-                }
-                else {
-                    $('#altDownloads').removeClass("fade-in-slow");
-                }
-            });
+    <footer class="overflow-hidden" style="background-color: #495057; color: white">
+        <div class="container-sm py-5 px-4 px-sm-0">
+            <div class="row">
+                <div class="col-sm-7">
+                    <p><strong>ABOUT EARLYGAME</strong></p>
+                    <p>
+                        EarlyGame is an open-source Minecraft mod for Fabric
+                        that aims to tweak the early game progression. It is
+                        a project driven by the community, for the community.
+                        Everyone is welcome to contribute!
+                    </p>
+                </div>
+                <div class="col-sm-2 d-none d-sm-block">
+                    <p><strong>NAVIGATE</strong></p>
+                    <ul style="list-style-type:none; padding: 0">
+                        <li><a href="../">Home</a></li>
+                        <li><a href="../use/">Use</a></li>
+                        <li><a href="../wiki/">Wiki</a></li>
+                        <li><a href="../source/">Source</a></li>
+                        <li><a href="../donate/">Donate</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <p><strong>SOCIALS</strong></p>
+                    <ul style="list-style-type:none; padding: 0">
+                        <li><a target="_blank" href="https://twitter.com/jaycee_creates"><i class="fa-brands fa-twitter" style="width: 20pt; text-align: center;"></i> Twitter</a></li>
+                        <li><a target="_blank" href="https://instagram.com/jayceecreates"><i class="fa-brands fa-instagram" style="width: 20pt; text-align: center;"></i> Instagram</a></li>
+                        <li><a target="_blank" href="https://github.com/JayCeeCreates"><i class="fa-brands fa-github" style="width: 20pt; text-align: center;"></i> GitHub</a></li>
+                        <li><i class="fa-brands fa-discord" style="width: 20pt; text-align: center;"></i> Discord (JayCee#1620)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-4" style="font-size: 0.75rem">
+                This project is not an official Mojang product and is not affiliated with Mojang. Made with 💜 by JayCee Creates. Powered by GitHub Pages.
+            </div>
+        </div>
+    </footer>
 
-            $('#toggleMenu').on("click", function() {
-                $('.mobile-menu').toggleClass("show");
-            });
-        </script>
-    </body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../resources/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../resources/js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#ddVersion').val('19').change();
+        })
+
+        $('#ddVersion').change(function () {
+            let i = this.selectedIndex;
+            var _dllink = '';
+            switch (i) {
+                case 0: _dllink = 'https://github.com/JayCeeCreates/earlygame/releases/download/1.19-1.1.2/earlygame-1.19-1.1.2.jar'; break;
+                case 1: _dllink = 'https://github.com/JayCeeCreates/earlygame/releases/download/1.18.2-1.1.2/earlygame-1.18.2-1.1.2.jar'; break;
+                case 2: _dllink = 'https://github.com/JayCeeCreates/earlygame/releases/download/1.16.x-1.0.4/earlygame-1.16.x-1.0.4.jar'; break;
+            }
+            $('#btnDownload').attr('href', _dllink);
+        })
+    </script>
+</body>
 </html>

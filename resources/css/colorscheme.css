@@ -1,0 +1,15 @@
+:root {
+    --var-bg-primary: 255, 255, 255;
+    --var-bg-secondary: 233, 236, 239;
+    --var-txt-primary: 0, 0, 0;
+    --var-fg-primary: 25, 135, 84;
+    --var-fg-primary-hover: 20, 108, 67;
+    --var-fg-secondary: 253, 126, 20;
+    --var-fg-secondary-hover: 202, 101, 16;
+}
+
+.dark-mode {
+    --var-bg-primary: 33, 37, 41;
+    --var-bg-secondary: 52, 58, 64;
+    --var-txt-primary: 255, 255, 255;
+}

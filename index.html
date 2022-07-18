@@ -1,63 +1,101 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>EarlyGame - Home</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-        <meta name="color-scheme" content="light dark">
-        <link rel="icon" type="image/x-icon" href="./favicon.png">
-        <link href="css/main.css" rel="stylesheet" />
-        <link href="css/animation.css" rel="stylesheet" />
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css" crossorigin="anonymous"/>
-        <script src="https://code.jquery.com/jquery-3.6.0.js" type="text/javascript"></script>
-    </head>
-    <body style="background-color: black;">
-        <div class="video-bg">
-            <video preload autoplay muted loop>
-                <source src="https://a.pomf.cat/iwlaft.mp4" type="video/mp4" />
-            </video>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EarlyGame</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css" />
+    <link rel="stylesheet" href="./resources/css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="./resources/css/main.css" />
+    <style>
+        a, div, span, body {
+            color: white;
+            filter: drop-shadow(0 2px 2px #00000030);
+        }
+        header {
+            background-color: transparent !important;
+        }
+        .home-section {
+            text-align: center;
+            position: relative;
+            top: 50%;
+            margin: 0 auto;
+        }
+        .home-section #eg-logo {
+            max-width: 640px;
+        }
+        .eg-oneliner {
+            font-size: 1.25rem;
+        }
+        #btnTheme1 {
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+        #btnTheme1:hover {
+            color: rgb(var(--var-fg-primary));
+        }
+        #video-bg {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            position: fixed;
+            left: 0; right: 0; top: 0; bottom: 0;
+            z-index: -1;
+        }
+
+        @media (max-width:575.98px) {
+            .home-section #eg-logo {
+                width: 100%;
+            }
+            .eg-oneliner {
+                font-size: initial;
+            }
+        }
+    </style>
+</head>
+<body style="background-color: black">
+    <header class="overflow-hidden fixed-top">
+        <div class="container-sm fs-5">
+            <div id="topNav" class="float-end py-3 py-sm-4 d-none d-sm-block">
+                <span class="me-4"><a href="./use">USE</a></span>
+                <span class="me-4">WIKI</span>
+                <span class="me-4"><a href="./source">SOURCE</a></span>
+                <span class="me-4"><a href="./donate">DONATE</a></span>
+                <span id="btnTheme1"><i class="fa-solid fa-moon"></i></span>
+            </div>
         </div>
-        <header class="header-home">
-            <div class="container">
-                <div class="nav-right">
-                    <a href="./use/">USE</a>
-                    <a href="./wiki/">WIKI</a>
-                    <a href="./source/">SOURCE</a>
-                    <a href="./donate/">DONATE</a>
+    </header>
+
+    <section>
+        <video id="video-bg" preload autoplay muted loop>
+            <source src="https://a.pomf.cat/iwlaft.mp4" type="video/mp4" />
+        </video>
+        <div class="w-100 h-100" style="background-color: rgba(var(--var-bg-primary), 0.3)">
+            <div class="container-sm h-100">
+                <div class="home-section slide-in-up">
+                    <img id="eg-logo" src="./resources/img/earlygame_logo.png" alt="EarlyGame logo" />
+                    <p class="eg-oneliner">A Minecraft early game progression overhaul mod for the Fabric modloader.</p>
+                    <div class="mt-4">
+                        <a href="./use" class="d-none d-sm-inline me-4"><button type="button" class="button1">Use</button></a><a href="./wiki"><button type="button" class="button2">Wiki</button></a>
+                    </div>
                 </div>
             </div>
-        </header>
-        <div class="section1">
-            <img id="eg-logo" src="https://raw.githubusercontent.com/JayCeeCreates/earlygame/resources/earlygame_header.png" alt="EarlyGame logo" /><br />
-            <p id="eg-oneliner" style="margin-bottom: 16px;">
-                A Minecraft Fabric mod that aims to change early game progression to make it feel more "realistic".
-            </p>
-            <a href="./use" style="margin-right:16pt"><button id="eg-btn-download" type="button" class="button1">Use</button></a><a href="./wiki"><button id="eg-btn-wiki" type="button" class="button2">Wiki</button></a>
         </div>
-        <div style="position:fixed;bottom:16px;right:16px;color:white;font-size: 10pt;z-index: 1;">
-            Powered by GitHub Pages
+    </section>
+
+    <footer class="w-100 p-4" style="position:fixed;bottom:0;color:white;z-index: 1;text-align: center;line-height: 20pt;">
+        <div class="container-sm">
+            <div class="float-sm-start mb-2 mb-sm-0" style="font-size: 20pt">
+                <a target="_blank" href="https://twitter.com/jaycee_creates"><i class="fa-brands fa-twitter me-2" style="width: 20pt; text-align: center;"></i></a>
+                <a target="_blank" href="https://instagram.com/jayceecreates"><i class="fa-brands fa-instagram me-2" style="width: 20pt; text-align: center;"></i></a>
+                <a target="_blank" href="https://github.com/JayCeeCreates"><i class="fa-brands fa-github me-2" style="width: 20pt; text-align: center;"></i></a>
+            </div>
+            <div class="float-sm-end">Made with 💜 by JayCee Creates. Powered by GitHub Pages.</div>
         </div>
+    </footer>
 
-        <script type="text/javascript">
-            var $header = $('.header');
-            var $win = $(window);
-            var $winWidth = $win.width();
-
-            $win.ready(function () {
-                if ($winWidth < 810) {
-                    $('.section1 #eg-logo').removeClass("slide-in-right-1");
-                    $('.section1 #eg-oneliner').removeClass("slide-in-right-2");
-                    $('.section1 #eg-btn-download').removeClass("slide-in-right-3");
-                    $('.section1 #eg-btn-wiki').removeClass("slide-in-right-3");
-                    $('.section1').addClass("slide-in-up");
-                }
-                else {
-                    $('.section1 #eg-logo').addClass("slide-in-right-1");
-                    $('.section1 #eg-oneliner').addClass("slide-in-right-2");
-                    $('.section1 #eg-btn-download').addClass("slide-in-right-3");
-                    $('.section1 #eg-btn-wiki').addClass("slide-in-right-3");
-                    $('.section1').removeClass("slide-in-up");
-                }
-            });
-        </script>
-    </body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./resources/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./resources/js/main.js"></script>
+</body>
 </html>

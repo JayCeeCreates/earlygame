@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,300&display=swap');
+@import url('./colorscheme.css');
+@import url('./animation.css');
+
+* {
+    font-family: 'Roboto', 'Arial', sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    background-color: rgb(var(--var-bg-primary));
+    color: rgb(var(--var-txt-primary));
+    margin: 0;
+}
+
+header {
+    background-color: rgb(var(--var-bg-primary));
+    color: rgb(var(--var-txt-primary));
+}
+
+button {
+    border: none;
+    border-radius: 8px;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 4px #0000007f;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding-bottom: 4px;
+    border-bottom: 1px solid rgba(var(--var-txt-primary), 0.3);
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: rgb(var(--var-fg-primary));
+}
+
+body.lock-scroll { overflow-y: hidden; }
+
+.button1 {
+    background-color: rgb(var(--var-fg-primary));
+    color: white;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.button1:hover {
+    background-color: rgb(var(--var-fg-primary-hover));
+}
+
+.button2 {
+    background-color: rgb(var(--var-fg-secondary));
+    color: white;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.button2:hover {
+    background-color: rgb(var(--var-fg-secondary-hover));
+}
+
+#btnTheme {
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+#btnTheme:hover {
+    color: rgb(var(--var-fg-primary));
+}
+
+#btnMenu { cursor: pointer; }
+
+#topmenu {
+    position: fixed;
+    background-color: rgb(var(--var-bg-primary));
+    width: 100vw;
+    height: 100vh;
+    z-index: 4;
+}
+
+#topmenu .navbutton {
+    text-align: center;
+    margin-bottom: 16px;
+    padding: 16px;
+    border: 1px solid rgb(var(--var-bg-secondary));
+    border-radius: 8px;
+    box-shadow: 0 2px 4px #0000007f;
+    background-color: rgba(var(--var-fg-primary), 0.5);
+}

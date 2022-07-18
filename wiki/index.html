@@ -1,7 +1,157 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta name="color-scheme" content="dark light">
-        <meta http-equiv="refresh" content="0; url=./home.html" />
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Use - EarlyGame</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css" />
+    <link rel="stylesheet" href="../resources/css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="../resources/css/main.css" />
+    <style>
+        #ddVersion {
+            padding: 8px;
+            background-color: rgb(var(--var-bg-primary), 0.8);
+            color: rgb(var(--var-txt-primary));
+            border: 1px solid rgb(var(--var-bg-secondary));
+            border-radius: 8px;
+            margin-left: 8px;
+            box-shadow: 0 4px 6px #0000007f;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        #usebg {
+            background: url('../resources/img/wiki_bg.png') center no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+    <header class="overflow-hidden fixed-top">
+        <div class="container-sm fs-5">
+            <div class="fw-bolder float-start py-3 py-sm-4">
+                <span class="d-inline-block d-sm-none">
+                    <span id="btnMenu" class="ps-3 pe-4"><i class="fa-solid fa-bars"></i></span>EARLYGAME
+                </span>
+                <span class="d-none d-sm-inline-block">
+                    <a href="../">EARLYGAME</a>
+                </span>
+            </div>
+            <div id="topNav" class="float-end py-3 py-sm-4 d-none d-sm-block">
+                <span class="me-4"><a href="../use/">USE</a></span>
+                <span class="me-4"><a href="../wiki/">WIKI</a></span>
+                <span class="me-4"><a href="../source/">SOURCE</a></span>
+                <span class="me-4"><a href="../donate/">DONATE</a></span>
+                <span id="btnTheme1"><i class="fa-solid fa-moon"></i></span>
+            </div>
+        </div>
+    </header>
+
+    <div id="topmenu" class="d-sm-none" style="display: none;">
+        <div class="p-4" style="text-align: center">
+            <a href="../"><div class="navbutton">Home</div></a>
+            <a href="../wiki/"><div class="navbutton">Wiki</div></a>
+            <a href="../source/"><div class="navbutton">Source</div></a>
+            <a href="../donate/"><div class="navbutton">Donate</div></a>
+            <br />
+            <span id="btnTheme2" style="font-size: 2.5rem"><i class="fa-solid fa-moon"></i></span>
+        </div>
+    </div>
+
+    <section>
+        <div class="my-5"></div>
+        <div id="usebg" style="height: 50vh;">
+            <div style="background-color: rgba(var(--var-bg-primary), 0.3); height: 50vh">
+                <div class="mx-3 px-5 py-3 rounded mx-sm-auto fade-in" style="width: fit-content; background-color: rgba(var(--var-bg-primary), 0.5); text-align: center; position: relative; top: 50%; transform: translateY(-50%); box-shadow: 0 2px 16px #0000007f">
+                    <div class="fs-1 fw-bolder">THE EARLYGAME WIKI</div>
+                    <div>This page contains more information about the mod and how to use it.</div>
+                </div>
+            </div>
+        </div>
+        <div class="container-sm my-4">
+            <div class="row px-2 px-sm-0">
+                <div class="col-sm-3 pe-sm-4">
+                    <div class="px-4 py-3" style="background-color: rgba(var(--var-bg-secondary), 0.5); border: 1px solid rgb(var(--var-bg-secondary)); border-radius: 8px; box-shadow: 0 2px 4px #0000007f;">
+                        <h4>Contents</h4>
+                        <ul class="m-0 p-0" style="list-style-type: none">
+                            <li><a href="?page=home">Home</a></li>
+                            <li><a href="?page=faq">FAQ</a></li>
+                            <li><a href="?page=overview">Overview</a></li>
+                            <li><a href="?page=setup">Setup</a></li>
+                            <li><a href="?page=blocks">Blocks and Items</a></li>
+                            <li><a href="?page=recipes">Recipes</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-9 pt-4 pt-sm-0 ps-sm-4">
+                    <div id="includedContent"></div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="overflow-hidden" style="background-color: #495057; color: white">
+        <div class="container-sm py-5 px-4 px-sm-0">
+            <div class="row">
+                <div class="col-sm-7">
+                    <p><strong>ABOUT EARLYGAME</strong></p>
+                    <p>
+                        EarlyGame is an open-source Minecraft mod for Fabric
+                        that aims to tweak the early game progression. It is
+                        a project driven by the community, for the community.
+                        Everyone is welcome to contribute!
+                    </p>
+                </div>
+                <div class="col-sm-2 d-none d-sm-block">
+                    <p><strong>NAVIGATE</strong></p>
+                    <ul style="list-style-type:none; padding: 0">
+                        <li><a href="../">Home</a></li>
+                        <li><a href="../use/">Use</a></li>
+                        <li><a href="../wiki/">Wiki</a></li>
+                        <li><a href="../source/">Source</a></li>
+                        <li><a href="../donate/">Donate</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <p><strong>SOCIALS</strong></p>
+                    <ul style="list-style-type:none; padding: 0">
+                        <li><a target="_blank" href="https://twitter.com/jaycee_creates"><i class="fa-brands fa-twitter" style="width: 20pt; text-align: center;"></i> Twitter</a></li>
+                        <li><a target="_blank" href="https://instagram.com/jayceecreates"><i class="fa-brands fa-instagram" style="width: 20pt; text-align: center;"></i> Instagram</a></li>
+                        <li><a target="_blank" href="https://github.com/JayCeeCreates"><i class="fa-brands fa-github" style="width: 20pt; text-align: center;"></i> GitHub</a></li>
+                        <li><i class="fa-brands fa-discord" style="width: 20pt; text-align: center;"></i> Discord (JayCee#1620)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-4" style="font-size: 0.75rem">
+                This project is not an official Mojang product and is not affiliated with Mojang. Made with 💜 by JayCee Creates. Powered by GitHub Pages.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../resources/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../resources/js/main.js"></script>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+    
+        $(window).on('load', function() {
+            let url = '';
+            switch (params.get('page')) {
+                case 'home': url = './content/home.html'; break;
+                case 'faq': url = './content/faq.html'; break;
+                case 'overview': url = './content/overview.html'; break;
+                case 'setup': url = './content/setup.html'; break;
+                case 'blocks': url = './content/blocks.html'; break;
+                case 'recipes': url = './content/recipes.html'; break;
+                default: url = './content/home.html';   
+            }
+            console.log(params.get('page'));
+            loadPage(url);
+        });
+            
+        function loadPage(url){
+            $("#includedContent").load(url); 
+        }
+    </script> 
+</body>
 </html>
