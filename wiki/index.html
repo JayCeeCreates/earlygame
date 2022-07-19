@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="../resources/css/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="../resources/css/main.css" />
     <style>
-        #ddVersion {
-            padding: 8px;
-            background-color: rgb(var(--var-bg-primary), 0.8);
+        #ddContents {
+            padding: 12px;
+            width: 100%;
+            background-color: rgb(var(--var-bg-secondary), 0.5);
             color: rgb(var(--var-txt-primary));
             border: 1px solid rgb(var(--var-bg-secondary));
             border-radius: 8px;
-            margin-left: 8px;
             box-shadow: 0 4px 6px #0000007f;
             font-weight: bold;
             cursor: pointer;
@@ -23,6 +23,10 @@
         #usebg {
             background: url('../resources/img/wiki_bg.png') center no-repeat;
             background-size: cover;
+        }
+        .sticky {
+            position: sticky;
+            top: 6em;
         }
     </style>
 </head>
@@ -70,7 +74,7 @@
         <div class="container-sm my-4">
             <div class="row px-2 px-sm-0">
                 <div class="col-sm-3 pe-sm-4">
-                    <div class="px-4 py-3" style="background-color: rgba(var(--var-bg-secondary), 0.5); border: 1px solid rgb(var(--var-bg-secondary)); border-radius: 8px; box-shadow: 0 2px 4px #0000007f;">
+                    <div class="d-none d-sm-block px-4 py-3 sticky" style="background-color: rgba(var(--var-bg-secondary), 0.5); border: 1px solid rgb(var(--var-bg-secondary)); border-radius: 8px; box-shadow: 0 2px 4px #0000007f;">
                         <h4>Contents</h4>
                         <ul class="m-0 p-0" style="list-style-type: none">
                             <li><a href="?page=home">Home</a></li>
@@ -80,6 +84,17 @@
                             <li><a href="?page=blocks">Blocks and Items</a></li>
                             <li><a href="?page=recipes">Recipes</a></li>
                         </ul>
+                    </div>
+                    <div class="d-sm-none">
+                        <select name="ddContents" id="ddContents">
+                            <option value="" selected hidden>Select a page...</option>
+                            <option value="?page=home">Home</option>
+                            <option value="?page=faq">FAQ</option>
+                            <option value="?page=overview">Overview</option>
+                            <option value="?page=setup">Setup</option>
+                            <option value="?page=blocks">Blocks and Items</option>
+                            <option value="?page=recipes">Recipes</option>
+                        </select>
                     </div>
                 </div>
                 <div class="col-sm-9 pt-4 pt-sm-0 ps-sm-4">
@@ -148,6 +163,10 @@
             console.log(params.get('page'));
             loadPage(url);
         });
+
+        $('#ddContents').change(function () {
+            window.location = $(this).find("option:selected").val();
+        })
             
         function loadPage(url){
             $("#includedContent").load(url); 

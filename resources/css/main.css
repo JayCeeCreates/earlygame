@@ -92,7 +92,7 @@ body.lock-scroll { overflow-y: hidden; }
     text-align: center;
     margin-bottom: 16px;
     padding: 16px;
-    border: 1px solid rgb(var(--var-bg-secondary));
+    border: 1px solid rgb(var(--var-fg-primary));
     border-radius: 8px;
     box-shadow: 0 2px 4px #0000007f;
     background-color: rgba(var(--var-fg-primary), 0.5);
