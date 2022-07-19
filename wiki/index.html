@@ -77,12 +77,12 @@
                     <div class="d-none d-sm-block px-4 py-3 sticky" style="background-color: rgba(var(--var-bg-secondary), 0.5); border: 1px solid rgb(var(--var-bg-secondary)); border-radius: 8px; box-shadow: 0 2px 4px #0000007f;">
                         <h4>Contents</h4>
                         <ul class="m-0 p-0" style="list-style-type: none">
-                            <li><a href="?page=home">Home</a></li>
-                            <li><a href="?page=faq">FAQ</a></li>
-                            <li><a href="?page=overview">Overview</a></li>
-                            <li><a href="?page=setup">Setup</a></li>
-                            <li><a href="?page=blocks">Blocks and Items</a></li>
-                            <li><a href="?page=recipes">Recipes</a></li>
+                            <li><a onmouseover="setParam($(this), 'page', 'home');">Home</a></li>
+                            <li><a onmouseover="setParam($(this), 'page', 'faq');">FAQ</a></li>
+                            <li><a onmouseover="setParam($(this), 'page', 'overview');">Overview</a></li>
+                            <li><a onmouseover="setParam($(this), 'page', 'setup');">Setup</a></li>
+                            <li><a onmouseover="setParam($(this), 'page', 'blocks');">Blocks and Items</a></li>
+                            <li><a onmouseover="setParam($(this), 'page', 'recipes');">Recipes</a></li>
                         </ul>
                     </div>
                     <div class="d-sm-none">
@@ -148,6 +148,7 @@
     <script src="../resources/js/main.js"></script>
     <script>
         const params = new URLSearchParams(window.location.search);
+        var urlPage = new URL(window.location.toString());
     
         $(window).on('load', function() {
             let url = '';
@@ -160,14 +161,18 @@
                 case 'recipes': url = './content/recipes.html'; break;
                 default: url = './content/home.html';   
             }
-            console.log(params.get('page'));
             loadPage(url);
         });
 
         $('#ddContents').change(function () {
             window.location = $(this).find("option:selected").val();
-        })
-            
+        });
+
+        function setParam(e, key, value) {
+            urlPage.searchParams.set(key, value);
+            e.attr('href', urlPage.href);
+        }
+
         function loadPage(url){
             $("#includedContent").load(url); 
         }
