@@ -55,7 +55,7 @@ public class WoodCuttingEvent {
 
                             for (RegistryEntry<Block> obj : Registry.BLOCK.iterateEntries(BlockTags.LOGS)) {
                                 if (state.getBlock() == obj.value()) {
-                                    String planksString = obj.value().toString().replace("stripped_", "").replaceAll("_.*$", "_planks}");
+                                    String planksString = obj.value().toString().replace("stripped_", "").replaceAll("_[^_]+$", "_planks}");
                                     for (RegistryEntry<Block> planks : Registry.BLOCK.iterateEntries(BlockTags.PLANKS)) {
                                         if (planks.value().toString().equals(planksString)) {
                                             itemEntity = new ItemEntity(
