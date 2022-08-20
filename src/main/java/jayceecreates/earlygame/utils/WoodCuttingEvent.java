@@ -43,70 +43,71 @@ public class WoodCuttingEvent {
             if (state == null || player == null)
                 return ActionResult.PASS;
 
-            if (isAxe && (isLog || isPlank) && block.getSide() == Direction.UP && player.isSneaking()) {
-                if (!world.isClient) {
-                    if (r1 <= EarlyGame.CONFIG.woodChoppingProb) {
-                        world.breakBlock(pos, false);
-                        ItemEntity itemEntity = null;
-                        if (isLog) {
-                            if (isSaw) r2 = 4; else r2 = RANDOM.nextInt(3) + 2;
-                            for (Block obj : BlockTags.LOGS.values()) {
-                                if (state.getBlock() == obj) {
-                                    String replacement = obj.toString().replace("stripped_", "").replace("log", "planks").replace("bark", "planks").replace("wood", "planks").replace("stem", "planks").replace("hyphae", "planks");
-                                    for (Block planks : BlockTags.PLANKS.values()) {
-                                        System.out.println(replacement);
-                                        System.out.println(planks.toString() + "a");
-                                        System.out.println(replacement.equals(planks.toString()));
-                                        if (replacement.equals(planks.toString())) {
-                                            itemEntity = new ItemEntity(player.world, block.getPos().x, block.getPos().y - 0.5, block.getPos().z, new ItemStack(planks, r2));
-                                            break;
+                if (isAxe && (isLog || isPlank) && block.getSide() == Direction.UP && player.isSneaking()) {
+                    if (!world.isClient) {
+                        if (r1 <= EarlyGame.CONFIG.woodChoppingProb) {
+                            world.breakBlock(pos, false);
+                            ItemEntity itemEntity = null;
+                            if (isLog) {
+                                r2 = isSaw ? 4 : RANDOM.nextInt(3) + 2;
+    
+                                for (Block obj : BlockTags.LOGS.values()) {
+                                    if (state.getBlock() == obj) {
+                                        String planksString = obj.toString().replace("stripped_", "").replaceAll("_[^_]+$", "_planks}");
+                                        EarlyGame.LOGGER.info("Convert to: " + planksString);
+                                        for (Block planks : BlockTags.PLANKS.values()) {
+                                            if (planks.toString().equals(planksString)) {
+                                                itemEntity = new ItemEntity(
+                                                    player.world,
+                                                    block.getPos().x,
+                                                    block.getPos().y - 0.5,
+                                                    block.getPos().z,
+                                                    new ItemStack(planks, r2));
+                                                break;
+                                            }
                                         }
                                     }
-                                    break;
                                 }
                             }
+                            if (isPlank) {
+                                r2 = isSaw ? 2 : RANDOM.nextInt(2) + 1;
+                                itemEntity = new ItemEntity(
+                                    player.world,
+                                    block.getPos().x,
+                                    block.getPos().y - 0.5,
+                                    block.getPos().z,
+                                    new ItemStack(Items.STICK, r2));
+                            }
+                            player.world.spawnEntity(itemEntity);
                         }
-                        if (isPlank) {
-                            if (isSaw) r2 = 2; else r2 = RANDOM.nextInt(2) + 1;
-                            itemEntity = new ItemEntity(
-                                player.world,
-                                block.getPos().x,
-                                block.getPos().y - 0.5,
-                                block.getPos().z,
-                                new ItemStack(
-                                    Items.STICK,
-                                    r2));
+                        else
+                            world.playSound(null, pos, SoundEvents.BLOCK_WOOD_HIT,
+                                SoundCategory.PLAYERS, 1.0F, 1.0F);
+    
+                        if (stack.getItem().isDamageable()) {
+                                
+                            ItemStack savedStack = stack.copy();
+                            boolean shouldAttemptDmg = true;
+                            Random random = new Random();
+                            int unbreakingLvl = EnchantmentHelper.getLevel(Enchantments.UNBREAKING, savedStack);
+            
+                            if (unbreakingLvl > 0) shouldAttemptDmg = (1 + random.nextInt(5)) <= unbreakingLvl;
+            
+                            if (savedStack.getDamage() < savedStack.getMaxDamage()) {
+            
+                                if (shouldAttemptDmg) savedStack.setDamage(savedStack.getDamage() + 1);
+            
+                                player.setStackInHand(hand, savedStack);
+            
+                            }
+            
+                            else player.setStackInHand(hand, ItemStack.EMPTY);
+            
                         }
-                        player.world.spawnEntity(itemEntity);
+                        
                     }
-                    else
-                        world.playSound(null, pos, SoundEvents.BLOCK_WOOD_HIT,
-                            SoundCategory.PLAYERS, 1.0F, 1.0F);
-
-                    if (stack.getItem().isDamageable()) {
-                            
-                        ItemStack savedStack = stack.copy();
-                        boolean shouldAttemptDmg = true;
-                        Random random = new Random();
-                        int unbreakingLvl = EnchantmentHelper.getLevel(Enchantments.UNBREAKING, savedStack);
-        
-                        if (unbreakingLvl > 0) shouldAttemptDmg = (1 + random.nextInt(5)) <= unbreakingLvl;
-        
-                        if (savedStack.getDamage() < savedStack.getMaxDamage()) {
-        
-                            if (shouldAttemptDmg) savedStack.setDamage(savedStack.getDamage() + 1);
-        
-                            player.setStackInHand(hand, savedStack);
-        
-                        }
-        
-                        else player.setStackInHand(hand, ItemStack.EMPTY);
-        
-                    }
-                    
+                    return ActionResult.SUCCESS;
                 }
-                return ActionResult.SUCCESS;
-            }
 
             return ActionResult.PASS;
         });
