@@ -1,0 +1,251 @@
+<style>
+    .nav {
+        border-color: transparent !important;
+    }
+    .nav-item {
+        margin: 4px;
+    }
+    .nav-link {
+        color: rgb(var(--var-txt-primary)) !important;
+    }
+    .nav-link.active {
+        background-color: rgb(var(--var-bg-secondary)) !important;
+        border-color: transparent !important;
+    }
+    .nav-link:hover {
+        background-color: rgba(var(--var-bg-secondary), 0.5) !important;
+        border-color: transparent !important;
+    }
+    .crafting-grid {
+        width: 64px;
+        height: 64px;
+        background-color: rgb(var(--var-bg-primary));
+        border: 1px solid rgb(var(--var-bg-secondary));
+        box-shadow: inset 0 0 4px #0000007f;
+    }
+    #container {
+        background-color: rgba(var(--var-bg-secondary), 0.5);
+        border: 1px solid rgb(var(--var-bg-secondary));
+        border-radius: 8px;
+        box-shadow: 0 2px 4px #0000007f;
+        text-align: center;
+    }
+
+    .w-sm-50 { width: 50% !important; }
+    .w-sm-75 { width: 75% !important; }
+
+    .itemPreview { width: 64px; margin: 8px; image-rendering: optimizeSpeed; cursor: pointer; }
+
+    .crafting-grid .itemPreview {
+        width: 48px;
+        height: 48px;
+        cursor: initial;
+    }
+    @media (max-width:575.98px) {
+        .w-sm-50 { width: 100% !important; }
+        .w-sm-75 { width: 100% !important; }
+
+        img.itemPreview { width: 48px; }
+    }
+</style>
+
+<h2>Recipes</h2>
+
+<div class="my-4">
+    <ul class="nav nav-pills nav-fill" role="tablist" id="tabs">
+        <li class="nav-item">
+            <a class="nav-link active" data-bs-toggle="tab" href="#crafting">Crafting</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#smelting">Smelting</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#smithing">Smithing</a>
+        </li>
+    </ul>
+    <div id="divTabContent" class="tab-content mt-3">
+        <div id="crafting" class="tab-pane fade show active">
+            <h4 class="mb-3" style="text-align: center;"><span id="lblItemName1">Crafting</span></h4>
+            <div id="container" class="p-2 mx-auto" style="width: fit-content">
+                <div class="d-flex">
+                    <div class="m-0">
+                        <div id="craftingGrid1" class="crafting-grid m-1"></div>
+                        <div id="craftingGrid2" class="crafting-grid m-1"></div>
+                        <div id="craftingGrid3" class="crafting-grid m-1"></div>
+                    </div>
+                    <div class="m-0">
+                        <div id="craftingGrid4" class="crafting-grid m-1"></div>
+                        <div id="craftingGrid5" class="crafting-grid m-1"></div>
+                        <div id="craftingGrid6" class="crafting-grid m-1"></div>
+                    </div>
+                    <div class="m-0">
+                        <div id="craftingGrid7" class="crafting-grid m-1"></div>
+                        <div id="craftingGrid8" class="crafting-grid m-1"></div>
+                        <div id="craftingGrid9" class="crafting-grid m-1"></div>
+                    </div>
+                    <div class="d-none d-sm-flex">
+                        <div class="h-auto my-auto mx-3"><i class="fa-solid fa-circle-right fs-1"></i></div>
+                        <div class="h-auto my-auto">
+                            <div id="craftingResult1" class="crafting-grid m-1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex flex-column d-sm-none">
+                    <div class="w-100 mx-auto my-3"><i class="fa-solid fa-circle-down fs-1"></i></div>
+                    <div class="w-auto mx-auto">
+                        <div id="craftingResult2" class="crafting-grid m-1"></div>
+                    </div>
+                </div>
+                <div class="mt-2">Crafting Table</div>
+            </div>
+            <div id="container" class="py-sm-2 px-sm-3 w-sm-75 mx-auto my-4">
+                <div class="d-sm-none">
+                    <img class="itemPreview" src="../resources/img/wiki/blocks/18/cobblestone.svg" />
+                    <img class="itemPreview" src="../resources/img/wiki/blocks/18/cobbled_andesite.svg" />
+                    <img class="itemPreview" src="../resources/img/wiki/blocks/18/cobbled_diorite.svg" />
+                    <img class="itemPreview" src="../resources/img/wiki/blocks/18/cobbled_granite.svg" />
+                    <img class="itemPreview" src="../resources/img/wiki/blocks/18/cobbled_deepslate.svg" />
+                    <img class="itemPreview" src="../resources/img/wiki/blocks/18/cobbled_calcite.svg" />
+                    <img class="itemPreview" src="../resources/img/wiki/blocks/18/cobbled_tuff.svg" />
+                    <img class="itemPreview" src="../resources/img/wiki/blocks/18/sandstone.svg" />
+                    <img class="itemPreview" src="../resources/img/wiki/blocks/18/red_sandstone.svg" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/lashing.png" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/copper_nugget.png" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/copper_ingot.png" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/flint_pickaxe.png" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/flint_axe.png" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/flint_knife.png" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/flint_saw.png" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/fire_starter.png" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/slingshot.png" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/copper_sword.png" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/copper_knife.png" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/copper_shovel.png" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/copper_pickaxe.png" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/copper_axe.png" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/copper_saw.png" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/copper_hoe.png" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/copper_helmet.png" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/copper_chestplate.png" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/copper_leggings.png" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/copper_boots.png" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/iron_knife.png" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/iron_saw.png" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/golden_knife.png" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/golden_saw.png" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/diamond_knife.png" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/diamond_saw.png" />
+                </div>
+                <div class="d-none d-sm-inline-block">
+                    <img class="itemPreview" src="../resources/img/wiki/blocks/18/cobblestone.svg" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Cobblestone" />
+                    <img class="itemPreview" src="../resources/img/wiki/blocks/18/cobbled_andesite.svg" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Cobbled Andesite" />
+                    <img class="itemPreview" src="../resources/img/wiki/blocks/18/cobbled_diorite.svg" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Cobbled Diorite" />
+                    <img class="itemPreview" src="../resources/img/wiki/blocks/18/cobbled_granite.svg" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Cobbled Granite" />
+                    <img class="itemPreview" src="../resources/img/wiki/blocks/18/cobbled_deepslate.svg" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Cobbled Deepslate" />
+                    <img class="itemPreview" src="../resources/img/wiki/blocks/18/cobbled_calcite.svg" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Cobbled Calcite" />
+                    <img class="itemPreview" src="../resources/img/wiki/blocks/18/cobbled_tuff.svg" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Cobbled Tuff" />
+                    <img class="itemPreview" src="../resources/img/wiki/blocks/18/sandstone.svg" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Sandstone" />
+                    <img class="itemPreview" src="../resources/img/wiki/blocks/18/red_sandstone.svg" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Red Sandstone" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/lashing.png" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Lashing" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/copper_nugget.png" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Copper Nugget" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/copper_ingot.png" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Copper Ingot" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/flint_pickaxe.png" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Flint Pickaxe" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/flint_axe.png" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Flint Axe" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/flint_knife.png" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Flint Knife" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/flint_saw.png" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Flint Saw" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/fire_starter.png" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Fire Starter" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/slingshot.png" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Slingshot" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/copper_sword.png" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Copper Sword" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/copper_knife.png" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Copper Knife" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/copper_shovel.png" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Copper Shovel" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/copper_pickaxe.png" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Copper Pickaxe" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/copper_axe.png" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Copper Axe" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/copper_saw.png" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Copper Saw" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/copper_hoe.png" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Copper Hoe" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/copper_helmet.png" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Copper Helmet" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/copper_chestplate.png" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Copper Breastplate" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/copper_leggings.png" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Copper Leggings" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/copper_boots.png" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Copper Boots" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/iron_knife.png" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Iron Knife" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/iron_saw.png" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Iron Saw" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/golden_knife.png" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Golden Knife" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/golden_saw.png" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Golden Saw" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/diamond_knife.png" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Diamond Knife" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/diamond_saw.png" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Diamond Saw" />
+                </div>
+            </div>
+        </div>
+        <div id="smelting" class="tab-pane fade">
+            <h4 class="mb-3" style="text-align: center;"><span id="lblItemName2">Smelting</span></h4>
+            <div id="container" class="p-2 mx-auto" style="width: fit-content">
+                <div class="d-flex">
+                    <div>
+                        <div id="smeltingGrid1" class="crafting-grid m-1"></div>
+                        <div class="m-3"><i class="fa-solid fa-fire fs-2" style="color: rgb(var(--var-fg-secondary))"></i></div>
+                        <div class="crafting-grid m-1">
+                            <img class="itemPreview" src="../resources/img/wiki/items/18/coal.png" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Fuel" />
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <div class="h-auto my-auto mx-4"><i class="fa-solid fa-circle-right fs-1""></i></div>
+                        <div class="h-auto my-auto">
+                            <div id="smeltingResult" class="crafting-grid m-1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-2">Furnace / Blast Furnace</div>
+            </div>
+            <div id="container" class="py-sm-2 px-sm-3 w-sm-75 mx-auto my-4">
+                <div class="d-sm-none">
+                    <img class="itemPreview" src="../resources/img/wiki/blocks/18/andesite.svg" />
+                    <img class="itemPreview" src="../resources/img/wiki/blocks/18/diorite.svg" />
+                    <img class="itemPreview" src="../resources/img/wiki/blocks/18/granite.svg" />
+                    <img class="itemPreview" src="../resources/img/wiki/blocks/18/calcite.svg" />
+                    <img class="itemPreview" src="../resources/img/wiki/blocks/18/tuff.svg" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/copper_nugget.png" />
+                </div>
+                <div class="d-none d-sm-inline-block">
+                    <img class="itemPreview" src="../resources/img/wiki/blocks/18/andesite.svg" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Andesite" />
+                    <img class="itemPreview" src="../resources/img/wiki/blocks/18/diorite.svg" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Diorite" />
+                    <img class="itemPreview" src="../resources/img/wiki/blocks/18/granite.svg" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Granite" />
+                    <img class="itemPreview" src="../resources/img/wiki/blocks/18/calcite.svg" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Calcite" />
+                    <img class="itemPreview" src="../resources/img/wiki/blocks/18/tuff.svg" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Tuff" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/copper_nugget.png" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Copper Nugget" />
+                </div>
+            </div>
+        </div>
+        <div id="smithing" class="tab-pane fade">
+            <h4 class="mb-3" style="text-align: center;"><span id="lblItemName2">Smithing</span></h4>
+            <div id="container" class="p-2 mx-auto" style="width: fit-content">
+                <div class="d-flex">
+                    <div id="smithingGrid1" class="crafting-grid m-1"></div>
+                    <div class="h-auto my-auto mx-2"><i class="fa-solid fa-plus fs-2"></i></div>
+                    <div class="crafting-grid m-1">
+                        <img class="itemPreview" src="../resources/img/wiki/items/18/netherite_ingot.png" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Netherite Ingot" />
+                    </div>
+                    <div class="h-auto my-auto mx-2"><i class="fa-solid fa-circle-right fs-1"></i></div>
+                    <div class="h-auto my-auto">
+                        <div id="smithingResult" class="crafting-grid m-1"></div>
+                    </div>
+                </div>
+                <div class="mt-2">Smithing Table</div>
+            </div>
+            <div id="container" class="py-sm-2 px-sm-3 w-sm-75 mx-auto my-4">
+                <div class="d-sm-none">
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/netherite_knife.png" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/netherite_saw.png" />
+                </div>
+                <div class="d-none d-sm-inline-block">
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/netherite_knife.png" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Netherite Knife" />
+                    <img class="itemPreview" src="../resources/img/wiki/items/18/netherite_saw.png" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Netherite Saw" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/@popperjs/core@2.11.5/dist/umd/popper.min.js"></script>
+<script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+</script>

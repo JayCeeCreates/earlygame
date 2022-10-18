@@ -31,9 +31,12 @@ button {
     box-shadow: 0 2px 4px #0000007f;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3{
     padding-bottom: 4px;
     border-bottom: 1px solid rgba(var(--var-txt-primary), 0.3);
+}
+
+h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
 }
 

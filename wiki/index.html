@@ -9,14 +9,20 @@
     <link rel="stylesheet" href="../resources/css/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="../resources/css/main.css" />
     <style>
-        #ddContents {
+        #tblContents {
+            background-color: rgba(var(--var-bg-secondary), 0.5);
+            border: 1px solid rgb(var(--var-bg-secondary));
+            border-radius: 8px;
+            box-shadow: 0 2px 4px #0000007f;
+        }
+        .dropdown {
             padding: 12px;
             width: 100%;
             background-color: rgb(var(--var-bg-secondary), 0.5);
             color: rgb(var(--var-txt-primary));
             border: 1px solid rgb(var(--var-bg-secondary));
             border-radius: 8px;
-            box-shadow: 0 4px 6px #0000007f;
+            box-shadow: 0 2px 4px #0000007f;
             font-weight: bold;
             cursor: pointer;
         }
@@ -75,26 +81,38 @@
         <div class="container-sm my-4">
             <div class="row px-2 px-sm-0">
                 <div class="col-sm-3 pe-sm-4">
-                    <div class="d-none d-sm-block px-4 py-3 sticky" style="background-color: rgba(var(--var-bg-secondary), 0.5); border: 1px solid rgb(var(--var-bg-secondary)); border-radius: 8px; box-shadow: 0 2px 4px #0000007f;">
-                        <h4>Contents</h4>
-                        <ul class="m-0 p-0" style="list-style-type: none">
-                            <li><a onmouseover="setParam($(this), 'page', 'home');">Home</a></li>
-                            <li><a onmouseover="setParam($(this), 'page', 'faq');">FAQ</a></li>
-                            <li><a onmouseover="setParam($(this), 'page', 'overview');">Overview</a></li>
-                            <li><a onmouseover="setParam($(this), 'page', 'setup');">Setup</a></li>
-                            <li><a onmouseover="setParam($(this), 'page', 'blocks');">Blocks and Items</a></li>
-                            <li><a onmouseover="setParam($(this), 'page', 'recipes');">Recipes</a></li>
-                        </ul>
+                    <div class="d-none d-sm-block sticky">
+                        <select name="ddVersion" id="ddVersion" class="dropdown mb-3">
+                            <option value="" selected hidden>Select a version...</option>
+                            <option value="16">1.16</option>
+                            <option value="18">1.18+</option>
+                        </select>
+                        <div id="tblContents" class="px-4 py-3">
+                            <h4>Contents</h4>
+                            <ul class="m-0 p-0" style="list-style-type: none">
+                                <li><a onmouseover="setParam($(this), 'page', 'home');">Home</a></li>
+                                <li><a onmouseover="setParam($(this), 'page', 'faq');">FAQ</a></li>
+                                <li><a onmouseover="setParam($(this), 'page', 'overview');">Overview</a></li>
+                                <li><a onmouseover="setParam($(this), 'page', 'setup');">Setup</a></li>
+                                <li><a onmouseover="setParam($(this), 'page', 'blocks');">Blocks and Items</a></li>
+                                <li><a onmouseover="setParam($(this), 'page', 'recipes');">Recipes</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="d-sm-none">
-                        <select name="ddContents" id="ddContents">
+                        <select name="ddVersion2" id="ddVersion2" class="dropdown mb-3">
+                            <option value="" selected hidden>Select a version...</option>
+                            <option value="16">1.16</option>
+                            <option value="18">1.18+</option>
+                        </select>
+                        <select name="ddContents" id="ddContents" class="dropdown">
                             <option value="" selected hidden>Select a page...</option>
-                            <option value="?page=home">Home</option>
-                            <option value="?page=faq">FAQ</option>
-                            <option value="?page=overview">Overview</option>
-                            <option value="?page=setup">Setup</option>
-                            <option value="?page=blocks">Blocks and Items</option>
-                            <option value="?page=recipes">Recipes</option>
+                            <option value="home">Home</option>
+                            <option value="faq">FAQ</option>
+                            <option value="overview">Overview</option>
+                            <option value="setup">Setup</option>
+                            <option value="blocks">Blocks and Items</option>
+                            <option value="recipes">Recipes</option>
                         </select>
                     </div>
                 </div>
@@ -152,30 +170,27 @@
         var urlPage = new URL(window.location.toString());
     
         $(window).on('load', function() {
-            let url = '';
-            switch (params.get('page')) {
-                case 'home': url = './content/home.html'; break;
-                case 'faq': url = './content/faq.html'; break;
-                case 'overview': url = './content/overview.html'; break;
-                case 'setup': url = './content/setup.html'; break;
-                case 'blocks': url = './content/blocks.html'; break;
-                case 'recipes': url = './content/recipes.html'; break;
-                default: url = './content/home.html';   
-            }
-            loadPage(url);
+            let version = params.get('version') ? params.get('version') : '18';
+            let page = params.get('page') ? params.get('page') : 'home';
+
+            $('#includedContent').load('./content/' + version + '/' + page + '.html');
+            $('#ddContents').val(params.get('page'));
+            $('#ddVersion, #ddVersion2').val(params.get('version'));
         });
 
         $('#ddContents').change(function () {
-            window.location = $(this).find("option:selected").val();
+            urlPage.searchParams.set('page', $(this).find("option:selected").val());
+            window.location = urlPage.href;
+        });
+
+        $('#ddVersion, #ddVersion2').change(function () {
+            urlPage.searchParams.set('version', $(this).find("option:selected").val());
+            window.location = urlPage.href;
         });
 
         function setParam(e, key, value) {
             urlPage.searchParams.set(key, value);
             e.attr('href', urlPage.href);
-        }
-
-        function loadPage(url){
-            $("#includedContent").load(url); 
         }
     </script> 
 </body>
